@@ -98,7 +98,7 @@ async function performSsoLogin(page, onEvent) {
 
   if (after === 'rejected') {
     throw new SsoError(
-      'SSO 拒绝了登录（密码错误）。请运行 npm run new-meeting -- init --username <学工号> --password <新密码> 更新凭据。',
+      'SSO 拒绝了登录（密码错误）。请运行 npm run new-meeting -- init --username <教工号> --password <新密码> 更新凭据。',
       'SSO_REJECTED',
     );
   }

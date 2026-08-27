@@ -142,7 +142,7 @@ function parseStored(text) {
 
 function missingError() {
   return new MeetingPlanError(
-    `未找到 SSO 凭据（服务名 ${SERVICE}）。请先运行：init --username <学工号> --password <密码>，或设置环境变量 ECNU_SSO_USER / ECNU_SSO_PASS。`,
+    `未找到 SSO 凭据（服务名 ${SERVICE}）。请先运行：init --username <教工号> --password <密码>，或设置环境变量 ECNU_SSO_USER / ECNU_SSO_PASS。`,
     'CREDENTIALS_MISSING',
   );
 }

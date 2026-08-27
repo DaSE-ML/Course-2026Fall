@@ -8,7 +8,7 @@ import { bookMeetings, listMeetings, deleteMeetingById, fetchMeetingDetails } fr
 import { openCalendarDraft } from './lib/calendar.mjs';
 
 const USAGE = `用法：
-  npm run new-meeting -- init --username <学工号> --password <密码>   # 存入系统安全存储（一次性）
+  npm run new-meeting -- init --username <教工号> --password <密码>   # 存入系统安全存储（一次性）
   npm run new-meeting -- login [--headed]                            # 检查/自动完成 SSO 登录
   npm run new-meeting -- plan --subject <主题> --start <ISO+08:00> --end <ISO+08:00> [选项...]   # 干跑，无副作用
   npm run new-meeting -- book --subject <主题> --start <ISO+08:00> --end <ISO+08:00> [选项...] [--headed]

@@ -5,7 +5,7 @@
 1. `https://vmr.ecnu.edu.cn/my-meeting` 为 Vue SPA；vmr 会话缺失时跳 `/sign-in?_t=%252Fmy-meeting`。
 2. `/sign-in` 页点击"统一身份认证平台"文字 → `sso.ecnu.edu.cn/login?service=...api.ecnu.edu.cn/user/authorize`（CAS）。
 3. **重要分支**：
-   - SSO 会话已失效 → 停在 CAS 表单页（`#nameInput` 学工号输入框 + `input[type=password]`；**页面无任何 `<button>`，填完凭据后在密码框按 Enter 提交**）。
+   - SSO 会话已失效 → 停在 CAS 表单页（`#nameInput` 教工号输入框 + `input[type=password]`；**页面无任何 `<button>`，填完凭据后在密码框按 Enter 提交**）。
    - SSO 会话仍有效 → 自动授权 302 直跳 `vmr.ecnu.edu.cn/calendar`，不停留 CAS 页。
 4. CAS 登录成功后落地 `vmr.ecnu.edu.cn/calendar`（非 my-meeting），需再次导航到 `/my-meeting`。
 5. 已登录页面特征：body 文本含 `您好,<姓名>`；会议列表页另含 `会议列表`。
@@ -33,9 +33,11 @@
 | `topic` | 会议主题 | 文本（= CLI `--subject`，受控） |
 | `meeting_date` / `meeting_time` / `duration` | 开始日期/时刻/时长分钟 | 受控，由 `--start/--end` 推导 |
 | `password` | 入会密码 | 6 位数字；或 8 位且同时含大写字母+小写字母+数字；缺省自动生成 6 位 |
-| `size` | 容量 | 前端下拉 `100/200/300/500/1000/2000`，按会议室组权限可见子集 |
+| `size` | 容量 | 前端下拉 `100/200/300/500/1000/2000`，按会议室组权限可见子集；校方政策教职工上限 300 人 |
 | `group_id` | 云会议室组（下拉"请选择会议室组"） | 数字；默认硬编码 `'2'`；空闲查询接口可查各组占用 |
 | `usage` | 用途 | 下拉由后端下发，默认 `"办公"` |
+
+> 政策来源（ECNU 信息化治理办公室「视频会议」服务页）：系统面向全校教职员工，自助预约企业版腾讯会议最长 **6 小时**、**300 参会人**以内——与 skill 的单场 6 小时拆分策略一致。
 | `attendees` | 指定参会人 | JSON 数组字符串，默认 `'[]'` |
 | `assistant(s)` / `meeting_guests` / `description`（表单层） | 助手 / 宾客 / 会议描述 | 文本类 |
 

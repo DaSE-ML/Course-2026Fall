@@ -2,6 +2,8 @@
 
 一个 [Agent Skill](https://agentskills.io) 标准的技能包：让 AI 编码助手（Claude Code / opencode / OpenAI Codex 等）一句话完成华东师大云视频（腾讯会议）会议室的**预约、查询、删除**，全程无人工干预，并可联动 Google Calendar 自动建提醒。
 
+> ⚠️ **仅向华东师大教职工开放**：据信息化治理办公室说明，学校为全校教职员工提供自助预约企业版腾讯会议的服务（最长 6 小时、300 参会人以内）。学生统一身份认证账号登录后无法使用会议室预约功能——请勿安装后误试。来源：[信息办「视频会议」服务页](https://eoffice.ecnu.edu.cn/sphy/list.htm)。
+
 > 纯 CLI 工具 + 使用说明书的结构：`scripts/cli.mjs` 是功能本体，`SKILL.md` 教 agent 如何调用它。不装 agent 也能直接当命令行工具用。
 
 ## 功能
@@ -18,6 +20,7 @@
 
 ## 环境要求
 
+- **ECNU 教职工统一身份认证账号**（见上方适用范围说明）
 - Node.js ≥ 22（建议 LTS）
 - 平台：macOS / Windows / Linux 均可
 
@@ -56,21 +59,21 @@ npx playwright install chromium   # 首次需要
 **方式 A · 环境变量（推荐，跨平台一致且不落盘）：**
 
 ```bash
-export ECNU_SSO_USER=<学工号>
+export ECNU_SSO_USER=<教工号>
 export ECNU_SSO_PASS=<统一身份认证密码>
 ```
 
 Windows PowerShell：
 
 ```powershell
-setx ECNU_SSO_USER "<学工号>"
+setx ECNU_SSO_USER "<教工号>"
 setx ECNU_SSO_PASS "<密码>"
 ```
 
 **方式 B · 存入平台安全存储：**
 
 ```bash
-node cli.mjs init --username <学工号> --password <密码>
+node cli.mjs init --username <教工号> --password <密码>
 ```
 
 存储位置按平台自动选择：
@@ -118,6 +121,8 @@ node cli.mjs book --subject ... --start ... --end ... --field description=组会
 
 会议批准后运行 `details --id <申请编号>` 可取得参会链接、会议号、入会密码（JSON 输出），便于补全日历邀请或转发参会人。
 
+> 配额提示：学校政策为教职工版最长单场 **6 小时**、**300 参会人**——超过 6 小时 CLI 会自动拆分为连续多场；`--size` 枚举虽含更大值，通常 300 即为实际上限。
+
 ## 测试与验收
 
 按三层递进；未通过上一层不要进入下一层。
@@ -133,7 +138,7 @@ cd <skill目录>/scripts && npm test
 **L1 · 冒烟测试**（需要凭据，均为只读或零副作用）
 
 ```bash
-node cli.mjs whoami    # 应输出你的学工号，且不含密码 —— 验证凭据读取链路
+node cli.mjs whoami    # 应输出你的教工号，且不含密码 —— 验证凭据读取链路
 node cli.mjs login     # 应输出「登录检查完成」—— 验证 SSO 登录与登录态持久化
 node cli.mjs plan --subject 测试 --start 2026-09-01T14:00:00+08:00 --end 2026-09-01T15:00:00+08:00 --size 300   # 干跑打印计划 JSON，不发任何请求
 node cli.mjs status    # 列出当前申请（可以为空）—— 验证内部 API 与 token 捕获
