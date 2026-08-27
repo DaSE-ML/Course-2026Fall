@@ -1,0 +1,30 @@
+{
+  "name": "ecnu-vmr-cli",
+  "version": "1.0.0",
+  "description": "ECNU 云视频会议预约 CLI (华东师大 vmr skill)",
+  "main": "cli.mjs",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "new-meeting": "node cli.mjs",
+    "postinstall": "playwright install chromium",
+    "test": "node --test \"test/**/*.test.mjs\""
+  },
+  "keywords": [
+    "ecnu",
+    "vmr",
+    "meeting"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "private": "true",
+  "dependencies": {
+    "playwright": "^1.61.0"
+  }
+}
