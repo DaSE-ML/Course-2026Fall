@@ -22,6 +22,22 @@ export class VmrApiClient {
     return normalizeMeetingList(data);
   }
 
+  async getMeeting(applicationId) {
+    const id = String(applicationId ?? '').trim();
+    if (!/^\d+$/.test(id)) {
+      throw new VmrPageError('details 需要数字申请编号：--id <applicationId>（可用 status 查看）。', 'DETAILS_ID_REQUIRED');
+    }
+    const data = await postVmrForm(this.page, '/meeting/get', {
+      user_token: this.token,
+      id,
+      review: 'true',
+    });
+    if (!data?.success || !data?.data) {
+      throw new VmrPageError(`会议详情接口未返回申请 ${id} 的数据；已停止。`, 'API_GET_REJECTED');
+    }
+    return normalizeMeetingDetail(data.data);
+  }
+
   async createMeeting(meeting, options = {}) {
     const payload = buildCreateMeetingPayload(meeting, this.token, {
       generatePassword: this.passwordProvider,
@@ -147,6 +163,30 @@ export function normalizeMeetingRecord(row) {
     durationText: String(row.duration_hour ?? row.duration ?? ''),
     approveStatus: stripHtml(String(row.approve_status ?? row.approveStatus ?? row.status ?? '')),
     raw: row,
+  };
+}
+
+export function normalizeMeetingDetail(data) {
+  const approve = stripHtml(String(data?.approve ?? data?.approve_status ?? ''));
+  let state = 'unknown';
+  if (/待审批|审批中/.test(approve)) state = 'pending';
+  else if (/驳回|拒绝|不通过/.test(approve)) state = 'rejected';
+  else if (approve.includes('批准')) state = 'approved';
+
+  return {
+    applicationId: String(data?.id ?? ''),
+    subject: String(data?.topic ?? ''),
+    startTime: String(data?.start_time ?? ''),
+    endTime: String(data?.end_time ?? ''),
+    approvalState: state,
+    approveStatus: approve,
+    link: data?.join_url ? String(data.join_url) : '',
+    meetingId: String(data?.meeting_id ?? data?.meeting_code ?? ''),
+    password: data?.password == null ? '' : String(data.password),
+    hostUrl: data?.host_url ? String(data.host_url) : '',
+    autoRecord: Boolean(data?.auto_record),
+    waitingRoom: Boolean(data?.waiting_room),
+    usage: String(data?.usage ?? ''),
   };
 }
 

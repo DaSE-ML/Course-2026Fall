@@ -1,7 +1,11 @@
 import { withMeetingPage } from './browser.mjs';
 import { ensureAuthenticated } from './sso.mjs';
-import { createVmrApiClient, findOverlappingMeetingViaApi, verifySubmittedOnceViaApi, verifyDeletionOnceViaApi } from './vmr-api.mjs';
-import { fetchMeetingDetailsViaPage } from './calendar.mjs';
+import {
+  createVmrApiClient,
+  findOverlappingMeetingViaApi,
+  verifySubmittedOnceViaApi,
+  verifyDeletionOnceViaApi,
+} from './vmr-api.mjs';
 import { VmrPageError } from './vmr-read.mjs';
 
 export async function bookMeetings(plan, options = {}) {
@@ -39,7 +43,21 @@ export async function listMeetings(options = {}) {
 export async function fetchMeetingDetails(applicationId, options = {}) {
   return withMeetingPage(async (page) => {
     await ensureAuthenticated(page);
-    return fetchMeetingDetailsViaPage(page, applicationId);
+    const api = await createVmrApiClient(page);
+    const detail = await api.getMeeting(applicationId);
+    if (detail.approvalState === 'pending') {
+      throw new VmrPageError(`申请 ${detail.applicationId} 尚未批准，暂无入会信息。`, 'PENDING_APPROVAL');
+    }
+    if (detail.approvalState === 'rejected') {
+      throw new VmrPageError(`申请 ${detail.applicationId} 已被驳回，无入会信息。`, 'APPLICATION_REJECTED');
+    }
+    if (!detail.link || !detail.meetingId || !detail.password) {
+      throw new VmrPageError(
+        `申请 ${detail.applicationId} 详情缺少入会三要素（链接/会议号/密码），请人工查看详情页。`,
+        'DETAILS_UNAVAILABLE',
+      );
+    }
+    return detail;
   }, options);
 }
 

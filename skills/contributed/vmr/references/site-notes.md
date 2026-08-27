@@ -61,8 +61,9 @@
 
 `user_token, id, quite, duration, meeting_date, meeting_time, topic, password`
 
-### 其他接口能力（未封装，记档备用）
+### 其他接口能力
 
+- `POST /api/v1/meeting/get`（2026-08-27 实测验证）：单条申请详情，body 为 `user_token + id + review:'true'`。响应 `data` 含 `join_url`（参会链接）、`meeting_id`/`meeting_code`（会议号）、`password`（入会密码）、`host_url`（主持人链接，含会话 hash 勿外传）、`approve`/`is_approved`（审批状态）、`start_time/end_time/auto_record/waiting_room/usage` 等。skill 的 `details` 命令即基于此接口。
 - 会议室空闲查询：创建页按 `group + date + time + duration` 触发占用检查（`handleFreeChange`）。
 - 批量创建：页面提供 Excel 导入入口（未调研格式）。
 - 路由带参：创建页支持从路由 params 读 start/end。

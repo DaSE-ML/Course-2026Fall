@@ -168,8 +168,8 @@ node cli.mjs delete --id "$ID"          # 结束后必须执行；再次 status 
 
 - 需要校园网环境下可访问 `vmr.ecnu.edu.cn` 与 `sso.ecnu.edu.cn`。
 - 内部 API 为站点私有实现，若学校改版可能失效；欢迎提 Issue 反馈。
-- `details --id` 的详情页定位策略在部分账号/分组下可能取不到三要素（报 `DETAILS_UNAVAILABLE` 安全停止），此时请人工打开详情页复制 URL，改用 `calendar-draft`。
-- 申请提交后仍需管理员审批，`status` 可查进度。
+- `details --id` 基于 `/meeting/get` 接口实测封装；若输出缺少三要素会报 `DETAILS_UNAVAILABLE` 安全停止，可人工查看详情页后用 `calendar-draft` 兜底。
+- 申请提交后仍需管理员审批（部分场景即时批准），`status` 可查进度。
 
 ## 许可证
 

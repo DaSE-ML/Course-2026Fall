@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { normalizeMeetingOptions, validatePassword } from '../lib/options.mjs';
-import { buildCreateMeetingPayload } from '../lib/vmr-api.mjs';
+import { buildCreateMeetingPayload, normalizeMeetingDetail } from '../lib/vmr-api.mjs';
 
 const MEETING = {
   subject: '课程讨论',
@@ -79,6 +79,34 @@ test('--field 透传与受控字段保护', () => {
 
 test('显式 --field 不能伪造主题/时间/密码', () => {
   assert.throws(() => normalizeMeetingOptions({ fields: ['password=Aa123456'] }), /受控字段/);
+});
+
+test('详情响应规范化：提取三要素与审批状态', () => {
+  const detail = normalizeMeetingDetail({
+    id: 60001,
+    topic: '组会',
+    start_time: '2026-09-01 14:00:00',
+    end_time: '2026-09-01 15:00:00',
+    approve: '批准',
+    is_approved: true,
+    join_url: 'https://meeting.tencent.com/dm/XXXXXX',
+    meeting_id: '123456789',
+    meeting_code: '123456789',
+    password: '881610',
+    auto_record: 1,
+    waiting_room: 0,
+    usage: '办公',
+  });
+  assert.equal(detail.approvalState, 'approved');
+  assert.equal(detail.link, 'https://meeting.tencent.com/dm/XXXXXX');
+  assert.equal(detail.meetingId, '123456789');
+  assert.equal(detail.password, '881610');
+  assert.equal(detail.autoRecord, true);
+});
+
+test('详情规范化区分待审批/驳回', () => {
+  assert.equal(normalizeMeetingDetail({ approve: '待审批' }).approvalState, 'pending');
+  assert.equal(normalizeMeetingDetail({ approve: '驳回' }).approvalState, 'rejected');
 });
 
 test('payload 合并：默认值不变，overrides 生效，密码优先级正确', () => {
