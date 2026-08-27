@@ -22,8 +22,11 @@ export class VmrApiClient {
     return normalizeMeetingList(data);
   }
 
-  async createMeeting(meeting) {
-    const payload = buildCreateMeetingPayload(meeting, this.token, this.passwordProvider());
+  async createMeeting(meeting, options = {}) {
+    const payload = buildCreateMeetingPayload(meeting, this.token, {
+      generatePassword: this.passwordProvider,
+      ...options,
+    });
     const data = await postVmrForm(this.page, '/meeting/edit', payload);
     if (!data?.success) {
       throw new VmrPageError('会议创建接口返回失败；已停止且不会自动重试。', 'API_CREATE_REJECTED');
@@ -84,7 +87,18 @@ export function extractTokenFromPostData(postData) {
   return params.get('user_token');
 }
 
-export function buildCreateMeetingPayload(meeting, userToken, password) {
+export function buildCreateMeetingPayload(meeting, userToken, opts = {}) {
+  const normalized = typeof opts === 'string' ? { password: opts } : (opts ?? {});
+  const overrides = normalized.overrides ?? {};
+  const fallbackPassword = typeof normalized.generatePassword === 'function'
+    ? normalized.generatePassword()
+    : generatePassword();
+  const payload = { ...baseCreateMeetingPayload(meeting, userToken), ...overrides };
+  payload.password = overrides.password ?? normalized.password ?? fallbackPassword;
+  return payload;
+}
+
+function baseCreateMeetingPayload(meeting, userToken) {
   return {
     user_token: userToken,
     duration: String(meeting.durationMinutes),
@@ -112,7 +126,7 @@ export function buildCreateMeetingPayload(meeting, userToken, password) {
     option_interpreter: '0',
     id: '0',
     quite: 'true',
-    password,
+    password: '',
     option_live: '0',
     topic: meeting.subject,
     attendees: '[]',

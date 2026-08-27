@@ -98,6 +98,60 @@ node cli.mjs plan --subject 测试 --start 2026-09-01T14:00:00+08:00 --end 2026-
 
 偶发网易易盾验证码导致无头登录失败时，运行 `node cli.mjs login --headed` 人工滑一次验证码即可恢复全自动。修改密码后需重新 `init`。
 
+### 高级参数（可选）
+
+`book` / `plan` 支持学校系统的完整参数面（默认行为不变，不传即最简预约）：
+
+```bash
+# 自定义密码 + 300 人容量 + 等候室
+node cli.mjs book --subject 组会 --start ... --end ... --password Aa123456 --size 300 --waiting-room
+
+# 每周例会 ×8 次
+node cli.mjs book --subject 例会 --start ... --end ... --recurrence weekly --times 8
+
+# 校内限定 + 自动录制
+node cli.mjs book --subject 讲座 --start ... --end ... --sso-only --auto-record
+
+# 其他官方字段直接透传（键名见 references/site-notes.md「API 参数参考」）
+node cli.mjs book --subject ... --start ... --end ... --field description=组会设备说明
+```
+
+会议批准后运行 `details --id <申请编号>` 可取得参会链接、会议号、入会密码（JSON 输出），便于补全日历邀请或转发参会人。
+
+## 测试与验收
+
+按三层递进；未通过上一层不要进入下一层。
+
+**L0 · 单元测试**（不需要凭据和网络）
+
+```bash
+cd <skill目录>/scripts && npm test
+```
+
+预期：19 个用例全部 pass。覆盖：时间策略、payload 构建、选项校验（size 枚举/密码规则/周期映射）、`--field` 受控字段保护、列表规范化、提交与删除核验逻辑。
+
+**L1 · 冒烟测试**（需要凭据，均为只读或零副作用）
+
+```bash
+node cli.mjs whoami    # 应输出你的学工号，且不含密码 —— 验证凭据读取链路
+node cli.mjs login     # 应输出「登录检查完成」—— 验证 SSO 登录与登录态持久化
+node cli.mjs plan --subject 测试 --start 2026-09-01T14:00:00+08:00 --end 2026-09-01T15:00:00+08:00 --size 300   # 干跑打印计划 JSON，不发任何请求
+node cli.mjs status    # 列出当前申请（可以为空）—— 验证内部 API 与 token 捕获
+```
+
+预期：全部正常返回，`status` 与网页"My Meeting"一致。
+
+**L2 · 端到端真实验证**（有副作用：会真实占用会议室并等待审批，请挑空闲时段、结束时清理）
+
+```bash
+ID=$(node cli.mjs book --subject E2E测试请忽略 --start <明天某空闲时段起 ISO+08:00> --end <止 ISO+08:00> | grep -oE '申请 [0-9]+' | grep -oE '[0-9]+')
+node cli.mjs status                     # 出现该编号且状态为 待审批/批准
+node cli.mjs details --id "$ID"         # 批准后应输出 link/meetingId/password 三要素
+node cli.mjs delete --id "$ID"          # 结束后必须执行；再次 status 确认消失
+```
+
+验收标准：book 返回申请编号 → status 见对应记录 → 批准后 details 给出三要素 → delete 后列表核验通过。任何一步报错码停止即视为失败，勿重试，先查 references/site-notes.md 的已知边界。
+
 ## 可选：Google Calendar 联动
 
 若你的 agent 环境配置了 `google-calendar` MCP，`book` 成功后会自动在 primary 日历创建事件（**固定提前 60 分钟 popup 提醒**），`delete` 成功后同步删事件。没有该 MCP 则跳过，不影响预约。
@@ -114,6 +168,7 @@ node cli.mjs plan --subject 测试 --start 2026-09-01T14:00:00+08:00 --end 2026-
 
 - 需要校园网环境下可访问 `vmr.ecnu.edu.cn` 与 `sso.ecnu.edu.cn`。
 - 内部 API 为站点私有实现，若学校改版可能失效；欢迎提 Issue 反馈。
+- `details --id` 的详情页定位策略在部分账号/分组下可能取不到三要素（报 `DETAILS_UNAVAILABLE` 安全停止），此时请人工打开详情页复制 URL，改用 `calendar-draft`。
 - 申请提交后仍需管理员审批，`status` 可查进度。
 
 ## 许可证

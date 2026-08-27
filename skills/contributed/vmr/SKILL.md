@@ -24,13 +24,18 @@ node "$VMR" <子命令>
 |--------|------|
 | `init --username <学工号> --password <密码>` | 凭据存入平台安全存储（仅首次；或直接设置环境变量 `ECNU_SSO_USER` / `ECNU_SSO_PASS`，免落盘且优先级最高） |
 | `login [--headed]` | 检查/自动完成 SSO 登录；验证码时用 `--headed` 人工滑一次 |
-| `book --subject <主题> --start <ISO> --end <ISO>` | 一键预约，输出申请编号 |
+| `book --subject <主题> --start <ISO> --end <ISO> [选项...]` | 一键预约，输出申请编号 |
 | `status` | 列出我的会议申请（编号/时间/主题/审批状态） |
+| `details --id <申请编号>` | 取已批准会议的参会链接/会议号/入会密码（JSON），用于补全日历 |
 | `delete --id <申请编号>` | 删除指定申请 |
 | `plan --subject <主题> --start <ISO> --end <ISO>` | 干跑校验时间（无副作用） |
 | `calendar-draft --meeting-url <URL> --subject <主题> --start <ISO> --end <ISO>` | 打开 Google Calendar 预填草稿页 |
 
 架构：SSO 凭据存平台安全存储（macOS Keychain / Windows DPAPI / 其他平台 0600 本地文件；服务名 `new-meeting-ecnu-sso`）；Playwright 专用持久化浏览器 `~/.new-meeting/profile`（不影响日常浏览器）；登录态过期时自动用凭据重登；内部 API 提交后一次核验，状态未知不重试。
+
+## 高级预约参数
+
+用户未提出额外要求时不要添加任何选项，保持默认。可加的参数：`--password`、`--size`、`--group-id`、`--usage`、周期三件套 `--recurrence daily|weekly|monthly --until/--times`、安全开关 `--waiting-room --sso-only --water-mark`、功能开关 `--auto-record --mute --jbh --h323 --live --interpreter`、任意官方字段透传 `--field 键=值`。完整字段与取值见 [API 参数参考](references/site-notes.md)。
 
 ## Google Calendar 联动（重要）
 
@@ -38,12 +43,13 @@ node "$VMR" <子命令>
 
 | vmr 操作 | 日历联动 |
 |----------|----------|
-| `book` 成功（输出申请编号后） | 用 `google-calendar` MCP 在 primary 日历创建事件：标题=会议主题、时间=会议起止、提醒=开始前 60 分钟（popup）、描述含"ECNU 云视频 申请编号 N" |
-| 会议批准（status 见"批准"） | 可选：更新日历描述，补充会议号/密码（详情页可读时） |
+| `book` 成功（输出申请编号后） | 用 `google-calendar` MCP 在 primary 日历创建事件：标题=会议主题、时间=会议起止、提醒=开始前 60 分钟（popup）、描述含"ECNU 云视频 申请编号 N"（此时尚未批准，无入会信息） |
+| 会议批准（status 见"批准"） | **必做**：运行 `details --id N` 取得 `{link, meetingId, password}`，用 `google-calendar` MCP 更新该事件——描述追加三行：`会议链接：<link>` / `会议号：<meetingId>` / `入会密码：<password>`（保持原提醒与标题不变）。若报 `PENDING_APPROVAL` 则暂缓，等下次 status 见批准再执行 |
 | `delete` 成功 | 用 `google-calendar` MCP 删除/搜索对应标题+时间的旧事件，保持日历与云视频一致 |
 
 日历事件搜索依据：标题精确匹配 + 开始时间匹配 + 描述含申请编号。
 若当前环境无 `google-calendar` MCP，则跳过联动并在回复中说明，不影响预约本身。
+人工兜底：也可以让用户打开详情页复制 URL 后运行 `calendar-draft` 命令预填日历草稿页。
 
 ## 验证码兜底
 
@@ -59,8 +65,10 @@ node "$VMR" <子命令>
 
 登录跳转链、内部 API、页面分类详见 [站点调研记录](references/site-notes.md)。
 
-## 测试
+## 验证与测试
 
 ```bash
 cd <skill_dir>/scripts && npm test
 ```
+
+分级验证：L0 单元测试（无需凭据/网络）→ L1 冒烟（只读）→ L2 真实预约（有副作用，需管理员审批，测完 `delete` 清理）。详细步骤见仓库 README「测试与验收」。

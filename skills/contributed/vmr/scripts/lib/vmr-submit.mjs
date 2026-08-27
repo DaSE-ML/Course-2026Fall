@@ -1,6 +1,7 @@
 import { withMeetingPage } from './browser.mjs';
 import { ensureAuthenticated } from './sso.mjs';
 import { createVmrApiClient, findOverlappingMeetingViaApi, verifySubmittedOnceViaApi, verifyDeletionOnceViaApi } from './vmr-api.mjs';
+import { fetchMeetingDetailsViaPage } from './calendar.mjs';
 import { VmrPageError } from './vmr-read.mjs';
 
 export async function bookMeetings(plan, options = {}) {
@@ -15,7 +16,7 @@ export async function bookMeetings(plan, options = {}) {
         console.log(`提示：发现同主题同开始时间的已有申请（申请 ${existing.applicationId}），仍继续提交；如不需要请稍后 delete。`);
       }
 
-      await api.createMeeting(meeting);
+      await api.createMeeting(meeting, { payloadOverrides: plan.options?.payloadOverrides });
       results.push(await verifySubmittedOnceViaApi(api, meeting));
       if (results.at(-1).status !== 'submitted_pending_approval') break;
     }
@@ -32,6 +33,13 @@ export async function listMeetings(options = {}) {
     await ensureAuthenticated(page);
     const api = await createVmrApiClient(page);
     return api.listMeetings();
+  }, options);
+}
+
+export async function fetchMeetingDetails(applicationId, options = {}) {
+  return withMeetingPage(async (page) => {
+    await ensureAuthenticated(page);
+    return fetchMeetingDetailsViaPage(page, applicationId);
   }, options);
 }
 
