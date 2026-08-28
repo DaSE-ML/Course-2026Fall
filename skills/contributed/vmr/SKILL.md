@@ -26,9 +26,10 @@ node "$VMR" <子命令>
 |--------|------|
 | `init --username <教工号> --password <密码>` | 凭据存入平台安全存储（仅首次；或直接设置环境变量 `ECNU_SSO_USER` / `ECNU_SSO_PASS`，免落盘且优先级最高） |
 | `login [--headed]` | 检查/自动完成 SSO 登录；验证码时用 `--headed` 人工滑一次 |
-| `book --subject <主题> --start <ISO> --end <ISO> [选项...]` | 一键预约，输出申请编号 |
+| `book --subject <主题> --start <ISO> --end <ISO> [选项...]` | 一键预约，输出申请编号；`--wait-approval` 额外等待审批并打印会议号/密码 |
 | `status` | 列出我的会议申请（编号/时间/主题/审批状态） |
 | `details --id <申请编号>` | 取已批准会议的参会链接/会议号/入会密码（JSON），用于补全日历 |
+| `wait --id <申请编号> [--timeout <秒>]` | 按 500ms→1s→2s→5s→10s 退避轮询等待批准（默认至多 120 秒），批准后打印会议号/密码 |
 | `delete --id <申请编号>` | 删除指定申请 |
 | `plan --subject <主题> --start <ISO> --end <ISO>` | 干跑校验时间（无副作用） |
 | `calendar-draft --meeting-url <URL> --subject <主题> --start <ISO> --end <ISO>` | 打开 Google Calendar 预填草稿页 |
@@ -45,9 +46,11 @@ node "$VMR" <子命令>
 
 | vmr 操作 | 日历联动 |
 |----------|----------|
-| `book` 成功（输出申请编号后） | 用 `google-calendar` MCP 在 primary 日历创建事件：标题=会议主题、时间=会议起止、提醒=开始前 60 分钟（popup）、描述含"ECNU 云视频 申请编号 N"（此时尚未批准，无入会信息） |
-| 会议批准（status 见"批准"） | **必做**：运行 `details --id N` 取得 `{link, meetingId, password}`，用 `google-calendar` MCP 更新该事件——描述追加三行：`会议链接：<link>` / `会议号：<meetingId>` / `入会密码：<password>`（保持原提醒与标题不变）。若报 `PENDING_APPROVAL` 则暂缓，等下次 status 见批准再执行 |
+| `book --wait-approval` 批准（CLI 打印会议号/密码后） | 用 `google-calendar` MCP 在 primary 日历创建事件：标题=会议主题、时间=会议起止、提醒=开始前 60 分钟（popup）、描述含"ECNU 云视频 申请编号 N + 会议号 + 入会密码"，一步到位；如需参会链接，可再运行 `details --id N` 补入描述 |
+| `book`（未等审批或审批超时） | 先创建事件（描述含申请编号，标注待审批）；批准后（`wait --id N` 或 status 见"批准"）更新事件——运行 `details --id N` 取 `{link, meetingId, password}`，描述追加三行：`会议链接：<link>` / `会议号：<meetingId>` / `入会密码：<password>`（保持原提醒与标题不变）。若报 `PENDING_APPROVAL` 则暂缓，下次再执行 |
 | `delete` 成功 | 用 `google-calendar` MCP 删除/搜索对应标题+时间的旧事件，保持日历与云视频一致 |
+
+实测（2026-08-28）：审批由系统自动完成、即时生效（提交后 1 秒内首查即"批准"），`--wait-approval` 通常首次轮询即命中；`wait` 超时未批（如需人工审批）时先建日历事件、批准后再补信息。
 
 日历事件搜索依据：标题精确匹配 + 开始时间匹配 + 描述含申请编号。
 若当前环境无 `google-calendar` MCP，则跳过联动并在回复中说明，不影响预约本身。

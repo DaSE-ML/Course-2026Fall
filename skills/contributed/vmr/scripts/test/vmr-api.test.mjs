@@ -2,12 +2,15 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
   buildCreateMeetingPayload,
+  buildListMeetingsForm,
   extractTokenFromPostData,
   findMatchingMeetings,
   findOverlappingMeetingViaApi,
   normalizeMeetingList,
+  parseZoomInfo,
   verifyDeletionOnceViaApi,
   verifySubmittedOnceViaApi,
+  waitForApprovalViaApi,
 } from '../lib/vmr-api.mjs';
 import { createMeetingPlan } from '../lib/plan.mjs';
 import { VmrPageError } from '../lib/vmr-read.mjs';
@@ -32,6 +35,87 @@ function apiWithRows(rows) {
 test('从接口 POST body 中提取 user_token 且不依赖其他字段', () => {
   assert.equal(extractTokenFromPostData('foo=bar&user_token=abc123TOKEN_xyz&topic=x'), 'abc123TOKEN_xyz');
   assert.equal(extractTokenFromPostData('foo=bar'), null);
+});
+
+test('list 请求带分页与范围参数避免落入默认首页快照', () => {
+  const form = buildListMeetingsForm('TOKEN_VALUE');
+  assert.equal(form.user_token, 'TOKEN_VALUE');
+  assert.equal(form.page_size, '200');
+  assert.equal(form.page, '1');
+  assert.equal(form.search, '');
+  assert.ok(typeof form['date_range[0]'] === 'string' && form['date_range[0]'].length > 0);
+  assert.ok(typeof form['date_range[1]'] === 'string' && form['date_range[1]'].length > 0);
+  assert.equal(form.use_date_range, '0');
+});
+
+test('parseZoomInfo 解析会议号与密码并容忍格式差异', () => {
+  assert.deepEqual(parseZoomInfo('会议号:987654321<br>密码:135790'), { meetingCode: '987654321', password: '135790' });
+  assert.deepEqual(parseZoomInfo('会议号：987-654-321\n密码：aB12'), { meetingCode: '987-654-321', password: 'aB12' });
+  assert.deepEqual(parseZoomInfo('会议号:987654321'), { meetingCode: '987654321' });
+  assert.deepEqual(parseZoomInfo(null), {});
+  assert.deepEqual(parseZoomInfo('审批中，详情暂不可见'), {});
+});
+
+test('waitForApprovalViaApi 轮询至批准并携带入会信息', async () => {
+  const rowsByPoll = [
+    [{ applicationId: '12345', subject: '课程讨论', approveStatus: '待审批', raw: {} }],
+    [{ applicationId: '12345', subject: '课程讨论', approveStatus: '待审批', raw: {} }],
+    [{ applicationId: '12345', subject: '课程讨论', approveStatus: '批准', raw: { zoom_info: '会议号:987654321<br>密码:135790' } }],
+  ];
+  let calls = 0;
+  const api = { listMeetings: async () => rowsByPoll[Math.min(calls++, rowsByPoll.length - 1)] };
+  const sleeps = [];
+  const result = await waitForApprovalViaApi(api, '12345', {
+    timeoutMs: 60_000,
+    intervals: [1_000],
+    sleepFn: (ms) => { sleeps.push(ms); },
+    nowFn: () => 0,
+  });
+  assert.equal(result.status, 'approved');
+  assert.equal(result.polls, 3);
+  assert.deepEqual(result.joinInfo, { meetingCode: '987654321', password: '135790' });
+  assert.deepEqual(sleeps, [1_000, 1_000]);
+});
+
+test('waitForApprovalViaApi 默认按 500ms→1s→2s→5s→10s 退避并封顶', async () => {
+  const pending = [{ applicationId: '12345', subject: '课程讨论', approveStatus: '待审批', raw: {} }];
+  const api = { listMeetings: async () => pending };
+  let clock = 0;
+  const sleeps = [];
+  const delays = [];
+  const result = await waitForApprovalViaApi(api, '12345', {
+    timeoutMs: 60_000,
+    sleepFn: (ms) => { sleeps.push(ms); clock += ms; },
+    nowFn: () => clock,
+    onPoll: (_status, _polls, delayMs) => delays.push(delayMs),
+  });
+  assert.equal(result.status, 'approval_timeout');
+  assert.deepEqual(sleeps, [500, 1_000, 2_000, 5_000, 10_000, 10_000, 10_000, 10_000, 10_000]);
+  assert.deepEqual(delays, [500, 1_000, 2_000, 5_000, 10_000, 10_000, 10_000, 10_000, 10_000, 10_000]);
+});
+
+test('waitForApprovalViaApi 超时返回当前状态、始终未出现则返回 missing', async () => {
+  const pendingApi = { listMeetings: async () => [{ applicationId: '12345', subject: '课程讨论', approveStatus: '待审批', raw: {} }] };
+  let clock = 0;
+  const timeout = await waitForApprovalViaApi(pendingApi, '12345', {
+    timeoutMs: 60_000,
+    intervals: [5_000],
+    sleepFn: () => { clock += 30_000; },
+    nowFn: () => clock,
+  });
+  assert.equal(timeout.status, 'approval_timeout');
+  assert.equal(timeout.record.approveStatus, '待审批');
+  assert.ok(timeout.polls >= 2);
+
+  let clock2 = 0;
+  const missing = await waitForApprovalViaApi({ listMeetings: async () => [] }, '12345', {
+    timeoutMs: 10_000,
+    intervals: [5_000],
+    sleepFn: () => { clock2 += 5_000; },
+    nowFn: () => clock2,
+  });
+  assert.equal(missing.status, 'missing');
+  assert.equal(missing.record, null);
 });
 
 test('创建会议 payload 使用计划时间、时长和默认会议选项', () => {

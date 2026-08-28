@@ -13,10 +13,12 @@
 
 ## 内部 API（2026-07-24 授权验证，2026-08-24 重构后复验）
 
-- `POST /api/v1/meeting/list`、`POST /api/v1/meeting/edit`（创建）、`POST /api/v1/meeting/delete`，`application/x-www-form-urlencoded`。
+- `POST /api/v1/meeting/list`、`POST /api/v1/meeting/edit`（创建）、`POST /api/v1/meeting/delete`、`POST /api/v1/meeting/get`（详情），`application/x-www-form-urlencoded`。
+- **list 必须带分页/范围参数**（`search=&page_size=200&page=1&date_range[0..1]=宽范围&use_date_range=0`，见 `buildListMeetingsForm`）。只传 `user_token` 时服务端返回默认首屏快照，超出部分的申请不可见——曾导致"创建成功但核验 unknown"的误判（2026-08-28 实测：带参请求返回全量，裸请求仅返回旧数据首屏）。
 - `user_token` 从会议列表页自身发起的 list 请求 POST body 中监听捕获，仅存于进程内存。
 - 创建成功标志：响应 `success: true`；列表核验按 `id`/`topic`/`start_time` 匹配（结构化字段，非页面文本）。
-- 审批可能即时完成（实测某次申请提交后状态即为"批准"）。
+- **审批为系统自动且即时**（2026-08-28 实测：提交接口返回后 1 秒内首次 list 核验，状态已是"批准"；`wait` 的 500ms 首轮轮询通常即命中）。
+- 列表行 `zoom_info` 字段（批准后）格式：`会议号:987654321<br>密码:135790`（示例为虚构数据），由 `parseZoomInfo` 解析；参会完整链接需走 `/meeting/get`（`details --id`）。
 
 ## 审批详情页（未完全复验）
 

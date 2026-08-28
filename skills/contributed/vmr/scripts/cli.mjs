@@ -4,16 +4,17 @@ import { MeetingPlanError } from './lib/request.mjs';
 import { saveSsoCredentials, readSsoCredentials } from './lib/credentials.mjs';
 import { withMeetingPage } from './lib/browser.mjs';
 import { ensureAuthenticated, SsoError } from './lib/sso.mjs';
-import { bookMeetings, listMeetings, deleteMeetingById, fetchMeetingDetails } from './lib/vmr-submit.mjs';
+import { bookMeetings, listMeetings, deleteMeetingById, fetchMeetingDetails, waitForApproval } from './lib/vmr-submit.mjs';
 import { openCalendarDraft } from './lib/calendar.mjs';
 
 const USAGE = `用法：
   npm run new-meeting -- init --username <教工号> --password <密码>   # 存入系统安全存储（一次性）
   npm run new-meeting -- login [--headed]                            # 检查/自动完成 SSO 登录
   npm run new-meeting -- plan --subject <主题> --start <ISO+08:00> --end <ISO+08:00> [选项...]   # 干跑，无副作用
-  npm run new-meeting -- book --subject <主题> --start <ISO+08:00> --end <ISO+08:00> [选项...] [--headed]
+  npm run new-meeting -- book --subject <主题> --start <ISO+08:00> --end <ISO+08:00> [选项...] [--headed] [--wait-approval] [--timeout <秒>]
   npm run new-meeting -- status                                       # 列出我的会议申请
   npm run new-meeting -- details --id <申请编号>                       # 取已批准会议的链接/会议号/密码（JSON）
+  npm run new-meeting -- wait --id <申请编号> [--timeout <秒>]          # 退避轮询等待批准，批准后打印会议号/密码
   npm run new-meeting -- delete --id <申请编号>                        # 删除指定申请
   npm run new-meeting -- calendar-draft --meeting-url <详情页URL> --subject <主题> --start <ISO+08:00> --end <ISO+08:00>
 
@@ -40,11 +41,12 @@ const USAGE = `用法：
   - SSO 凭据保存在平台安全存储：macOS Keychain / Windows DPAPI / 其他平台为 0600 本地文件（服务名 new-meeting-ecnu-sso），仅在自动登录时由本进程临时读取；也可改用环境变量 ECNU_SSO_USER / ECNU_SSO_PASS（优先级最高，不落盘）。
   - 浏览器使用专用持久化实例（~/.new-meeting/profile），不影响日常浏览器；登录态持久保存。
   - 时间必须是 Asia/Shanghai 的 ISO-8601 并带 +08:00 偏移，例如 2026-08-26T14:00:00+08:00。
-  - book 为一键预约：自动登录 → 提交 → 一次核验，全程无人工确认；提交后等待管理员审批。
+  - book 为一键预约：自动登录 → 提交 → 一次核验，全程无人工确认；提交后等待管理员审批（实测多为系统自动、即时完成）。
+  - --wait-approval：book 提交后按 500ms→1s→2s→5s→10s 退避轮询审批（默认至多 120 秒，--timeout 可调），批准后打印会议号/密码。
   - 全部官方字段及取值见 references/site-notes.md「API 参数参考」。
   - 若 SSO 触发验证码导致自动登录失败，运行 login --headed 人工完成一次即可。`;
 
-const VALUELESS_FLAGS = new Set(['headed', 'waiting-room', 'sso-only', 'water-mark', 'auto-record', 'live', 'interpreter']);
+const VALUELESS_FLAGS = new Set(['headed', 'waiting-room', 'sso-only', 'water-mark', 'auto-record', 'live', 'interpreter', 'wait-approval']);
 
 function parseArguments(argv) {
   const [command, ...tokens] = argv;
@@ -135,12 +137,31 @@ async function main() {
     if (!results.length || results.some((r) => r.status !== 'submitted_pending_approval')) {
       process.exitCode = 1;
     }
+    if (options.waitApproval) {
+      const waitOptions = {
+        headless: options.headless !== false,
+        timeoutMs: (Number(options.timeout) > 0 ? Number(options.timeout) : 120) * 1000,
+      };
+      for (const result of results.filter((r) => r.applicationId)) {
+        console.log(`等待申请 ${result.applicationId} 审批（至多 ${Math.round(waitOptions.timeoutMs / 1000)} 秒）…`);
+        await waitForApproval(result.applicationId, waitOptions);
+      }
+    }
     return;
   }
 
   if (command === 'status') {
     const records = await listMeetings({ headless: options.headless !== false });
     printMeetingRecords(records);
+    return;
+  }
+
+  if (command === 'wait') {
+    const timeoutSeconds = Number(options.timeout) > 0 ? Number(options.timeout) : 120;
+    await waitForApproval(options.id, {
+      headless: options.headless !== false,
+      timeoutMs: timeoutSeconds * 1000,
+    });
     return;
   }
 

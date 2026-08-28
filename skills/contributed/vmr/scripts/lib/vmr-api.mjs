@@ -18,7 +18,7 @@ export class VmrApiClient {
   }
 
   async listMeetings() {
-    const data = await postVmrForm(this.page, '/meeting/list', { user_token: this.token });
+    const data = await postVmrForm(this.page, '/meeting/list', buildListMeetingsForm(this.token));
     return normalizeMeetingList(data);
   }
 
@@ -221,6 +221,64 @@ export async function verifySubmittedOnceViaApi(api, meeting) {
   return matches.length > 0
     ? { subject: meeting.subject, status: 'submitted_pending_approval', applicationId: matches[0].applicationId }
     : { subject: meeting.subject, status: 'submission_unknown', detail: '创建接口返回后一次列表核验未找到对应申请' };
+}
+
+export function buildListMeetingsForm(userToken) {
+  return {
+    user_token: userToken,
+    search: '',
+    page_size: '200',
+    page: '1',
+    'date_range[0]': '2025-01-01 00:00',
+    'date_range[1]': '2035-12-31 23:59',
+    use_date_range: '0',
+  };
+}
+
+export function parseZoomInfo(value) {
+  const text = String(value ?? '').replace(/<br\s*\/?>/giu, '\n');
+  const meetingCode = text.match(/会议号[:：]\s*([0-9-]+)/u)?.[1];
+  const password = text.match(/密码[:：]\s*([0-9A-Za-z]+)/u)?.[1];
+  const joinInfo = {};
+  if (meetingCode) joinInfo.meetingCode = meetingCode;
+  if (password) joinInfo.password = password;
+  return joinInfo;
+}
+
+export function isApprovedStatus(status) {
+  return String(status ?? '').includes('批准');
+}
+
+export const APPROVAL_POLL_INTERVALS_MS = [500, 1_000, 2_000, 5_000, 10_000];
+
+export async function waitForApprovalViaApi(api, applicationId, options = {}) {
+  const timeoutMs = options.timeoutMs ?? 120_000;
+  const intervals = options.intervals ?? APPROVAL_POLL_INTERVALS_MS;
+  const sleep = options.sleepFn ?? ((ms) => new Promise((resolve) => setTimeout(resolve, ms)));
+  const now = options.nowFn ?? Date.now;
+  const deadline = now() + timeoutMs;
+  let last = null;
+  let polls = 0;
+
+  while (true) {
+    polls += 1;
+    const records = await api.listMeetings();
+    last = records.find((record) => record.applicationId === String(applicationId)) ?? null;
+    if (last && isApprovedStatus(last.approveStatus)) {
+      return { applicationId: String(applicationId), status: 'approved', record: last, joinInfo: parseZoomInfo(last.raw?.zoom_info), polls };
+    }
+    const delayMs = intervals[Math.min(polls - 1, intervals.length - 1)];
+    if (options.onPoll) options.onPoll(last?.approveStatus ?? null, polls, delayMs);
+    if (now() + delayMs > deadline) break;
+    await sleep(delayMs);
+  }
+
+  return {
+    applicationId: String(applicationId),
+    status: last ? 'approval_timeout' : 'missing',
+    record: last,
+    polls,
+  };
 }
 
 export async function verifyDeletionOnceViaApi(api, applicationId) {
