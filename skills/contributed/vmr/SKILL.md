@@ -26,12 +26,12 @@ node "$VMR" <子命令>
 |--------|------|
 | `init --username <教工号> --password <密码>` | 凭据存入平台安全存储（仅首次；或直接设置环境变量 `ECNU_SSO_USER` / `ECNU_SSO_PASS`，免落盘且优先级最高） |
 | `login [--headed]` | 检查/自动完成 SSO 登录；验证码时用 `--headed` 人工滑一次 |
-| `book --subject <主题> --start <ISO> --end <ISO> [选项...]` | 一键预约，输出申请编号；`--wait-approval` 额外等待审批并打印会议号/密码 |
+| `book [--subject <主题>] (--start <ISO> --end <ISO> | --start <ISO> --duration <分钟> | --asap --duration <分钟>) [选项...]` | 一键预约，输出申请编号；`--wait-approval` 额外等待审批并打印会议号/密码 |
 | `status` | 列出我的会议申请（编号/时间/主题/审批状态） |
 | `details --id <申请编号>` | 取已批准会议的参会链接/会议号/入会密码（JSON），用于补全日历 |
 | `wait --id <申请编号> [--timeout <秒>]` | 按 500ms→1s→2s→5s→10s 退避轮询等待批准（默认至多 120 秒），批准后打印会议号/密码 |
 | `delete --id <申请编号>` | 删除指定申请 |
-| `plan --subject <主题> --start <ISO> --end <ISO>` | 干跑校验时间（无副作用） |
+| `plan [--subject <主题>] (--start <ISO> --end <ISO> | --asap --duration <分钟>)` | 干跑校验时间（无副作用） |
 | `calendar-draft --meeting-url <URL> --subject <主题> --start <ISO> --end <ISO>` | 打开 Google Calendar 预填草稿页 |
 
 架构：SSO 凭据存平台安全存储（macOS Keychain / Windows DPAPI / 其他平台 0600 本地文件；服务名 `new-meeting-ecnu-sso`）；Playwright 专用持久化浏览器 `~/.new-meeting/profile`（不影响日常浏览器）；登录态过期时自动用凭据重登；内部 API 提交后一次核验，状态未知不重试。
@@ -39,6 +39,16 @@ node "$VMR" <子命令>
 ## 高级预约参数
 
 用户未提出额外要求时不要添加任何选项，保持默认。可加的参数：`--password`、`--size`、`--group-id`、`--usage`、周期三件套 `--recurrence daily|weekly|monthly --until/--times`、安全开关 `--waiting-room --sso-only --water-mark`、功能开关 `--auto-record --mute --jbh --h323 --live --interpreter`、任意官方字段透传 `--field 键=值`。完整字段与取值见 [API 参数参考](references/site-notes.md)。
+
+## 时间与主题的自动调整（服务端实测规则，2026-09-12）
+
+提交 `/api/v1/meeting/edit` 时服务端逐条校验，CLI 已在本地固化以下策略，正常不会触发拒绝：
+
+1. **主题至少 3 个字符**（`"主题 必须要 3个字符"`）：无 `--subject` 或主题不足 3 字符时，自动使用默认主题「周X会议」（按开始日期星期几）。
+2. **开始时间只能是整点或半点**（`"时间只能是 00 和 30分钟"`）：开始时间自动向上对齐；`--duration <分钟>` 可替代 `--end`。
+3. **开始时间必须严格在未来**（`"无法创建过去的会议!"`）：正在进行中的半点时段也**不可**预约（实测 16:47 提交 16:30 开始被拒）。因此"马上开会"用 `--asap --duration <分钟>`：自动取下一个整/半点（预留 90 秒提交缓冲，最坏约等 29 分钟）。对"当前半点时段内"的开始时间自动前移到下一个半点；更久远的过去时间仍报错，避免静默改写。
+
+CLI 会在预约摘要中打印所有自动调整（`提示：主题已自动设为…`、`提示：开始时间已对齐到整/半点…`），agent 应将摘要中的最终时间（`有效开始`/`有效结束时间`）作为日历事件时间。
 
 ## Google Calendar 联动（重要）
 

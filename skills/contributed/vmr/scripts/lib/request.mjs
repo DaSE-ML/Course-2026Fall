@@ -10,16 +10,22 @@ const SHANGHAI_OFFSET = '+08:00';
 
 export function parseRequest(input) {
   const subject = typeof input.subject === 'string' ? input.subject.trim() : '';
-  if (!subject) {
-    throw new MeetingPlanError('会议主题不能为空。');
-  }
 
   if (input.timeZone !== 'Asia/Shanghai') {
     throw new MeetingPlanError('时区必须为 Asia/Shanghai。');
   }
 
   const start = parseShanghaiDateTime(input.start, '开始时间');
-  const end = parseShanghaiDateTime(input.end, '结束时间');
+  let end;
+  if (input.durationMinutes !== undefined && input.durationMinutes !== null && `${input.durationMinutes}` !== '') {
+    const minutes = Number(input.durationMinutes);
+    if (!Number.isFinite(minutes) || minutes <= 0) {
+      throw new MeetingPlanError('时长必须为正数（单位：分钟）。');
+    }
+    end = new Date(start.getTime() + minutes * 60_000);
+  } else {
+    end = parseShanghaiDateTime(input.end, '结束时间');
+  }
   if (end.getTime() <= start.getTime()) {
     throw new MeetingPlanError('结束时间必须晚于开始时间。');
   }

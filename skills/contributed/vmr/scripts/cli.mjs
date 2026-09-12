@@ -1,6 +1,7 @@
 import process from 'node:process';
 import { createMeetingPlan, renderPlanSummary } from './lib/plan.mjs';
-import { MeetingPlanError } from './lib/request.mjs';
+import { MeetingPlanError, formatShanghai } from './lib/request.mjs';
+import { nextHalfHourSlot } from './lib/time-policy.mjs';
 import { saveSsoCredentials, readSsoCredentials } from './lib/credentials.mjs';
 import { withMeetingPage } from './lib/browser.mjs';
 import { ensureAuthenticated, SsoError } from './lib/sso.mjs';
@@ -10,8 +11,8 @@ import { openCalendarDraft } from './lib/calendar.mjs';
 const USAGE = `用法：
   npm run new-meeting -- init --username <教工号> --password <密码>   # 存入系统安全存储（一次性）
   npm run new-meeting -- login [--headed]                            # 检查/自动完成 SSO 登录
-  npm run new-meeting -- plan --subject <主题> --start <ISO+08:00> --end <ISO+08:00> [选项...]   # 干跑，无副作用
-  npm run new-meeting -- book --subject <主题> --start <ISO+08:00> --end <ISO+08:00> [选项...] [--headed] [--wait-approval] [--timeout <秒>]
+  npm run new-meeting -- plan [--subject <主题>] (--start <ISO+08:00> --end <ISO+08:00> | --asap --duration <分钟>) [选项...]   # 干跑，无副作用
+  npm run new-meeting -- book [--subject <主题>] (--start <ISO+08:00> --end <ISO+08:00> | --start <ISO+08:00> --duration <分钟> | --asap --duration <分钟>) [选项...] [--headed] [--wait-approval] [--timeout <秒>]
   npm run new-meeting -- status                                       # 列出我的会议申请
   npm run new-meeting -- details --id <申请编号>                       # 取已批准会议的链接/会议号/密码（JSON）
   npm run new-meeting -- wait --id <申请编号> [--timeout <秒>]          # 退避轮询等待批准，批准后打印会议号/密码
@@ -38,6 +39,9 @@ const USAGE = `用法：
   --field <键=值>              其他官方接口字段透传（可重复；不可覆盖受控字段）
 
 说明：
+  - 服务端校验规则（2026-09-12 实测）：主题至少 3 个字符；开始时间只能是整点或半点；开始时间必须严格在未来（正在进行中的半点时段也不可预约）。
+  - 无 --subject 或主题不足 3 个字符时，自动使用默认主题「周X会议」（按开始日期的星期几）。
+  - 开始时间自动向上对齐到整点/半点；--asap 表示"马上开会"：自动取下一个整/半点开始（最坏约 29 分钟后），须配合 --duration 指定时长。
   - SSO 凭据保存在平台安全存储：macOS Keychain / Windows DPAPI / 其他平台为 0600 本地文件（服务名 new-meeting-ecnu-sso），仅在自动登录时由本进程临时读取；也可改用环境变量 ECNU_SSO_USER / ECNU_SSO_PASS（优先级最高，不落盘）。
   - 浏览器使用专用持久化实例（~/.new-meeting/profile），不影响日常浏览器；登录态持久保存。
   - 时间必须是 Asia/Shanghai 的 ISO-8601 并带 +08:00 偏移，例如 2026-08-26T14:00:00+08:00。
@@ -46,7 +50,7 @@ const USAGE = `用法：
   - 全部官方字段及取值见 references/site-notes.md「API 参数参考」。
   - 若 SSO 触发验证码导致自动登录失败，运行 login --headed 人工完成一次即可。`;
 
-const VALUELESS_FLAGS = new Set(['headed', 'waiting-room', 'sso-only', 'water-mark', 'auto-record', 'live', 'interpreter', 'wait-approval']);
+const VALUELESS_FLAGS = new Set(['headed', 'waiting-room', 'sso-only', 'water-mark', 'auto-record', 'live', 'interpreter', 'wait-approval', 'asap']);
 
 function parseArguments(argv) {
   const [command, ...tokens] = argv;
@@ -85,9 +89,23 @@ function planInput(options) {
     subject: options.subject,
     start: options.start,
     end: options.end,
+    durationMinutes: options.duration,
     timeZone: 'Asia/Shanghai',
     options,
   };
+}
+
+// --asap："马上开会"。取下一个整/半点作为开始时间（预留 90 秒提交缓冲），时长必须显式给出。
+// 注意：--asap 经 VALUELESS_FLAGS 解析为空字符串，故用 !== undefined 判断而非真值判断。
+function applyAsap(options) {
+  if (options.asap === undefined) return;
+  const minutes = Number(options.duration);
+  if (!(minutes > 0)) {
+    throw new MeetingPlanError('--asap 需要配合 --duration <分钟> 指定时长（服务端仅接受整点/半点开始且必须在未来）。');
+  }
+  const start = nextHalfHourSlot(new Date());
+  options.start = formatShanghai(start);
+  options.end = formatShanghai(new Date(start.getTime() + minutes * 60_000));
 }
 
 function printMeetingRecords(records) {
@@ -124,6 +142,7 @@ async function main() {
   }
 
   if (command === 'plan') {
+    applyAsap(options);
     const plan = createMeetingPlan(planInput(options));
     console.log(renderPlanSummary(plan));
     console.log(`\nJSON：\n${JSON.stringify(plan, null, 2)}`);
@@ -131,6 +150,7 @@ async function main() {
   }
 
   if (command === 'book') {
+    applyAsap(options);
     const plan = createMeetingPlan(planInput(options));
     console.log(renderPlanSummary(plan));
     const results = await bookMeetings(plan, { headless: options.headless !== false });
