@@ -1,6 +1,10 @@
 # SummerCamp-2026
 2026 Summer Camp — Vibe Coding course materials and showcase
 
+## 机器学习课程材料（2026 秋）
+
+统计方法与机器学习 · 机器学习部分的学生材料在 **[ml-2026/](ml-2026/)**（课件、实验阅读版、作业说明）。请进入该目录后打开 `index.html` 或运行 `启动课程.bat` / `start.sh`。
+
 ## 课程社区
 
 <img src="assets/summercamp-live-more-banner.png" alt="Live More, Work Less. SummerCamp 2026 Vibe Coding Banner" width="100%">
