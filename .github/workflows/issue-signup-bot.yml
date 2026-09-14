@@ -1,19 +1,19 @@
-name: discussion-signup-bot
+name: issue-signup-bot
 
 on:
-  discussion:
-    types: [created, edited]
+  issues:
+    types: [opened, edited]
 
 permissions:
-  discussions: write
+  issues: write
 
 concurrency:
-  group: discussion-signup-bot
+  group: issue-signup-bot
   cancel-in-progress: false
 
 jobs:
   assign:
-    if: github.event.discussion.category.slug == 'signup'
+    if: github.event.issue.state == 'open'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,4 +21,4 @@ jobs:
         run: bash .github/scripts/signup-bot.sh
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DISCUSSION_NUMBER: ${{ github.event.discussion.number }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}

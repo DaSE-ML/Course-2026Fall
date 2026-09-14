@@ -1,44 +1,20 @@
 #!/usr/bin/env bash
-# 组队报名机器人：自动为报名帖分配组号（ML26-01 ~ ML26-25）并维护一条确认评论。
-# 幂等：同一帖多次触发（created/edited）时复用已分配的组号，只更新确认评论。
+# 组队报名机器人（issue 版）：自动为报名 issue 分配组号（ML26-01 ~ ML26-25）并维护一条确认评论。
+# 幂等：同一 issue 多次触发（opened/edited）时复用已分配的组号，只更新确认评论。
 set -euo pipefail
 
 TAG='<!-- signup-bot-confirm -->'
 MAX_GROUP=25
-BOT_LOGIN='github-actions[bot]'
+num="${ISSUE_NUMBER:?}"
+repo="$GITHUB_REPOSITORY"
 
-ghq() { gh api graphql -f query="$1" "${@:2}"; }
-jq_field() { jq -r "$1" <<<"$DATA"; }
-
-owner="${GITHUB_REPOSITORY_OWNER:?}"
-name="${GITHUB_REPOSITORY_NAME:?}"
-num="${DISCUSSION_NUMBER:?}"
-
-DATA=$(ghq 'query($o:String!,$n:String!,$num:Int!){
-  repository(owner:$o,name:$n){
-    id
-    discussion(number:$num){
-      id title body closed
-      comments(first:50){ nodes{ id author{ login } body } }
-    }
-    discussionCategories(first:20){ nodes{ id slug } }
-    discussions(first:100){ nodes{ number title category{ slug } } }
-  }
-}' -f o="$owner" -f n="$name" -F num="$num")
-
-repo_id=$(jq_field '.data.repository.id')
-d_id=$(jq_field '.data.repository.discussion.id')
-d_title=$(jq_field '.data.repository.discussion.title')
-d_body=$(jq_field '.data.repository.discussion.body')
-closed=$(jq_field '.data.repository.discussion.closed')
-
-# 报名截止（老师关闭帖子）后冻结，不再处理任何编辑
-[[ "$closed" == "true" ]] && exit 0
-
-signup_cat_id=$(jq -r '.data.repository.discussionCategories.nodes[] | select(.slug=="signup") | .id' <<<"$DATA")
+ISSUE=$(gh api "repos/$repo/issues/$num")
+body=$(jq -r '.body // ""' <<<"$ISSUE")
+title=$(jq -r '.title' <<<"$ISSUE")
+[[ $(jq -r '.state' <<<"$ISSUE") == "closed" ]] && exit 0
 
 # ---------- 解析成员 ----------
-members=$(jq -r '.data.repository.discussion.body' <<<"$DATA" \
+members=$(jq -r '.body // ""' <<<"$ISSUE" \
   | grep -oE '@[A-Za-z0-9][A-Za-z0-9-]{0,38}' | sed 's/-*$//' | sort -fu)
 count=$(grep -c . <<<"$members" || true)
 
@@ -50,63 +26,62 @@ if (( count == 0 )); then
 else
   while IFS= read -r u; do
     u=${u#@}
-    if ! gh api -q .login "users/$u" >/dev/null 2>&1; then
+    t=$(gh api -q .type "users/$u" 2>/dev/null || echo "")
+    if [[ -z "$t" ]]; then
       errors+=("GitHub 用户名 \`@$u\` 不存在，请逐字核对（含大小写）。")
+    elif [[ "$t" != "User" ]]; then
+      errors+=("\`@$u\` 不是个人账号（类型为 $t），请填写同学本人的 GitHub 个人账号。")
     fi
   done <<<"$members"
 fi
 if (( count > 5 )); then
   errors+=("识别到 ${count} 位成员，超过每组 5 人上限。")
 elif (( count > 0 && count < 4 )); then
-  warnings+=("目前识别到 ${count} 位成员（每组需 4–5 人）。可以先提交占号，凑齐后**编辑本帖**更新名单，机器人会自动重新确认。")
+  warnings+=("目前识别到 ${count} 位成员（每组需 4–5 人）。可以先提交占号，凑齐后**编辑本 issue** 更新名单，机器人会自动重新确认。")
 fi
 
 # ---------- 分配组号（已有则沿用） ----------
 group=''
-if [[ "$d_title" =~ ML26-([0-9]{2}) ]]; then
+if [[ "$title" =~ ML26-([0-9]{2}) ]]; then
   group=${BASH_REMATCH[1]}
 else
-  used=$(jq -r --arg cat "$signup_cat_id" \
-    '.data.repository.discussions.nodes[] | select(.category.slug=="signup") | .title' <<<"$DATA" \
-    | grep -oE 'ML26-[0-9]{2}' | grep -oE '[0-9]{2}' | sort -u)
+  used=$(gh api "repos/$repo/issues?state=all&per_page=100" --paginate -q '.[].title' 2>/dev/null \
+    | grep -oE 'ML26-[0-9]{2}' | grep -oE '[0-9]{2}' | sort -u || true)
   for i in $(seq -w 1 "$MAX_GROUP"); do
     if ! grep -qx "$i" <<<"$used"; then group=$i; break; fi
   done
   if [[ -z "$group" ]]; then
     errors+=("25 个组号已全部用完，请联系老师增开仓库。")
   else
-    new_title="ML26-$group · ${d_title#*· }"
-    ghq 'mutation($id:ID!,$t:String!){ updateDiscussion(input:{discussionId:$id,title:$t}){ discussion { number } } }' \
-      -f id="$d_id" -f t="$new_title" >/dev/null
+    gh api -X PATCH "repos/$repo/issues/$num" -f title="ML26-$group · 组队报名" >/dev/null
+    gh issue edit "$num" --repo "$repo" --add-label "ML26-$group" >/dev/null 2>&1 || true
   fi
 fi
 
 # ---------- 生成确认评论（幂等 upsert） ----------
 if (( ${#errors[@]} )); then
-  body_lines=("$TAG" "### ❌ 报名未通过，请修改后重新提交" "")
-  for e in "${errors[@]}"; do body_lines+=("- $e"); done
-  body_lines+=("" "修改方法：编辑本帖正文（右上角 ⋯ → Edit），机器人会自动重新检查。")
+  out=("$TAG" "### ❌ 报名未通过，请修改后重新提交" "")
+  for e in "${errors[@]}"; do out+=("- $e"); done
+  out+=("" "修改方法：编辑本 issue 的描述（右上角 ⋯ → Edit），机器人会自动重新检查。")
 else
-  body_lines=("$TAG" "### ✅ 已登记：ML26-$group" "" "| # | GitHub 用户名 |" "| - | - |")
+  out=("$TAG" "### ✅ 已登记：ML26-$group" "" "| # | GitHub 用户名 |" "| - | - |")
   i=1
   while IFS= read -r u; do
-    body_lines+=("| $i | $u |"); i=$((i+1))
+    out+=("| $i | $u |"); i=$((i+1))
   done <<<"$members"
-  body_lines+=("" "共 ${count} 人。权限将在报名截止后由老师统一开通。" "")
-  for w in "${warnings[@]:-}"; do [[ -n "$w" ]] && body_lines+=("> ℹ️ $w"); done
-  body_lines+=("名单有变动时请**编辑本帖**，机器人会自动更新本确认。")
+  out+=("" "共 ${count} 人。组仓库权限将在报名截止后由老师统一开通。" "")
+  for w in "${warnings[@]:-}"; do [[ -n "$w" ]] && out+=("> ℹ️ $w"); done
+  out+=("名单有变动时请**编辑本 issue**，机器人会自动更新本确认。")
 fi
-comment_body=$(printf '%s\n' "${body_lines[@]}")
+cbody=$(printf '%s\n' "${out[@]}")
 
-comment_id=$(jq -r --arg tag "$TAG" --arg bot "$BOT_LOGIN" \
-  '.data.repository.discussion.comments.nodes[] | select(.author.login==$bot and (.body|contains($tag))) | .id' <<<"$DATA" | head -1)
+cid=$(gh api "repos/$repo/issues/$num/comments?per_page=100" \
+  -q '.[] | select(.body | contains("<!-- signup-bot-confirm -->")) | .id' 2>/dev/null | head -1 || true)
 
-if [[ -n "$comment_id" ]]; then
-  ghq 'mutation($id:ID!,$b:String!){ updateDiscussionComment(input:{commentId:$id,body:$b}){ comment { id } } }' \
-    -f id="$comment_id" -F b="$comment_body" >/dev/null
+if [[ -n "${cid:-}" ]]; then
+  gh api -X PATCH "repos/$repo/issues/$num/comments/$cid" -F body="$cbody" >/dev/null
 else
-  ghq 'mutation($id:ID!,$b:String!){ addDiscussionComment(input:{discussionId:$id,body:$b}){ comment { id } } }' \
-    -f id="$d_id" -F b="$comment_body" >/dev/null
+  gh api -X POST "repos/$repo/issues/$num/comments" -F body="$cbody" >/dev/null
 fi
 
-echo "discussion #$num: group=${group:-none} members=$count errors=${#errors[@]}"
+echo "issue #$num: group=${group:-none} members=$count errors=${#errors[@]}"

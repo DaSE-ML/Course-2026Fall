@@ -1,0 +1,33 @@
+name: 组队报名
+description: 每组 4–5 人；提交后机器人自动分配组号（ML26-01 起）
+title: "组队报名"
+labels: ["组队报名"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **提交后机器人会自动为你们组分配仓库号（`ML26-01` ~ `ML26-25`）并在下方回帖确认，无需自己选号。**
+
+        - 每组 **4–5 人**：可先提交占号，凑齐后**编辑本 issue** 更新名单，机器人自动重新确认；满 5 人封顶。
+        - 提交前请确认组内每位同学都已注册 GitHub，并能正常登录。
+  - type: input
+    id: leader
+    attributes:
+      label: 组长 GitHub 用户名
+      description: 只填用户名本身，不要带 @（例：zhangsan）
+      placeholder: zhangsan
+    validations:
+      required: true
+  - type: textarea
+    id: members
+    attributes:
+      label: 全体成员名单（含组长，每行一位）
+      description: |
+        格式：`姓名 @github用户名`，第一行写组长。
+        用户名务必逐字核对（含大小写）：仓库权限按 @用户名 开通，拼错会开通失败。
+      placeholder: |
+        张三 @zhangsan
+        李四 @lisi
+        王五 @wangwu
+    validations:
+      required: true
