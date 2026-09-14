@@ -1,0 +1,24 @@
+name: discussion-signup-bot
+
+on:
+  discussion:
+    types: [created, edited]
+
+permissions:
+  discussions: write
+
+concurrency:
+  group: discussion-signup-bot
+  cancel-in-progress: false
+
+jobs:
+  assign:
+    if: github.event.discussion.category.slug == 'signup'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 自动分配组号并确认
+        run: bash .github/scripts/signup-bot.sh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISCUSSION_NUMBER: ${{ github.event.discussion.number }}
