@@ -81,6 +81,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #4177b7;outline-offset:4p
 }
 .course-table tbody tr:last-child td{border-bottom:0}
 .course-table tbody tr:hover{background:#fbfcfe}
+.course-table tbody tr.lesson-locked{background:#f7f9fc}
+.course-table tbody tr.lesson-locked:hover{background:#f7f9fc}
 
 .col-lesson{width:72px;text-align:center}
 .lesson-badge{
@@ -91,6 +93,37 @@ a:focus-visible,button:focus-visible{outline:3px solid #4177b7;outline-offset:4p
   background:#eef3fa;
   border-radius:8px;
 }
+.lesson-badge-locked{
+  color:#8194aa;
+  background:#eef1f5;
+}
+
+.col-slides .lesson-title.locked{
+  color:#8194aa;
+  font-weight:600;
+  cursor:not-allowed;
+}
+.lesson-lock-hint{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  color:#8194aa;
+  font-size:13px;
+  margin-top:5px;
+}
+.lock-icon{
+  flex-shrink:0;
+  color:#a0adb8;
+  vertical-align:middle;
+}
+
+.col-lab .is-disabled{
+  display:inline-flex;
+  opacity:.55;
+  cursor:not-allowed;
+  pointer-events:none;
+}
+.lab-live-links.locked{color:#c5d4e4;font-size:13px}
 
 .col-slides .lesson-title{
   display:inline-block;
