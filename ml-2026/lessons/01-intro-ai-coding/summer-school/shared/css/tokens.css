@@ -1,0 +1,21 @@
+:root {
+  --bg: #101722;
+  --panel: #182230;
+  --panel-strong: #223043;
+  --ink: #f4f7fb;
+  --muted: #aebdca;
+  --line: #385069;
+  --terminal: #0a1018;
+  --terminal-2: #121d2a;
+  --terminal-line: #36506a;
+  --white: #ffffff;
+  --acid: #f7ba4b;
+  --signal: #61d4e6;
+  --success: #99e3bb;
+  --warning: #ffd078;
+  --danger: #ff9d98;
+  --sans: ui-rounded, "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --radius: 4px;
+  --shadow: 0 18px 38px rgba(1, 8, 18, .28);
+}

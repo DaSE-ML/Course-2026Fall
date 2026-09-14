@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="pixel-robots.css" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: transparent; }
+  #app { width: 100%; height: 100%; position: relative; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="pixel-robots.iife.js"></script>
+<script>
+  if (window.mountPixelRobots) {
+    window.mountPixelRobots(document.getElementById('app'));
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@media print {
+  @page { size: landscape; margin: 10mm; }
+  html, body { background: #fff; color: #111; }
+  .deck { display: block; }
+  .deckbar, .deckfoot, .deckfoot__controls, .help { display: none !important; }
+  .stage { overflow: visible; }
+  .slide, .slide.is-active { display: grid !important; min-height: 0; page-break-after: always; break-after: page; padding: 12mm; background: #fff; color: #111; box-shadow: none; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .slide--evidence { grid-template-columns: .8fr 1.2fr; }
+  h1, h2, h3 { color: #111; }.lede, .evidence-grid p, .challenge p:last-child { color: #333; }.kicker, .deckbar__page { color: #075f73; }
+  .terminal, .file-tree, .json, .diff, .evidence-grid, .comparison, .challenge { border-color: #697788; box-shadow: none; }.terminal pre, .file-tree, .json, .diff { min-height: 0; background: #f2f4f6; color: #111; }.diff del { border-left-color: #9b302a; background: #fff0ee; color: #651b16; }.diff ins { border-left-color: #17633b; background: #effcf3; color: #124525; }.chrome, .comparison__head, .source { background: #e7ebef !important; color: #111 !important; }.evidence-grid { background: #b9c1c9; }.evidence-grid article, .evidence-grid > div, .comparison > div, .challenge { background: #fff !important; }.comparison__preferred { background: #edf7fa !important; }.flow-band span, .flow-band strong { background: #fff; color: #111; }.source a { color: #075f73; }
+}
