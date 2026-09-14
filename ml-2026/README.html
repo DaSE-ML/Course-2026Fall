@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>环境与运行</title><link rel="stylesheet" href="lessons/assets/portal.css"></head><body><main class="doc-main"><header class="doc-header"><a class="back" href="index.html">← 返回课程目录</a><div class="doc-nav"><a class="btn btn-sm btn-ghost" href="README.html">环境与运行</a><a class="btn btn-sm btn-ghost" href="docs/resources.html">资料来源</a></div></header><h1 id="环境与运行">环境与运行</h1>
+<p>华东师范大学数据科学与工程学院 · 本科三年级 · 机器学习部分（2026 秋）</p>
+<h2 id="一键启动">一键启动</h2>
+<ul>
+<li><strong>Windows</strong>：双击 <code>启动课程.bat</code></li>
+<li><strong>macOS</strong>：双击 <code>启动课程.command</code></li>
+<li><strong>终端</strong>：在课程目录运行 <code>./start.sh</code></li>
+</ul>
+<p>会先打开 <a href="index.html">index.html</a>，再启动 JupyterLab（端口 8888）。<strong>保持启动窗口开启</strong>；关闭启动窗口后 JupyterLab 会一并退出。结束使用时可在终端按 Ctrl+C 关闭服务器。</p>
+<h2 id="课程材料在哪里">课程材料在哪里</h2>
+<p>每章材料在 <code>lessons/0X-讲名/</code>：</p>
+<table>
+<thead>
+<tr class="header">
+<th>文件</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>slides.html</code></td>
+<td>课件（浏览器打开，方向键翻页；无教师备注）</td>
+</tr>
+<tr class="even">
+<td><code>notebook/</code></td>
+<td>实验 notebook（在 JupyterLab 中交互运行）</td>
+</tr>
+<tr class="odd">
+<td><code>notebook.html</code></td>
+<td>含已执行输出的阅读版（无需运行即可对照）</td>
+</tr>
+</tbody>
+</table>
+<p>入口页 <a href="index.html">index.html</a> 汇总各章链接。</p>
+<h2 id="内核选择重要">内核选择（重要）</h2>
+<p>课件数字锚定在两组环境，<strong>请按章节选择内核</strong>：</p>
+<table>
+<thead>
+<tr class="header">
+<th>内核名</th>
+<th>用于</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ecnu-ml</strong>（<code>.venv</code>，scikit-learn 1.9.0）</td>
+<td>第 1–9 章</td>
+</tr>
+<tr class="even">
+<td><strong>ecnu-hf</strong>（<code>.venv-hf</code>，PyTorch + transformers）</td>
+<td>第 10 章</td>
+</tr>
+</tbody>
+</table>
+<p>在 JupyterLab 菜单 <strong>Kernel → Change Kernel</strong> 切换。第 1–9 章请勿选 HF 内核，否则结果可能与课件不一致。建议 <strong>File → Save Notebook As</strong> 另存副本再改代码，避免覆盖原文件。</p>
+<h2 id="在-lab-里操作">在 Lab 里操作</h2>
+<ul>
+<li><strong>Shift+Enter</strong>：运行当前单元格</li>
+<li><strong>Kernel → Restart Kernel and Run All Cells</strong>：从头完整复现（耗时较长）</li>
+</ul>
+<p>JupyterLab 默认只在本机访问（127.0.0.1），无需把 notebook 上传到公网。</p>
+<h2 id="换电脑或环境报错">换电脑或环境报错</h2>
+<p>虚拟环境绑定本机 Python，<strong>不要</strong>直接复制 <code>.venv</code> 或 <code>.venv-hf</code> 到其他电脑。请按课程提供的依赖说明在本机重新创建环境；仍失败时对照课件中的 Python / scikit-learn 版本说明。</p>
+<h2 id="离线阅读">离线阅读</h2>
+<p><code>slides.html</code> 与 <code>notebook.html</code> 可直接用浏览器打开，无需联网。首次运行某些实验可能需要下载数据或模型，以各章 notebook 说明为准。</p>
+</main></body></html>

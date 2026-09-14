@@ -1,0 +1,352 @@
+/* 课程入口 index 与 md 文档页共享样式（与 course.css 同色板） */
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{
+  margin:0;
+  background:#f0f3f7;
+  color:#192b41;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.65;
+}
+a{color:#174b87;text-underline-offset:4px}
+a:focus-visible,button:focus-visible{outline:3px solid #4177b7;outline-offset:4px}
+
+/* —— 入口页 —— */
+.portal-main{max-width:1250px;margin:0 auto;padding:48px 40px 64px}
+.portal-meta{color:#52657a;font-size:15px;margin:0 0 6px}
+.portal-main h1{font-size:clamp(28px,4vw,42px);line-height:1.25;margin:8px 0 0;font-weight:650;letter-spacing:-.02em}
+.portal-intro{font-size:19px;max-width:850px;margin:18px 0 0;line-height:1.6;color:#334862}
+
+.hero{
+  margin:28px 0 32px;
+  padding:22px 26px;
+  background:linear-gradient(135deg,#eef3fa 0%,#f7fafc 100%);
+  border:1px solid #d5dfe9;
+  border-left:5px solid #4177b7;
+  border-radius:10px;
+}
+.hero-stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.chip{
+  display:inline-block;
+  padding:5px 12px;
+  font-size:14px;font-weight:600;
+  color:#174b87;
+  background:white;
+  border:1px solid #c5d4e4;
+  border-radius:999px;
+}
+.hero-actions,.nav-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.nav-links{margin:24px 0 28px}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:8px 16px;
+  font-size:15px;font-weight:600;
+  text-decoration:none;
+  border-radius:6px;
+  border:1px solid transparent;
+  transition:background .15s,border-color .15s,box-shadow .15s;
+}
+.btn-primary{color:white;background:#174b87;border-color:#174b87}
+.btn-primary:hover{background:#1e5a9e}
+.btn-secondary{color:#174b87;background:white;border-color:#8194aa}
+.btn-secondary:hover{background:#eef3fa;border-color:#4177b7}
+.btn-ghost{color:#52657a;background:transparent;border-color:#c5d4e4}
+.btn-ghost:hover{background:white;color:#174b87}
+.btn-sm{padding:5px 11px;font-size:13px;font-weight:600;border-radius:5px}
+.btn-lab{color:#52657a;background:#f7f9fc;border-color:#c5d4e4;font-weight:500}
+.btn-lab:hover{background:#eef3fa;color:#174b87;border-color:#8194aa}
+
+.table-wrap{
+  background:white;
+  border:1px solid #d5dfe9;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(25,43,65,.06);
+  overflow:hidden;
+}
+.course-table{width:100%;border-collapse:collapse;margin:0}
+.course-table th{
+  text-align:left;
+  font-weight:600;
+  font-size:14px;
+  color:#52657a;
+  background:#f7f9fc;
+  padding:14px 18px;
+  border-bottom:1px solid #d5dfe9;
+}
+.course-table td{
+  padding:16px 18px;
+  border-bottom:1px solid #e8eef4;
+  vertical-align:top;
+}
+.course-table tbody tr:last-child td{border-bottom:0}
+.course-table tbody tr:hover{background:#fbfcfe}
+.course-table tbody tr.lesson-locked{background:#f7f9fc}
+.course-table tbody tr.lesson-locked:hover{background:#f7f9fc}
+
+.col-lesson{width:72px;text-align:center}
+.lesson-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:40px;height:40px;
+  font-size:15px;font-weight:700;
+  color:#174b87;
+  background:#eef3fa;
+  border-radius:8px;
+}
+.lesson-badge-locked{
+  color:#8194aa;
+  background:#eef1f5;
+}
+
+.col-slides .lesson-title.locked{
+  color:#8194aa;
+  font-weight:600;
+  cursor:not-allowed;
+}
+.lesson-lock-hint{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  color:#8194aa;
+  font-size:13px;
+  margin-top:5px;
+}
+.lock-icon{
+  flex-shrink:0;
+  color:#a0adb8;
+  vertical-align:middle;
+}
+
+.col-lab .is-disabled{
+  display:inline-flex;
+  opacity:.55;
+  cursor:not-allowed;
+  pointer-events:none;
+}
+.lab-live-links.locked{color:#c5d4e4;font-size:13px}
+
+.col-slides .lesson-title{
+  display:inline-block;
+  font-size:17px;font-weight:650;
+  line-height:1.35;
+  text-decoration:none;
+}
+.col-slides .lesson-title:hover{text-decoration:underline}
+.col-lab{font-size:14px;max-width:360px}
+.lab-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.lab-live-links a{font-size:13px;font-weight:500}
+.lab-live-links .sep{color:#c5d4e4;margin:0 4px}
+
+.col-extra{font-size:14px}
+.col-extra .btn-sm{margin-bottom:6px}
+
+.callout{
+  border-left:5px solid #23756c;
+  background:#f1f8f6;
+  padding:18px 24px;
+  margin:28px 0;
+  border-radius:0 8px 8px 0;
+}
+.callout-title{margin:0 0 10px;font-size:18px;color:#17655d}
+.callout p{margin:8px 0}
+.callout ul{margin:8px 0 0;padding-left:1.25em}
+.callout li{margin:6px 0}
+.callout code{font-family:"SFMono-Regular",Consolas,monospace;background:rgba(255,255,255,.7);padding:2px 6px;border-radius:3px;font-size:.9em}
+
+.portal-footer{
+  color:#8194aa;
+  margin-top:36px;
+  padding-top:20px;
+  border-top:1px solid #d5dfe9;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.section-heading{font-size:22px;margin:36px 0 14px;color:#192b41}
+
+/* —— md 文档页 —— */
+.doc-main{max-width:980px;margin:0 auto;padding:48px 40px 80px;font-size:17px;line-height:1.75}
+.doc-header{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:12px;
+  margin-bottom:24px;
+  padding-bottom:16px;
+  border-bottom:1px solid #d5dfe9;
+}
+.doc-header .back{font-size:15px;text-decoration:none;font-weight:500}
+.doc-header .back:hover{text-decoration:underline}
+.doc-nav{display:flex;flex-wrap:wrap;gap:8px}
+.doc-main h1{font-size:34px;line-height:1.3;margin:0 0 22px;color:#192b41}
+.doc-main h2{font-size:24px;margin-top:34px;border-left:4px solid #4177b7;padding-left:12px}
+.doc-main h3{font-size:20px;margin-top:26px;color:#174b87}
+.doc-main code{font-family:"SFMono-Regular",Consolas,monospace;background:#eef3fa;padding:2px 6px;border-radius:3px;font-size:.9em}
+.doc-main pre{background:#eef3fa;padding:14px 16px;overflow:auto;line-height:1.5;border-radius:6px}
+.doc-main pre code{padding:0;background:none}
+.doc-main table{width:100%;border-collapse:collapse;font-size:.92em;margin:14px 0;background:white;border:1px solid #d5dfe9;border-radius:8px;overflow:hidden}
+.doc-main th{text-align:left;color:#174b87;background:#eef3fa}
+.doc-main td,.doc-main th{padding:10px 14px;border-bottom:1px solid #d5dfe9}
+.doc-main blockquote{border-left:5px solid #23756c;background:#f1f8f6;margin:16px 0;padding:10px 18px;border-radius:0 6px 6px 0}
+.doc-main blockquote p{margin:6px 0}
+.doc-main li{margin:6px 0}
+.doc-main img{max-width:100%}
+.doc-main hr{border:0;border-top:1px solid #d5dfe9;margin:30px 0}
+
+@media(max-width:750px){
+  .portal-main,.doc-main{padding:28px 16px 48px}
+  .portal-main h1{font-size:30px}
+  .table-wrap{border-radius:8px;overflow:auto;-webkit-overflow-scrolling:touch}
+  .course-table{min-width:640px}
+  .course-table td,.course-table th{padding:12px 14px}
+  .col-slides .lesson-title{font-size:16px}
+  .hero{padding:18px 16px}
+}
+
+@media print{
+  body{background:white}
+  .portal-main,.doc-main{padding:0;max-width:none}
+  .hero,.table-wrap{box-shadow:none;border:1px solid #ccc}
+  .course-table tbody tr:hover{background:transparent}
+  .doc-main{font-size:11pt}
+}
+
+/* —— 学生版入口（NotebookLM + 学术线稿） —— */
+.student-portal{
+  position:relative;
+  min-height:100vh;
+  background-color:#f5f5f2;
+  color:#192b41;
+}
+/* 全屏点阵底纹（1px 点 · 24px 间距 · SVG 避免亚像素不渲染） */
+.student-portal::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-color:#f5f5f2;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='1' fill='%23174b87' fill-opacity='0.07'/%3E%3C/svg%3E");
+  background-size:24px 24px;
+}
+.student-portal .portal-main{max-width:1120px;padding-top:32px}
+.student-portal .portal-topbar{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:12px;
+  padding-bottom:20px;
+  margin-bottom:8px;
+  border-bottom:1px solid #e4e4df;
+}
+.student-portal .portal-brand{
+  font-size:14px;font-weight:650;letter-spacing:.04em;
+  color:#52657a;text-transform:uppercase;
+}
+.student-portal .portal-topnav{display:flex;flex-wrap:wrap;gap:18px}
+.student-portal .portal-topnav a{
+  font-size:14px;font-weight:500;color:#52657a;text-decoration:none;
+}
+.student-portal .portal-topnav a:hover{color:#174b87;text-decoration:underline}
+
+.student-portal .student-hero{
+  display:grid;
+  grid-template-columns:1fr minmax(260px,420px);
+  gap:32px 40px;
+  align-items:center;
+  padding:36px 0 28px;
+  margin-bottom:8px;
+}
+.student-portal .pill-intro{
+  margin-bottom:14px;
+  background:#eef3fa;
+  border-color:#d5dfe9;
+  color:#174b87;
+  font-size:13px;
+}
+.student-portal .student-title{
+  margin:0;
+  font-family:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,serif;
+  font-size:clamp(32px,4.5vw,46px);
+  font-weight:700;
+  line-height:1.15;
+  letter-spacing:-.02em;
+  color:#0f2238;
+}
+.student-portal .student-subtitle{
+  margin:10px 0 0;
+  font-size:17px;font-weight:600;color:#4177b7;
+}
+.student-portal .student-lead{
+  margin:16px 0 0;
+  max-width:36em;
+  font-size:16px;line-height:1.65;color:#52657a;
+}
+.student-portal .hero-actions{margin-top:22px}
+.student-portal .btn-primary{
+  padding:10px 20px;border-radius:999px;
+  box-shadow:0 2px 8px rgba(23,75,135,.18);
+}
+.student-portal .btn-secondary{border-radius:999px;background:transparent}
+.student-portal .btn-arrow{margin-left:4px;font-weight:400}
+.student-portal .student-hero-viz .hero-viz-svg{
+  display:block;width:100%;max-width:400px;height:auto;margin-left:auto;
+}
+
+.student-portal .feature-cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin:28px 0 12px;
+}
+.student-portal .feature-card{
+  background:white;
+  border:1px solid #e8e8e3;
+  border-radius:12px;
+  padding:20px 18px 18px;
+  box-shadow:0 1px 3px rgba(25,43,65,.04);
+}
+.student-portal .feature-icon{
+  width:22px;height:22px;
+  color:#174b87;
+  margin-bottom:12px;
+}
+.student-portal .feature-card h3{
+  margin:0 0 8px;
+  font-size:16px;font-weight:650;color:#192b41;
+}
+.student-portal .feature-card p{
+  margin:0;
+  font-size:14px;line-height:1.55;color:#52657a;
+}
+.student-portal .feature-card code{
+  font-family:"SFMono-Regular",Consolas,monospace;
+  font-size:.88em;
+  background:#f0f3f7;padding:1px 5px;border-radius:3px;
+}
+
+.student-portal .lessons-heading{
+  margin:28px 0 14px;
+  font-size:20px;font-weight:650;color:#192b41;
+}
+.student-portal .table-wrap{
+  border-color:#e8e8e3;
+  box-shadow:0 2px 12px rgba(25,43,65,.05);
+}
+.student-portal .lesson-badge{
+  border:1px solid #d5dfe9;
+  background:white;
+  font-variant-numeric:tabular-nums;
+}
+.student-portal .portal-footer{
+  border-top-color:#e4e4df;
+  margin-top:40px;
+}
+
+@media(max-width:900px){
+  .student-portal .student-hero{grid-template-columns:1fr}
+  .student-portal .student-hero-viz .hero-viz-svg{margin:0 auto;max-width:340px}
+  .student-portal .feature-cards{grid-template-columns:1fr}
+}
+
+@media print{
+  .student-portal::before{display:none}
+  .student-portal{background-color:#fff}
+  .student-portal .student-hero-viz,.student-portal .feature-cards{display:none}
+}

@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>本地 JupyterLab</title><style>*{box-sizing:border-box}body{margin:0;background:#f0f3f7;color:#192b41;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;font-size:17px}main{max-width:980px;margin:0 auto;padding:55px 40px 80px}h1{font-size:34px;line-height:1.3;margin:14px 0 22px;color:#192b41}h2{font-size:24px;margin-top:34px;border-left:4px solid #4177b7;padding-left:12px}h3{font-size:20px;margin-top:26px;color:#174b87}a{color:#174b87;text-underline-offset:4px}code{font-family:"SFMono-Regular",Consolas,monospace;background:#eef3fa;padding:2px 6px;border-radius:3px;font-size:.9em}pre{background:#eef3fa;padding:14px 16px;overflow:auto;line-height:1.5}pre code{padding:0;background:none}table{width:100%;border-collapse:collapse;font-size:.92em;margin:14px 0}th{text-align:left;color:#174b87;background:#eef3fa}td,th{padding:8px 12px;border-bottom:1px solid #d5dfe9}blockquote{border-left:5px solid #23756c;background:#f1f8f6;margin:16px 0;padding:10px 18px}blockquote p{margin:6px 0}li{margin:6px 0}img{max-width:100%}.back{display:inline-block;margin-bottom:18px;font-size:15px}hr{border:0;border-top:1px solid #d5dfe9;margin:30px 0}@media print{body{background:white;font-size:11pt}main{padding:0;max-width:none}}</style></head><body><main><a class="back" href="../index.html">← 返回课程目录</a><h1 id="本地-jupyterlab">本地 JupyterLab</h1>
+<p>在课程目录双击 <code>启动课程.command</code>（macOS）或 <code>启动课程.bat</code>（Windows），会先打开课件入口（index.html）再启动 JupyterLab。保持启动窗口开启——<strong>关闭它 JupyterLab 会一并退出</strong>。结束使用时，在该终端按 Control+C 并确认关闭服务器。</p>
+<p>也可以在终端手动执行：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">cd</span> <span class="st">&#39;/Users/momo/Documents/workspace/教学/2026机器学习与概率统计-本科&#39;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>./start.sh</span></code></pre></div>
+<h2 id="选择内核">选择内核</h2>
+<ul>
+<li>第 1–9 章实验：选择 <strong>ecnu-ml（机器学习课程 Python 3.14）</strong>，对应课程目录 <code>.venv</code>（scikit-learn 1.9.0，课件数字锚定于此）。</li>
+<li>第 10 章 Hugging Face / 预训练模型实验：选择 <strong>ecnu-hf（机器学习课程 HF Python 3.12）</strong>，对应 <code>.venv-hf</code>。</li>
+<li>两个内核已注册到用户级 Jupyter 目录，无论 JupyterLab 从哪个环境启动都会出现在内核列表；<strong>第 1–9 章切勿选 HF 内核</strong>，否则数字与课件对不上。</li>
+<li>在 Notebook 菜单 Kernel → Change Kernel 切换。先使用 File → Save Notebook As 保存练习副本，避免覆盖带参考输出的教师版本。</li>
+<li>Shift+Enter 运行当前单元。完整复现使用 Kernel → Restart Kernel and Run All Cells。</li>
+</ul>
+<p>环境分开是为了保留两组已经验证过的依赖版本，避免 PyTorch 和基础实验互相影响。服务只监听本机 127.0.0.1（<code>启动课程.command</code> 启动的实例免令牌，仅本机可访问）；无需上传课程文件。</p>
+<p>虚拟环境保存在课程目录，不再依赖 /private/tmp 的临时虚拟环境，但仍依赖创建它们的本机 Python：基础环境使用 Homebrew Python 3.14，HF 环境使用 Codex 配套 Python 3.12。将整个课程目录复制到其他电脑后应重新创建环境，不能直接搬运虚拟环境。</p>
+<p>首次执行某些实验可能需要下载数据或模型，具体以各 Notebook 说明为准。</p>
+</main></body></html>

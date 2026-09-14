@@ -1,0 +1,8 @@
+# 基础实验实际验证版本；完整依赖快照见 requirements-validated.txt
+numpy==2.5.2
+scikit-learn==1.9.0
+matplotlib==3.11.1
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.3.0
+pandas==3.0.5
