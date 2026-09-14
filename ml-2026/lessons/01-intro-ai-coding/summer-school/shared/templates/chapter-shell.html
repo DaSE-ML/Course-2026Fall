@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>章节标题｜Claude Code 与 Vibe Coding</title>
+  <!-- 新章节位于 chapters/<chapter-id>/ 时，保留以下相对路径。所有视觉资源均为本地文件。 -->
+  <link rel="stylesheet" href="../../shared/css/tokens.css">
+  <link rel="stylesheet" href="../../shared/css/deck.css">
+  <link rel="stylesheet" href="../../shared/css/print.css">
+</head>
+<body>
+  <main class="deck" data-deck>
+    <header class="deckbar">
+      <p class="deckbar__chapter">Module / Chapter · 章节标题</p>
+      <p class="deckbar__page" data-page>01 / 05</p>
+    </header>
+
+    <div class="stage">
+      <!-- 每页使用 section.slide；id 必须唯一且与 manifest.json 的 slides 对齐。 -->
+      <section class="slide slide--full" id="cover" tabindex="-1">
+        <div class="slide__copy">
+          <p class="kicker">MODULE / CHAPTER · 知识优先</p>
+          <h1>章节标题：先建立判断，再执行动作。</h1>
+          <p class="lede">用一句话说清学生完成本章后能解释、选择或验证什么。</p>
+          <p class="marker">[示意｜AI 生成/合成｜非真实界面、非真实实验结果]</p>
+        </div>
+      </section>
+
+      <!-- 1. 左文右证据：.slide__copy 与 .visual 必须同级，避免证据卡被正文收缩。 -->
+      <section class="slide slide--evidence" id="evidence" tabindex="-1">
+        <div class="slide__copy">
+          <p class="kicker">判断 · 为什么</p>
+          <h2>证据不是结论的装饰，而是下一步的依据。</h2>
+          <p class="lede">先读输出中的状态，再决定是否继续执行；不要用“看起来成功”代替验证。</p>
+        </div>
+        <div class="visual evidence-grid" aria-label="四项可观察证据">
+          <article><small>01 / CONTEXT</small><b>位置正确</b><p>知道当前命令在哪个项目中运行。</p></article>
+          <article><small>02 / RULE</small><b>规则可见</b><p>能指出当前操作应遵守的约束。</p></article>
+          <article><small>03 / OUTPUT</small><b>结果可读</b><p>区分成功、警告与需要处理的错误。</p></article>
+          <article><small>04 / NEXT</small><b>动作可证</b><p>下一步能被终端、diff 或检查结果验证。</p></article>
+          <aside class="source"><span>来源：本章离线材料 · 操作证据示例</span></aside>
+        </div>
+      </section>
+
+      <!-- 2. 全宽比较或流程：slide--full 始终单列。 -->
+      <section class="slide slide--full" id="compare" tabindex="-1">
+        <div class="slide__copy">
+          <p class="kicker">比较 · 选择</p>
+          <h2>把模糊的“试试看”改成可回看的闭环。</h2>
+          <div class="comparison" role="table" aria-label="两种工作方式比较">
+            <div class="comparison__head" role="row"><span role="columnheader">工作方式</span><span role="columnheader">留下的证据</span><span role="columnheader">下一步</span></div>
+            <div role="row"><b role="cell">直接执行</b><span role="cell">只有印象</span><span role="cell">难以复盘</span></div>
+            <div class="comparison__preferred" role="row"><b role="cell">先读—再做—后验</b><span role="cell">输出、diff、检查</span><span role="cell">可解释地推进</span></div>
+          </div>
+          <div class="flow-band" aria-label="可验证工作流"><span>读取上下文</span><i>→</i><span>说明动作</span><i>→</i><span>观察证据</span><i>→</i><strong>决定下一步</strong></div>
+        </div>
+      </section>
+
+      <!-- 3. 终端或 diff 证据：代码块使用等宽字体，保留可复制文本。 -->
+      <section class="slide slide--evidence" id="terminal-proof" tabindex="-1">
+        <div class="slide__copy">
+          <p class="kicker">证据 · 终端</p>
+          <h2>让输出回答“发生了什么”。</h2>
+          <p class="lede">讲解时圈出命令、状态和下一步，而不是把整屏输出当作结论。</p>
+        </div>
+        <div class="visual terminal">
+          <div class="chrome"><i></i><i></i><i></i><span>terminal · read-only example</span></div>
+          <pre><code><span class="prompt">$</span> git status --short
+<span class="ok">✓</span> working tree clean
+
+<span class="prompt">$</span> node courseware/tools/verify-courseware.mjs
+<span class="ok">✓</span> 课件静态检查通过：已检查 10 个章节</code></pre>
+          <aside class="source"><span>来源：本章离线演示 · Git 与课件检查输出</span></aside>
+        </div>
+      </section>
+
+      <!-- 4. 文件树、JSON 与 diff：三类文本证据均可复制、可投影、可打印。 -->
+      <section class="slide slide--evidence" id="structure-proof" tabindex="-1">
+        <div class="slide__copy">
+          <p class="kicker">证据 · 结构变化</p>
+          <h2>用文件、配置和 diff 说明改动范围。</h2>
+          <p class="lede">不要只说“已配置”：指出文件在哪里、字段是什么、哪一行改变了，再交给检查验证。</p>
+        </div>
+        <div class="visual">
+          <pre class="file-tree"><code><span class="folder">courseware/</span>
+├── <span class="folder">shared/</span>
+│   ├── <span class="folder">css/</span>
+│   │   └── <span class="file">deck.css</span>
+│   └── <span class="folder">js/</span>
+│       └── <span class="file">deck.js</span>
+└── <span class="folder">chapters/</span></code></pre>
+          <pre class="json"><code>{
+  <span class="key">"teacherTrialRequired"</span>: <span class="boolean">true</span>,
+  <span class="key">"slides"</span>: [<span class="string">"cover"</span>, <span class="string">"evidence"</span>]
+}</code></pre>
+          <div class="diff" aria-label="配置变更 diff"><del>- "network": "required"</del><ins>+ "network": "offline-fallback"</ins></div>
+        </div>
+      </section>
+
+      <!-- 5. 来源页脚：事实性证据块只标明轻量来源。 -->
+      <section class="slide slide--full" id="sources" tabindex="-1">
+        <div class="slide__copy">
+          <p class="kicker">来源 · 继续学习</p>
+          <h2>完整来源页让学生知道从哪里继续核对。</h2>
+          <div class="source-list">
+            <aside class="source"><span>来源：Claude Code Docs · Commands</span><a href="https://code.claude.com/docs/en/commands">继续阅读</a></aside>
+            <aside class="source"><span>来源：本课程离线练习材料 · 章节目录</span></aside>
+          </div>
+          <div class="challenge"><p class="kicker">SELF-CHECK · 30 秒</p><h3>指出本章中一个“证据”，并说明它支持哪一个下一步。</h3><p>先独立判断，再与同伴对照；答案应能回到页面上的可观察信息。</p></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="deckfoot">
+      <div class="deckfoot__progress" aria-label="阅读进度"><span data-progress></span></div>
+      <div class="deckfoot__controls" aria-label="课件导航">
+        <button type="button" data-prev aria-label="上一页">← <span>上一页</span></button>
+        <button type="button" data-next aria-label="下一页">下一页 →</button>
+        <button type="button" data-help aria-label="显示快捷键帮助">?</button>
+      </div>
+    </footer>
+  </main>
+
+  <aside class="help" data-help-panel hidden aria-label="快捷键帮助" role="dialog" aria-modal="false">
+    <p class="kicker">键盘导航</p>
+    <p><kbd>←</kbd><kbd>→</kbd> 翻页　<kbd>Home</kbd><kbd>End</kbd> 首末页</p>
+    <p><kbd>F</kbd> 全屏　<kbd>?</kbd> 帮助　<kbd>Esc</kbd> 关闭</p>
+  </aside>
+  <p class="sr-only" data-live aria-live="polite"></p>
+
+  <script src="../../shared/js/deck.js"></script>
+</body>
+</html>
