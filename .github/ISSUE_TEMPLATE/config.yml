@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 🧩 分享或发现 Agent Skill
-    url: https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions/categories/skill-square
-    about: 推荐 Cursor / Claude Code 等 Agent Skill；安装报错请仍用课程答疑。
-  - name: 🤝 寻找队友或自由交流
-    url: https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions
-    about: 寻找队友、发布招募、技能交换和自由讨论请前往 Discussions。
+  - name: 💬 课程讨论
+    url: https://github.com/DaSE-ML/Course-2026Fall/discussions
+    about: 交流课程内容、实验结果、学习体会和相关资料。
+  - name: ❓ 课程问答
+    url: https://github.com/DaSE-ML/Course-2026Fall/discussions/categories/q-a
+    about: 提出课程学习或实验过程中遇到的问题。

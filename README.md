@@ -1,23 +1,15 @@
-# SummerCamp-2026
-2026 Summer Camp — Vibe Coding course materials and showcase
+# Course-2026Fall
 
-## 机器学习课程材料（2026 秋）
+华东师范大学数据科学与工程学院《统计方法与机器学习》2026 年秋季课程仓库。
 
-统计方法与机器学习 · 机器学习部分的学生材料在 **[ml-2026/](ml-2026/)**（课件、实验阅读版、作业说明）。请进入该目录后打开 `index.html` 或运行 `启动课程.bat` / `start.sh`。
+## 机器学习课程材料
 
-## 课程社区
+机器学习部分面向本科三年级学生，共 10 讲、20 课堂学时，内容包括回归、分类、模型评估、模型选择、树与集成、支持向量机、无监督学习、文本表示与预训练模型。
 
-<img src="assets/summercamp-live-more-banner.png" alt="Live More, Work Less. SummerCamp 2026 Vibe Coding Banner" width="100%">
+学生材料位于 **[ml-2026/](ml-2026/)**，包括课件、实验 notebook、实验阅读版和作业说明。目前开放第 1 讲，其余内容将随课程进度发布。
 
-在这里，问题可以被看见，经验可以被复用，想法也能找到伙伴。欢迎每位同学参与互助！
+进入 **[课程入口](ml-2026/index.html)** 可查看已经开放的章节。课件和实验阅读版可直接在浏览器中打开；需要运行 notebook 时，请按照 [环境与运行说明](ml-2026/README.md) 启动 JupyterLab。
 
-| 想做什么？ | 入口 |
-| --- | --- |
-| 🙋 遇到课程或项目问题 | [提问答疑](https://github.com/DaSE-VibeCoding/SummerCamp-2026/issues/new?template=course-q-and-a.yml) |
-| 👋 初次来这里，想认识大家 | [进入 🌟 破冰认识](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions/categories/icebreaker) |
-| 🧩 分享或发现好用的 Agent Skill | [Skill 广场](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions/categories/skill-square) · [精选索引](skills/README.md) |
-| 🤝 想认识伙伴、一起组队 | [寻找队友](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions) |
-| 🚀 已有项目，正在招募成员 | [发布招募](https://github.com/DaSE-VibeCoding/SummerCamp-2026/discussions) |
-| 🐾 想为公共合照画廊添加自己的宠物 | [添加宠物](https://github.com/DaSE-VibeCoding/SC26-CodexPetsGallery) |
+## 课程讨论
 
-开始前，请先搜索类似讨论；保持友善；问题解决后记得确认关闭；不要公开密码、Token、学号、电话等敏感信息。详细规则见[社区准则](docs/community-guidelines.md)。
+欢迎同学们参与 [Discussions](https://github.com/DaSE-ML/Course-2026Fall/discussions)，交流课程内容、实验结果、学习体会和相关资料。发帖前请先搜索是否已有相近主题，并避免公开密码、Token、学号、电话等敏感信息。
