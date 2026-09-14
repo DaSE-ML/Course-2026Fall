@@ -1,5 +1,7 @@
 # Course-2026Fall
 
+<img src="assets/summercamp-live-more-banner.png" alt="Course-2026Fall Banner" width="100%">
+
 华东师范大学数据科学与工程学院《统计方法与机器学习》2026 年秋季课程仓库。
 
 ## 机器学习课程材料
