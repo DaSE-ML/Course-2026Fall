@@ -22,7 +22,7 @@ count=$(grep -c . <<<"$members" || true)
 errors=()
 warnings=()
 if (( count == 0 )); then
-  errors+=("没有识别到任何成员：请在「全体成员名单」中按 \`姓名 @github用户名\` 每行一位填写。")
+  errors+=("没有识别到任何成员：请在「全体成员 GitHub 用户名」中每行填一个 \`@github用户名\`。")
 else
   while IFS= read -r u; do
     u=${u#@}

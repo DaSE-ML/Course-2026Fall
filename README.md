@@ -6,7 +6,7 @@
 
 ## 📋 分组报名（进行中）
 
-👉 **[点此报名分组](https://github.com/DaSE-ML/Course-2026Fall/issues/new?template=group-signup.yml)**：每组 **4–5 人**，填写组长用户名和成员名单（每行 `姓名 @用户名`），提交后机器人**自动分配组号**（ML26-01 起）并回帖确认。名单变动时编辑报名 issue 即可自动更新。
+👉 **[点此报名分组](https://github.com/DaSE-ML/Course-2026Fall/issues/new?template=group-signup.yml)**：每组 **4–5 人**，只需粘贴全组成员的 GitHub 用户名（每行一个 `@用户名`），提交后机器人**自动分配组号**（ML26-01 起）并回帖确认。⚠️ 请勿在报名中填写真实姓名、学号等个人信息。名单变动时编辑报名 issue 即可自动更新。
 
 各组后续在对应的私有仓库 `ML26-01` ~ `ML26-25` 中提交作业与项目（仅本组成员与教师可见）。
 
