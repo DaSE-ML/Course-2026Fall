@@ -40,11 +40,27 @@ elif (( count > 0 && count < 4 )); then
   warnings+=("目前识别到 ${count} 位成员（每组需 4–5 人）。可以先提交占号，凑齐后**编辑本 issue** 更新名单，机器人会自动重新确认。")
 fi
 
-# ---------- 分配组号（已有则沿用） ----------
+# ---------- 跨 issue 查重：一人只能属于一个组 ----------
+declare -A seen_in=()
+while IFS=$'\t' read -r inum ititle ibody; do
+  [[ "$inum" == "$num" ]] && continue
+  [[ "$ititle" =~ ML26-([0-9]{2}) ]] || continue
+  g=${BASH_REMATCH[1]}
+  while IFS= read -r u; do seen_in[$u]="ML26-$g (#$inum)"; done \
+    < <(grep -oE '@[A-Za-z0-9][A-Za-z0-9-]{0,38}' <<<"$ibody" | sed 's/-*$//' | sort -fu)
+done < <(gh api "repos/$repo/issues?state=open&per_page=100" --paginate \
+  -q '.[] | select(.pull_request == null) | [.number, .title, (.body // "")] | @tsv' 2>/dev/null || true)
+if (( count > 0 )); then
+  while IFS= read -r u; do
+    [[ -n "${seen_in[$u]:-}" ]] && errors+=("\`@$u\` 已登记在 ${seen_in[$u]}，一人只能属于一个组，请先在原组名单中移除该成员。")
+  done <<<"$members"
+fi
+
+# ---------- 分配组号（已有则沿用；有错误时不占号，修正后自动分配） ----------
 group=''
 if [[ "$title" =~ ML26-([0-9]{2}) ]]; then
   group=${BASH_REMATCH[1]}
-else
+elif (( ${#errors[@]} == 0 )); then
   used=$(gh api "repos/$repo/issues?state=all&per_page=100" --paginate -q '.[].title' 2>/dev/null \
     | grep -oE 'ML26-[0-9]{2}' | grep -oE '[0-9]{2}' | sort -u || true)
   for i in $(seq -w 1 "$MAX_GROUP"); do
