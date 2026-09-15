@@ -12,9 +12,9 @@
 
 ## 🧪 实验课任务
 
-| # | 任务 | 任务海报 | 提交位置 |
+| # | 任务 | 任务海报（点击看全图） | 提交位置 |
 | - | - | - | - |
-| 1 | Lesson 1 实验：用 AI Tool 写一封研究生套瓷信 | [lab01-poster.jpg](assignments/lab01-poster.jpg) | 本组仓库 `ML26-XX` 的 `lab01/` 文件夹 |
+| 1 | Lesson 1 实验：用 AI Tool 写一封研究生套瓷信 | <a href="assignments/lab01-poster.jpg"><img src="assignments/lab01-poster-thumb.jpg" width="200" alt="Lab 1 任务海报缩略图"></a> | 本组仓库 `ML26-XX` 的 `lab01/` 文件夹 |
 
 **提交说明**（作业**按组计**，全组共用一份提交）：
 
