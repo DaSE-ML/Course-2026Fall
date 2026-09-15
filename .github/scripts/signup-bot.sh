@@ -41,18 +41,25 @@ elif (( count > 0 && count < 4 )); then
 fi
 
 # ---------- 跨 issue 查重：一人只能属于一个组 ----------
-declare -A seen_in=()
-while IFS=$'\t' read -r inum ititle ibody; do
-  [[ "$inum" == "$num" ]] && continue
-  [[ "$ititle" =~ ML26-([0-9]{2}) ]] || continue
-  g=${BASH_REMATCH[1]}
-  while IFS= read -r u; do seen_in[$u]="ML26-$g (#$inum)"; done \
-    < <(grep -oE '@[A-Za-z0-9][A-Za-z0-9-]{0,38}' <<<"$ibody" | sed 's/-*$//' | sort -fu)
-done < <(gh api "repos/$repo/issues?state=open&per_page=100" --paginate \
+seen_lines=$(gh api "repos/$repo/issues?state=open&per_page=100" --paginate \
   -q '.[] | select(.pull_request == null) | [.number, .title, (.body // "")] | @tsv' 2>/dev/null || true)
-if (( count > 0 )); then
+if (( count > 0 )) && [[ -n "$seen_lines" ]]; then
   while IFS= read -r u; do
-    [[ -n "${seen_in[$u]:-}" ]] && errors+=("\`@$u\` 已登记在 ${seen_in[$u]}，一人只能属于一个组，请先在原组名单中移除该成员。")
+    loc=$(awk -v u="$u" -F'\t' '$3 == u {print "ML26-" $2 " (#" $1 ")"; exit}' \
+      <(printf '%s\n' "$seen_lines" | awk -F'\t' \
+        '$1 ~ /^[0-9]+$/ {
+          t = $2; b = $3; n = $1;
+          if (match(t, /ML26-[0-9][0-9]/)) {
+            g = substr(t, RSTART + 5, 2);
+            while (match(b, /@[A-Za-z0-9][A-Za-z0-9-]{0,38}/)) {
+              m = substr(b, RSTART + 1, RLENGTH - 1);
+              sub(/-+$/, "", m);
+              if (m != "") print n "\t" g "\t" m;
+              b = substr(b, RSTART + RLENGTH);
+            }
+          }
+        }'))
+    [[ -n "$loc" ]] && errors+=("\`@$u\` 已登记在 $loc，一人只能属于一个组，请先在原组名单中移除该成员。")
   done <<<"$members"
 fi
 
@@ -95,7 +102,7 @@ cid=$(gh api "repos/$repo/issues/$num/comments?per_page=100" \
   -q '.[] | select(.body | contains("<!-- signup-bot-confirm -->")) | .id' 2>/dev/null | head -1 || true)
 
 if [[ -n "${cid:-}" ]]; then
-  gh api -X PATCH "repos/$repo/issues/$num/comments/$cid" -F body="$cbody" >/dev/null
+  gh api -X PATCH "repos/$repo/issues/comments/$cid" -F body="$cbody" >/dev/null
 else
   gh api -X POST "repos/$repo/issues/$num/comments" -F body="$cbody" >/dev/null
 fi
