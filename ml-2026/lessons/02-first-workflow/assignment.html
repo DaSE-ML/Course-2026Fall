@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第 02 章练习：完整工作流复现与错例检查</title><style>*{box-sizing:border-box}body{margin:0;background:#f0f3f7;color:#192b41;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;font-size:17px}main{max-width:980px;margin:0 auto;padding:55px 40px 80px}h1{font-size:34px;line-height:1.3;margin:14px 0 22px;color:#192b41}h2{font-size:24px;margin-top:34px;border-left:4px solid #4177b7;padding-left:12px}h3{font-size:20px;margin-top:26px;color:#174b87}a{color:#174b87;text-underline-offset:4px}code{font-family:"SFMono-Regular",Consolas,monospace;background:#eef3fa;padding:2px 6px;border-radius:3px;font-size:.9em}pre{background:#eef3fa;padding:14px 16px;overflow:auto;line-height:1.5}pre code{padding:0;background:none}table{width:100%;border-collapse:collapse;font-size:.92em;margin:14px 0}th{text-align:left;color:#174b87;background:#eef3fa}td,th{padding:8px 12px;border-bottom:1px solid #d5dfe9}blockquote{border-left:5px solid #23756c;background:#f1f8f6;margin:16px 0;padding:10px 18px}blockquote p{margin:6px 0}li{margin:6px 0}img{max-width:100%}.back{display:inline-block;margin-bottom:18px;font-size:15px}hr{border:0;border-top:1px solid #d5dfe9;margin:30px 0}@media print{body{background:white;font-size:11pt}main{padding:0;max-width:none}}</style></head><body><main><a class="back" href="../../index.html">← 返回课程目录</a><h1 id="第-02-章练习完整工作流复现与错例检查">第 02
+章练习：完整工作流复现与错例检查</h1>
+<p>预计 60 分钟。入口：<a
+href="notebook/02-first-workflow.ipynb"><code>02-first-workflow.ipynb</code></a>。数字来自
+Notebook 已执行输出，可直接核对；任务 2 需要运行错例定位三行。</p>
+<h2 id="任务">任务</h2>
+<ol type="1">
+<li><p><strong>复现实验并填全记录表（30
+分）</strong>：填写小结页的记录表——模型（基线多数类、Logistic(C=1)）×（验证准确率、测试准确率、测试错例数）三列，每个分数注明“和谁比、在哪测、数字哪来”。只读路径可从已执行输出抄录，注明“未本机重跑”。</p></li>
+<li><p><strong>检查至少 3 个错例（40
+分）</strong>：用下面的三行定位测试集错例，逐条记录真实类别、预测类别，并区分观察与猜测。观察＝图上直接看到的（真实是几、预测成几）；猜测＝你对写错原因的解释（如“这个
+9 写得像 4”）——记录时标注哪句是猜测。不足 3
+个就如实报告（本章冻结模型在测试集上的错例数是已知值）。</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>prediction <span class="op">=</span> final_model.predict(X[test_idx])  <span class="co"># final_model：冻结后用 1437 条重训的模型</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>wrong <span class="op">=</span> np.flatnonzero(prediction <span class="op">!=</span> y[test_idx])</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(wrong))</span></code></pre></div></li>
+<li><p><strong>AI 建议核验记录（20 分）</strong>：记录一次你检查或否决
+AI 建议的依据，格式：“我改了什么，因为哪个证据”，写在 Notebook
+的文字格子里（第 1 章四步约定的第④步）。也可对照“审查 AI
+生成的代码”一页的教学示例，写出你会在第②步审查里提出的两条问题。</p></li>
+<li><p><strong>复现（10 分）</strong>：随机种子
+42、两次切分的次序、Python/scikit-learn 版本；说明基线在验证 37/360
+与测试 36/360 的一分之差为什么不必过度解读。</p></li>
+</ol>
+<h2 id="提交与共同规则">提交与共同规则</h2>
+<p>提交运行过的 Notebook（保留输出）和 300–500 字说明，可直接写入
+Notebook。重启内核后从头运行，记录
+Python/依赖版本、随机种子、划分方式；外部素材保留来源链接。只改指定条件，其余保持一致。模型分数按实际运行填写，不以分数高低评分。</p>
+<p>允许使用免费 AI 工具，也可完全不用
+AI。使用者记录工具、日期、采纳或拒绝的一条建议以及人工验证方法；未使用者写“未使用”，附一条自己的代码检查记录。无需购买
+API、GPU
+或公开提交竞赛。课程提供的上游案例优先复用，说明修改之处即可。</p>
+<p>本练习为形成性学习证据，上面的 100
+分量规用于反馈，不直接新增总评权重。机器学习理论最终按任务/概念
+20%、机制 25%、评估 35%、选型/解释 20% 汇总；机器学习项目另占总评
+10%。</p>
+</main></body></html>
