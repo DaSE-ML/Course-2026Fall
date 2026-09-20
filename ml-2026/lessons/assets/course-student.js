@@ -40,8 +40,22 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'End') show(slides.length - 1);
 });
 
-const hashPage = parseInt(location.hash.slice(1), 10);
-show(Number.isFinite(hashPage) ? hashPage - 1 : 0);
+function showAnchor(hash) {
+  const name = decodeURIComponent((hash || '').slice(1));
+  if (!name) { show(0); return; }
+  if (/^\d+$/.test(name)) { show(parseInt(name, 10) - 1); return; }
+  const el = document.getElementById(name);
+  const slide = el ? el.closest('.slide') : null;
+  if (slide) {
+    show(slides.indexOf(slide));
+    history.replaceState(null, '', `#${name}`);
+    if (all && el.scrollIntoView) el.scrollIntoView({ block: 'center' });
+  } else {
+    show(0);
+  }
+}
+showAnchor(location.hash);
+window.addEventListener('hashchange', () => showAnchor(location.hash));
 
 document.querySelectorAll('.body a[href]').forEach((a) => {
   const h = a.getAttribute('href');
