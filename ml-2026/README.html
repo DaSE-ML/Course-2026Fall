@@ -7,6 +7,26 @@
 <li><strong>终端</strong>：在课程目录运行 <code>./start.sh</code></li>
 </ul>
 <p>会先打开 <a href="index.html">index.html</a>，再启动 JupyterLab（端口 8888）。<strong>保持启动窗口开启</strong>；关闭启动窗口后 JupyterLab 会一并退出。结束使用时可在终端按 Ctrl+C 关闭服务器。</p>
+<h2 id="首次使用安装环境">首次使用：安装环境（约 10 分钟，只需一次）</h2>
+<p>「一键启动」假定环境已就绪。第一次使用请先完成以下三步；需要 Python 3.12 及以上（课堂数字基于 Python 3.14.6 + scikit-learn 1.9.0）。</p>
+<p><strong>第 1 步 · 确认 Python</strong></p>
+<pre><code>python3 --version        # Windows 在 PowerShell 中执行: python --version</code></pre>
+<p>低于 3.12 时先到 <a href="https://www.python.org/downloads/">python.org</a> 安装（Windows 安装时勾选 <strong>Add python.exe to PATH</strong>）。</p>
+<p><strong>第 2 步 · 创建虚拟环境并安装依赖</strong>（在本目录 <code>ml-2026</code> 内执行）</p>
+<p>macOS / Linux：</p>
+<pre><code>python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install jupyterlab</code></pre>
+<p>Windows（PowerShell）：</p>
+<pre><code>python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+pip install jupyterlab</code></pre>
+<p><strong>第 3 步 · 注册课程内核（一次性）</strong></p>
+<pre><code>python -m ipykernel install --user --name ecnu-ml --display-name "机器学习课程 Python 3.14"</code></pre>
+<p>完成后 JupyterLab 的内核列表里才会出现 <code>ecnu-ml</code>。第 10 章的 <code>ecnu-hf</code> 内核在开放第 10 章时再按当时说明安装。</p>
+<p>装好后回到「一键启动」。环境自检顺序：Python ≥ 3.12 → 提示符前是否出现 <code>(.venv)</code> → 是否在 <code>ml-2026</code> 目录内执行。完全不想装环境时，可将对应 <code>.ipynb</code> 上传 <a href="https://colab.research.google.com/">Google Colab</a> 运行（第 10 章需要 GPU，Colab 免费版可用）。</p>
 <h2 id="课程材料在哪里">课程材料在哪里</h2>
 <p>每章材料在 <code>lessons/0X-讲名/</code>：</p>
 <table>
@@ -52,7 +72,7 @@
 </tr>
 </tbody>
 </table>
-<p>在 JupyterLab 菜单 <strong>Kernel → Change Kernel</strong> 切换。第 1–9 章请勿选 HF 内核，否则结果可能与课件不一致。建议 <strong>File → Save Notebook As</strong> 另存副本再改代码，避免覆盖原文件。</p>
+<p>在 JupyterLab 菜单 <strong>Kernel → Change Kernel</strong> 切换。第 1–9 章请勿选 HF 内核，否则结果可能与课件不一致。建议 <strong>File → Save Notebook As</strong> 另存副本再改代码，避免覆盖原文件。两个内核都需先注册：<code>ecnu-ml</code> 见「首次使用：安装环境」第 3 步；<code>ecnu-hf</code> 在第 10 章开放时提供安装说明。</p>
 <h2 id="在-lab-里操作">在 Lab 里操作</h2>
 <ul>
 <li><strong>Shift+Enter</strong>：运行当前单元格</li>
@@ -60,7 +80,7 @@
 </ul>
 <p>JupyterLab 默认只在本机访问（127.0.0.1），无需把 notebook 上传到公网。</p>
 <h2 id="换电脑或环境报错">换电脑或环境报错</h2>
-<p>虚拟环境绑定本机 Python，<strong>不要</strong>直接复制 <code>.venv</code> 或 <code>.venv-hf</code> 到其他电脑。请按课程提供的依赖说明在本机重新创建环境；仍失败时对照课件中的 Python / scikit-learn 版本说明。</p>
+<p>虚拟环境绑定本机 Python，<strong>不要</strong>直接复制 <code>.venv</code> 或 <code>.venv-hf</code> 到其他电脑。请按「首次使用：安装环境」的三步在本机重新创建环境；仍失败时对照课件中的 Python / scikit-learn 版本说明。</p>
 <h2 id="离线阅读">离线阅读</h2>
 <p><code>slides.html</code> 与 <code>notebook.html</code> 可直接用浏览器打开，无需联网。首次运行某些实验可能需要下载数据或模型，以各章 notebook 说明为准。</p>
 </main></body></html>
