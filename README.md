@@ -12,12 +12,41 @@
 
 ## 🧪 实验课任务
 
-| # | 任务 | 任务海报（点击看全图） | 提交目录与交付物 |
-| - | - | - | - |
-| 1 | Lesson 1 实验：用 AI Tool 写一封研究生套瓷信 | <a href="assignments/lab01-poster.jpg"><img src="assignments/lab01-poster-thumb.jpg" width="200" alt="Lab 1 任务海报缩略图"></a> | **`lab01/`**<br>① 套瓷信（中英文皆可）<br>② 过程材料任选其一：`plan.md`、相关 Markdown 文档、session history / key prompt 记录 |
-| 2 | Lesson 2 实验：收集、清洗并标注一个数字图片数据集 | <a href="assignments/lab02-poster.jpg"><img src="assignments/lab02-poster-thumb.jpg" width="200" alt="Lab 2 任务海报缩略图"></a> | **`lab02/`**<br>① 整个数据集（图片与标签）<br>② `Data Processing Workflow` 流程图<br>数据须从现实世界收集，不可使用现成或生成的数据集，可用 AI Tools 辅助。 |
+<table>
+  <thead>
+    <tr>
+      <th width="130">任务</th>
+      <th width="340">任务海报（点击看全图）</th>
+      <th width="330">提交目录与交付物</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top"><strong>Lesson 1</strong><br><br>用 AI Tool<br>写一封研究生<br>套瓷信</td>
+      <td align="center" valign="top"><a href="assignments/lab01-poster.jpg"><img src="assignments/lab01-poster-thumb.jpg" width="320" alt="Lab 1 任务海报缩略图"></a></td>
+      <td valign="top">
+        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab01/</code> 文件夹。</p>
+        <p><strong>提交什么？</strong><br>① 套瓷信（中英文皆可）<br>② 一份过程材料，以下任选其一：</p>
+        <ul>
+          <li><code>plan.md</code></li>
+          <li>相关 Markdown 文档</li>
+          <li>session history / 关键 prompt 记录</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><strong>Lesson 2</strong><br><br>收集、清洗<br>并标注一个<br>数字图片数据集</td>
+      <td align="center" valign="top"><a href="assignments/lab02-poster.jpg"><img src="assignments/lab02-poster-thumb.jpg" width="320" alt="Lab 2 任务海报缩略图"></a></td>
+      <td valign="top">
+        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab02/</code> 文件夹。</p>
+        <p><strong>提交什么？</strong><br>① 整个数据集（图片与标签）<br>② Data Processing Workflow 流程图</p>
+        <p><strong>数据要求</strong><br>从现实世界收集，不可使用现成或生成的数据集。可以使用 AI Tools 辅助。</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-**统一提交方式：** 作业按组计，全组共用一份提交。在本组私有仓库 `ML26-XX` 根目录下建立表中对应文件夹，放入成果后直接 push 即可。组内自行协调分工与文件命名；看不到本组仓库请联系助教。详细要求与加分项见任务海报。
+**统一提交方式：** 作业按组计，全组共用一份提交。将成果放入表中对应目录后直接 push 即可。组内自行协调分工与文件命名；看不到本组仓库请联系助教。详细要求与加分项见任务海报。
 
 ## 机器学习课程材料
 
