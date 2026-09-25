@@ -15,12 +15,19 @@
 | # | 任务 | 任务海报（点击看全图） | 提交位置 |
 | - | - | - | - |
 | 1 | Lesson 1 实验：用 AI Tool 写一封研究生套瓷信 | <a href="assignments/lab01-poster.jpg"><img src="assignments/lab01-poster-thumb.jpg" width="200" alt="Lab 1 任务海报缩略图"></a> | 本组仓库 `ML26-XX` 的 `lab01/` 文件夹 |
+| 2 | Lesson 2 实验：收集、清洗并标注一个数字图片数据集 | <a href="assignments/lab02-poster.jpg"><img src="assignments/lab02-poster-thumb.jpg" width="200" alt="Lab 2 任务海报缩略图"></a> | 本组仓库 `ML26-XX` 的 `lab02/` 文件夹 |
 
 **提交说明**（作业**按组计**，全组共用一份提交）：
 
 1. 在本组仓库根目录下新建 `lab01/` 文件夹，本任务全部成果放入其中；组内请自行协调分工与文件命名。
 2. `lab01/` 内需包含：**套瓷信**（中英文皆可）+ **过程材料**（`plan.md`、Markdown 文档、session history / key prompt 记录，任选其一）。
 3. 直接 push 即可；看不到自己组的仓库说明权限尚未开通，请联系助教。
+
+Lesson 2 提交说明：
+
+1. 在本组仓库根目录下新建 `lab02/` 文件夹，本任务全部成果放入其中；组内请自行协调分工与文件命名。
+2. `lab02/` 内需包含：整个数据集（图片与标签）+ `Data Processing Workflow` 流程图。
+3. 数据集应从现实世界收集，不能直接使用别人已经收集、整理好的数据集，也不能使用生成数据集；可以使用 AI Tools 辅助。
 
 ## 机器学习课程材料
 
