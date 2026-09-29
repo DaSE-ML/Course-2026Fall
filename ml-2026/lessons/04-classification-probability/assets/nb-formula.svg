@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="150" viewBox="0 0 980 150" role="img" aria-labelledby="title desc">
+  <title id="title">朴素贝叶斯分类公式</title>
+  <desc id="desc">P of y given x is proportional to P of y times the product from j equals 1 to d of P of x sub j given y</desc>
+  <rect width="980" height="150" rx="18" fill="#f7f3ea"/>
+  <text x="490" y="92" text-anchor="middle" fill="#172033" font-family="STIX Two Math, STIXGeneral, Times New Roman, serif" font-size="58" font-style="italic">
+    P(y|x) ∝ P(y)  ∏<tspan baseline-shift="super" font-size="30">d</tspan><tspan baseline-shift="sub" font-size="30">j=1</tspan> P(x<tspan baseline-shift="sub" font-size="30">j</tspan>|y)
+  </text>
+</svg>

@@ -1,0 +1,37 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第 04 章练习：拉普拉斯手算、kNN 邻居数与错例三步法</title><style>*{box-sizing:border-box}body{margin:0;background:#f0f3f7;color:#192b41;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;font-size:17px}main{max-width:980px;margin:0 auto;padding:55px 40px 80px}h1{font-size:34px;line-height:1.3;margin:14px 0 22px;color:#192b41}h2{font-size:24px;margin-top:34px;border-left:4px solid #4177b7;padding-left:12px}h3{font-size:20px;margin-top:26px;color:#174b87}a{color:#174b87;text-underline-offset:4px}code{font-family:"SFMono-Regular",Consolas,monospace;background:#eef3fa;padding:2px 6px;border-radius:3px;font-size:.9em}pre{background:#eef3fa;padding:14px 16px;overflow:auto;line-height:1.5}pre code{padding:0;background:none}table{width:100%;border-collapse:collapse;font-size:.92em;margin:14px 0}th{text-align:left;color:#174b87;background:#eef3fa}td,th{padding:8px 12px;border-bottom:1px solid #d5dfe9}blockquote{border-left:5px solid #23756c;background:#f1f8f6;margin:16px 0;padding:10px 18px}blockquote p{margin:6px 0}li{margin:6px 0}img{max-width:100%}.back{display:inline-block;margin-bottom:18px;font-size:15px}hr{border:0;border-top:1px solid #d5dfe9;margin:30px 0}@media print{body{background:white;font-size:11pt}main{padding:0;max-width:none}}</style></head><body><main><a class="back" href="../../index.html">← 返回课程目录</a><h1 id="第-04-章练习拉普拉斯手算knn-邻居数与错例三步法">第 04
+章练习：拉普拉斯手算、kNN 邻居数与错例三步法</h1>
+<p>预计 60 分钟。入口：<a
+href="notebook/04-classification-probability.ipynb"><code>04-classification-probability.ipynb</code></a>（任务
+2 用 cell 31 与 cell 34）。</p>
+<h2 id="任务">任务</h2>
+<ol type="1">
+<li><strong>拉普拉斯平滑手算（35
+分）</strong>：把“零概率”一页词频表里“发票”的计数改成广告 0、正常 2，取
+alpha=1，重算 P(发票|广告) 与
+P(发票|正常)。提示：改计数后先重算两类的总词数再代公式，词汇表大小 V=3
+不变。交：两个算式与两个分数，并回答平滑后哪个类更像；对照“拉普拉斯平滑”一页的表说明你的结果落在哪里。</li>
+<li><strong>kNN 的 k 从 3 改成 15（35 分）</strong>：在 moons 数据上把
+cell 31 的 <code>KNeighborsClassifier(3)</code> 改成
+15，同划分重跑，交两个测试分数（k=3 与
+k=15）与一句边界形状描述，对照“课堂练习”一页你先猜的结论。只改
+k，其余设置（数据、划分、标准化）保持一致。</li>
+<li><strong>错例三步法（20
+分）</strong>：用“错例阅读三步法”一页的格式写一个错例（100
+字内），三步齐全：记录（只写看得见的事实）、归类假设（选一个，不许都占）、验证办法（可检验才算）。哪句是猜测要标注。可参考“决策边界”一页表格里
+p=0.184 的漏报，也可在验证集前五条里另选一条。</li>
+<li><strong>复现（10 分）</strong>：注明
+random_state、划分与改动点；保留 k=3 与 k=15 两次运行输出。</li>
+</ol>
+<h2 id="提交与共同规则">提交与共同规则</h2>
+<p>提交运行过的 Notebook（保留输出）和 300–500 字说明，可直接写入
+Notebook。重启内核后从头运行，记录
+Python/依赖版本、随机种子、划分方式；外部素材保留来源链接。只改指定条件，其余保持一致。模型分数按实际运行填写，不以分数高低评分。</p>
+<p>允许使用免费 AI 工具，也可完全不用
+AI。使用者记录工具、日期、采纳或拒绝的一条建议以及人工验证方法；未使用者写“未使用”，附一条自己的代码检查记录。无需购买
+API、GPU
+或公开提交竞赛。课程提供的上游案例优先复用，说明修改之处即可。</p>
+<p>本练习为形成性学习证据，上面的 100
+分量规用于反馈，不直接新增总评权重。机器学习理论最终按任务/概念
+20%、机制 25%、评估 35%、选型/解释 20% 汇总；机器学习项目另占总评
+10%。</p>
+</main></body></html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="170" viewBox="0 0 920 170" role="img" aria-labelledby="title desc">
+  <title id="title">拉普拉斯平滑公式</title>
+  <desc id="desc">P of x sub j given y equals the fraction N sub j y plus alpha over N sub y plus alpha V</desc>
+  <rect width="920" height="170" rx="18" fill="#f7f3ea"/>
+  <text x="300" y="105" text-anchor="middle" fill="#172033" font-family="STIXGeneral, Times New Roman, serif" font-size="58" font-style="italic">P(xⱼ | y) =</text>
+  <text x="520" y="66" fill="#172033" font-family="STIXGeneral, Times New Roman, serif" font-size="50" font-style="italic">N</text>
+  <text x="552" y="78" fill="#172033" font-family="STIXGeneral, Times New Roman, serif" font-size="28" font-style="italic">jy</text>
+  <text x="595" y="66" fill="#172033" font-family="STIXGeneral, Times New Roman, serif" font-size="50" font-style="italic">+ α</text>
+  <line x1="505" y1="84" x2="795" y2="84" stroke="#172033" stroke-width="3"/>
+  <text x="520" y="140" fill="#172033" font-family="STIXGeneral, Times New Roman, serif" font-size="50" font-style="italic">N</text>
+  <text x="552" y="152" fill="#172033" font-family="STIXGeneral, Times New Roman, serif" font-size="28" font-style="italic">y</text>
+  <text x="580" y="140" fill="#172033" font-family="STIXGeneral, Times New Roman, serif" font-size="50" font-style="italic">+ αV</text>
+</svg>
