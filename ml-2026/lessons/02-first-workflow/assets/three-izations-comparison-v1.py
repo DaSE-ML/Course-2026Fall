@@ -66,29 +66,32 @@ setup(ax)
 tag(ax, "管数据", BLUE)
 ax.set_title("归一化 Normalization", fontsize=20.5, weight="bold", pad=10)
 
-# 前：0~100 的分数数轴
-x0, x1 = 0.6, 4.4
-ax.plot([x0, x1], [6.9, 6.9], color="#999999", lw=1.5)
-scores = np.array([62, 71, 78, 85, 93])
-ax.scatter(x0 + scores / 100 * (x1 - x0), np.full(5, 6.9), s=42, color=BLUE, zorder=3)
-for t, lab in [(0, "0"), (50, "50"), (100, "100")]:
-    xt = x0 + t / 100 * (x1 - x0)
-    ax.plot([xt, xt], [6.72, 7.08], color="#999999", lw=1.2)
-    ax.text(xt, 6.15, lab, fontsize=11.5, color=GRAY, ha="center")
-ax.text(2.5, 7.7, "考试分数 0~100", fontsize=9.5, color=GRAY, ha="center")
+# 前：比例相同（1:2:3）、长短不同的两行
+s = 0.12
+for vals, lab, y in [([2, 4, 6], "[2, 4, 6]", 7.3), ([10, 20, 30], "[10, 20, 30]", 5.5)]:
+    ax.plot([0.5, 0.5 + vals[-1] * s], [y, y], color="#bbbbbb", lw=1)
+    ax.scatter(0.5 + np.array(vals) * s, np.full(len(vals), y), s=42, color=BLUE, zorder=3)
+    ax.text(0.5, y + 0.55, lab, fontsize=12, color=GRAY, ha="left")
+ax.text(0.5, 8.5, "两向量比例相同（1:2:3），长短不同", fontsize=12, color=BLUE, ha="left")
 
-arrow(ax, 4.95, 5.7, 6.9, "归一化")
+arrow(ax, 4.55, 5.35, 6.4, "按行 L2 归一化")
 
-# 后：同样的分数被压进 [0,1] 的小框
-bx0, bx1 = 6.3, 8.1
-ax.add_patch(Rectangle((bx0, 6.55), bx1 - bx0, 0.7, fc="#e8f1f8", ec=BLUE, lw=1.4))
-ax.scatter(bx0 + scores / 100 * (bx1 - bx0), np.full(5, 6.9), s=42, color=BLUE, zorder=3)
-ax.text(bx0, 6.0, "0", fontsize=11.5, color=GRAY, ha="center")
-ax.text(bx1, 6.0, "1", fontsize=11.5, color=GRAY, ha="center")
-ax.text(7.45, 7.7, "全部落进 [0, 1]", fontsize=12, color=BLUE, ha="center")
-ax.text(7.2, 4.85, "只由最大、最小值决定", fontsize=12, color=BLUE, ha="center")
+# 后：各除以自身 L2 范数，两行几乎重合
+rx0, rx1 = 5.9, 9.6
+unit = np.array([0.27, 0.53, 0.80])
+ax.plot([rx0, rx1], [6.4, 6.4], color="#bbbbbb", lw=1)
+for dy, fc in [(0.13, BLUE), (-0.13, "white")]:
+    ax.scatter(rx0 + unit * (rx1 - rx0), np.full(3, 6.4 + dy), s=42,
+               facecolors=fc, edgecolors=BLUE, linewidths=1.6, zorder=3)
+for t, lab in [(0, "0"), (1, "1")]:
+    xt = rx0 + t * (rx1 - rx0)
+    ax.plot([xt, xt], [6.24, 6.56], color="#999999", lw=1.2)
+    ax.text(xt, 5.95, lab, fontsize=11.5, color=GRAY, ha="center")
+ax.text((rx0 + rx1) / 2, 5.45, "[0.27, 0.53, 0.80]", fontsize=12, color=BLUE, ha="center")
+ax.text(7.75, 7.55, "都变成单位向量（长度 1）", fontsize=12, color=BLUE, ha="center")
+ax.text(7.75, 4.85, "两行几乎重合，只剩比例", fontsize=12, color=BLUE, ha="center")
 
-ax.text(5, 1.15, "线性缩放到固定区间（如 [0, 1]）\n对最大最小值（异常值）敏感", fontsize=16,
+ax.text(5, 1.15, "把每一行除以自身的 L2 范数（按行计算）\n只保留比例，丢掉绝对大小", fontsize=16,
         color=GRAY, ha="center", linespacing=1.6)
 
 # ---------- 第三栏：正则化 ----------
