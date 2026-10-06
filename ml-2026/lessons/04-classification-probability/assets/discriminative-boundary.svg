@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="230" viewBox="0 0 560 230">
+<title>判别式：直接学习分类边界</title>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#536b83" stroke-width="1.5"/></marker></defs>
+<rect x="1" y="1" width="558" height="228" rx="16" fill="#fff"/>
+<path d="M58 26V191H509" fill="none" stroke="#9baec0" stroke-width="2" marker-end="url(#a)"/>
+<path d="M58 191V26H312L183 191Z" fill="#e6f0ff"/>
+<path d="M312 26H509V191H183Z" fill="#e1f3ee"/>
+<path d="M312 26L183 191" stroke="#294b76" stroke-width="4"/>
+<g fill="#4177b7" stroke="white" stroke-width="2"><circle cx="107" cy="144" r="7"/><circle cx="126" cy="100" r="7"/><circle cx="158" cy="152" r="7"/><circle cx="176" cy="77" r="7"/><circle cx="194" cy="114" r="7"/><circle cx="224" cy="64" r="7"/><circle cx="240" cy="101" r="7"/><circle cx="277" cy="61" r="7"/></g>
+<g fill="#23756c" stroke="white" stroke-width="2"><circle cx="286" cy="156" r="7"/><circle cx="301" cy="102" r="7"/><circle cx="330" cy="140" r="7"/><circle cx="355" cy="82" r="7"/><circle cx="381" cy="160" r="7"/><circle cx="408" cy="109" r="7"/><circle cx="436" cy="75" r="7"/><circle cx="452" cy="145" r="7"/></g>
+<path d="M251 104l4 10 11 1-9 7 3 11-9-6-9 6 3-11-9-7 11-1Z" fill="#e9a94c" stroke="#996526" stroke-width="2"/>
+<path d="M265 125L330 185" fill="none" stroke="#a06a24" stroke-width="1.8"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="20"><text x="85" y="58" fill="#174b87">未违约</text><text x="400" y="46" fill="#17665f">违约</text><text x="340" y="211" fill="#856026">新客户 x</text><text x="23" y="23" fill="#536b83" font-size="16">特征₂</text><text x="473" y="216" fill="#536b83" font-size="16">特征₁</text></g>
+</svg>

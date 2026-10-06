@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<title>GAN：生成器和判别器交替训练</title>
+<desc>噪声经生成器得到猫图，真实与生成猫图分别送入判别器。固定生成器更新判别器，再固定判别器更新生成器，反馈反传到生成器。</desc>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#52657a" stroke-width="2"/></marker>
+<marker id="feedback" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#c47c2d" stroke-width="2"/></marker>
+<symbol id="cat" viewBox="0 0 110 100"><path d="M18 47L15 10 43 27Q55 22 67 27L96 10 92 47Q105 85 56 92 7 87 18 47Z" fill="#edc791" stroke="#856342" stroke-width="3"/><path d="M24 23L26 43 37 31M86 23L84 43 73 31" fill="#eea990"/><ellipse cx="38" cy="56" rx="5" ry="7" fill="#273951"/><ellipse cx="73" cy="56" rx="5" ry="7" fill="#273951"/><path d="M49 69L62 69 56 76Z" fill="#bd775b"/><path d="M56 76Q47 86 40 77M56 76Q65 86 72 77" fill="none" stroke="#856342" stroke-width="2.5"/><path d="M17 68L3 65M18 75L2 78M92 68L108 65M92 75L108 78" stroke="#856342" stroke-width="2"/></symbol>
+</defs>
+<rect x="1" y="1" width="978" height="518" rx="22" fill="#f8fafc" stroke="#dae4ec" stroke-width="2"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#192b41">
+<text x="30" y="43" font-size="27" font-weight="650">生成器画猫，判别器辨别样本来源</text>
+<!-- Forward generation path -->
+<rect x="27" y="101" width="105" height="106" rx="14" fill="#e9eff8"/>
+<g fill="#7895ba"><rect x="43" y="120" width="12" height="12"/><rect x="73" y="126" width="12" height="12"/><rect x="99" y="114" width="12" height="12"/><rect x="56" y="153" width="12" height="12"/><rect x="87" y="164" width="12" height="12"/><rect x="42" y="182" width="12" height="12"/><rect x="109" y="147" width="9" height="9"/></g>
+<text x="80" y="241" text-anchor="middle" font-size="25">噪声 z</text>
+<path d="M139 153H184" fill="none" stroke="#52657a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="199" y="89" width="169" height="137" rx="20" fill="#e0f2ed" stroke="#58a699" stroke-width="2"/>
+<rect x="243" y="106" width="79" height="63" rx="15" fill="white" stroke="#23756c" stroke-width="3"/>
+<path d="M282 95V106M262 178H304M249 190H316" stroke="#23756c" stroke-width="3" stroke-linecap="round"/>
+<circle cx="265" cy="131" r="6" fill="#23756c"/><circle cx="302" cy="131" r="6" fill="#23756c"/>
+<path d="M268 151Q283 160 299 151" fill="none" stroke="#23756c" stroke-width="3"/>
+<text x="283" y="215" text-anchor="middle" font-size="26" font-weight="650">生成器 G</text>
+<path d="M376 153H422" fill="none" stroke="#52657a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="438" y="84" width="139" height="139" rx="16" fill="#fff" stroke="#86bbae" stroke-width="3"/>
+<use href="#cat" x="453" y="101" width="109" height="105"/>
+<text x="508" y="252" text-anchor="middle" font-size="25" fill="#17665f">生成样本</text>
+<path d="M587 153H676" fill="none" stroke="#52657a" stroke-width="3" marker-end="url(#arrow)"/>
+<!-- Real data path joins same discriminator -->
+<rect x="436" y="284" width="139" height="119" rx="16" fill="#fff" stroke="#81a4cf" stroke-width="3"/>
+<use href="#cat" x="456" y="295" width="99" height="91"/>
+<text x="409" y="328" text-anchor="end" font-size="25" fill="#174b87">训练集</text>
+<text x="409" y="360" text-anchor="end" font-size="25" fill="#174b87">真实样本</text>
+<path d="M587 344H645Q662 344 662 327V231H676" fill="none" stroke="#52657a" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="690" y="114" width="164" height="174" rx="20" fill="#fff0e1" stroke="#d8a26b" stroke-width="2"/>
+<path d="M718 166Q772 119 827 166Q772 214 718 166Z" fill="white" stroke="#a56930" stroke-width="3"/>
+<circle cx="772" cy="166" r="17" fill="#a56930"/><circle cx="778" cy="160" r="5" fill="white"/>
+<text x="772" y="238" text-anchor="middle" font-size="26" font-weight="650" fill="#8b4b17">判别器 D</text>
+<text x="772" y="269" text-anchor="middle" font-size="21" fill="#8b4b17">来自真实数据？</text>
+<path d="M861 190H886" fill="none" stroke="#52657a" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="936" y="171" text-anchor="middle" font-size="27" fill="#a56930">真</text>
+<text x="936" y="220" text-anchor="middle" font-size="27" fill="#a56930">假</text>
+<!-- Gradient feedback to G, not true data -->
+<path d="M773 295V416Q773 434 755 434H301Q283 434 283 416V256" fill="none" stroke="#c47c2d" stroke-width="3.5" stroke-dasharray="9 6" marker-end="url(#feedback)"/>
+<rect x="357" y="412" width="354" height="38" rx="15" fill="#fff6e9"/>
+<text x="534" y="439" text-anchor="middle" font-size="24" fill="#a56930">反馈经生成样本反传到 G</text>
+<rect x="25" y="469" width="441" height="36" rx="8" fill="#eef3fa"/><text x="45" y="495" font-size="22">① 固定 G，更新 D：分清真假</text>
+<rect x="482" y="469" width="473" height="36" rx="8" fill="#edf7f4"/><text x="499" y="495" font-size="22">② 固定 D，更新 G：让样本被判为真</text>
+</g></svg>

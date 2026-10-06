@@ -52,7 +52,9 @@ python -m ipykernel install --user --name ecnu-ml --display-name "机器学习�
 
 完成后 JupyterLab 的内核列表里才会出现 `ecnu-ml`。第 10 章的 `ecnu-hf` 内核在开放第 10 章时再按当时说明安装。
 
-装好后回到「一键启动」。环境自检顺序：Python ≥ 3.12 → 提示符前是否出现 `(.venv)` → 是否在 `ml-2026` 目录内执行。完全不想装环境时，可将对应 `.ipynb` 上传 [Google Colab](https://colab.research.google.com/) 运行（第 10 章需要 GPU，Colab 免费版可用）。
+装好后回到「一键启动」。环境自检顺序：Python ≥ 3.12 → 提示符前是否出现 `(.venv)` → 是否在 `ml-2026` 目录内执行。完全不想装环境时，可将对应 `.ipynb` 上传 [Google Colab](https://colab.research.google.com/) 运行（第 10 章另需安装模型推理依赖）。
+
+数据与配套文件：建议下载整个 `ml-2026` 目录，保留每讲 `notebook/data/README.md` 和 `notebook/helpers/`。第 4 讲附带信用卡 CSV；若遗漏，Notebook 会自动下载并转换，首次需要联网。只上传 `.ipynb` 到 Colab 时，使用绘图辅助文件的实验还需上传对应 `helpers/`。其他讲次的数据准备方式见其 Notebook；第 10 讲的 CPU 推理不要求 GPU，需安装其独立依赖。
 
 ## 课程材料在哪里
 

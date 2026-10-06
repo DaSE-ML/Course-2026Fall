@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="230" viewBox="0 0 560 230">
+<title>生成式：学习各类特征分布</title>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#536b83" stroke-width="1.5"/></marker></defs>
+<rect x="1" y="1" width="558" height="228" rx="16" fill="#fff"/>
+<path d="M58 26V191H509" fill="none" stroke="#9baec0" stroke-width="2" marker-end="url(#a)"/>
+<g fill="#4177b7" fill-opacity=".08" stroke="#4177b7" stroke-opacity=".55" stroke-width="2"><ellipse cx="187" cy="111" rx="116" ry="69"/><ellipse cx="187" cy="111" rx="79" ry="47"/><ellipse cx="187" cy="111" rx="42" ry="25"/></g>
+<g fill="#23756c" fill-opacity=".08" stroke="#23756c" stroke-opacity=".55" stroke-width="2"><ellipse cx="369" cy="123" rx="115" ry="67"/><ellipse cx="369" cy="123" rx="78" ry="45"/><ellipse cx="369" cy="123" rx="41" ry="24"/></g>
+<g fill="#4177b7" stroke="white" stroke-width="2"><circle cx="107" cy="144" r="6"/><circle cx="126" cy="100" r="6"/><circle cx="158" cy="152" r="6"/><circle cx="176" cy="77" r="6"/><circle cx="194" cy="114" r="6"/><circle cx="224" cy="64" r="6"/><circle cx="240" cy="101" r="6"/><circle cx="277" cy="61" r="6"/></g>
+<g fill="#23756c" stroke="white" stroke-width="2"><circle cx="286" cy="156" r="6"/><circle cx="301" cy="102" r="6"/><circle cx="330" cy="140" r="6"/><circle cx="355" cy="82" r="6"/><circle cx="381" cy="160" r="6"/><circle cx="408" cy="109" r="6"/><circle cx="436" cy="75" r="6"/><circle cx="452" cy="145" r="6"/></g>
+<path d="M251 104l4 10 11 1-9 7 3 11-9-6-9 6 3-11-9-7 11-1Z" fill="#e9a94c" stroke="#996526" stroke-width="2"/>
+<path d="M237 121L202 119M267 120L314 121" stroke="#a06a24" stroke-width="2" stroke-dasharray="4 4"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="20"><text x="90" y="32" fill="#174b87">未违约类的分布</text><text x="340" y="32" fill="#17665f">违约类的分布</text><text x="131" y="215" fill="#52657a">比较两类可能性，再结合类别比例</text><text x="23" y="23" fill="#536b83" font-size="16">特征₂</text></g>
+</svg>

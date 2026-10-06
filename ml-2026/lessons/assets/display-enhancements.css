@@ -29,13 +29,31 @@ body.image-open{overflow:hidden}
 .mini-grid .reveal-card--ok{border-left-color:#23756c}
 .mini-grid .reveal-card--ok>b{color:#23756c;display:block}
 .mini-grid .reveal-card>p{margin:10px 0 0}
+/* Narrow screens: let long teaching slides scroll from the top and prevent
+   grid/code blocks from imposing their intrinsic width on the page. */
+@media(max-width:650px){
+ .slide{justify-content:flex-start}
+ .content,.body,.body>*,.cols>div,.mini-grid>div{min-width:0;max-width:100%}
+ .body :not(pre){overflow-wrap:anywhere}
+ .body table{table-layout:fixed;overflow-wrap:anywhere}
+ .body img{max-width:100%;height:auto}
+ .mini-grid{width:100%;min-width:0;grid-template-columns:minmax(0,1fr)}
+ .mini-grid>div{min-width:0;max-width:100%;overflow:hidden}
+ pre{width:100%;max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto}
+}
 @media print{
  body{background:white!important}
  .image-viewer{display:none!important}
- .body details{display:block!important}
+ .body details:not(.print-hide){display:block!important}
  .body details>summary{display:block!important;list-style:none}
  .body details>summary::-webkit-details-marker{display:none}
  .body details>summary::marker{content:''}
  .body details>summary::after{content:''!important}
  .body details>:not(summary){display:block!important;visibility:visible!important;height:auto!important;overflow:visible!important}
+ .slide.print-fit .body{font-size:13pt;line-height:1.24}
+ .slide.print-fit .body p{margin:3px 0}
+ .slide.print-fit .body table{font-size:.82em}
+ .slide.threshold-cost table{table-layout:fixed;font-size:.76em}
+ .slide.threshold-cost th,.slide.threshold-cost td{padding:4px 6px;text-align:center;white-space:nowrap}
+ .slide.threshold-cost th:first-child,.slide.threshold-cost td:first-child{width:25%}
 }
