@@ -43,6 +43,15 @@
         <p><strong>数据要求</strong><br>从现实世界收集，不可使用现成或生成的数据集。可以使用 AI Tools 辅助。</p>
       </td>
     </tr>
+    <tr>
+      <td valign="top"><strong>Lesson 3</strong><br><br>机器邪修锦囊</td>
+      <td align="center" valign="top"><a href="assignments/lab03-poster.jpg"><img src="assignments/lab03-poster-thumb.jpg" width="320" alt="Lab 3 机器邪修锦囊任务海报缩略图"></a></td>
+      <td valign="top">
+        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab03/</code> 文件夹。</p>
+        <p><strong>提交什么？</strong><br>Jupyter Notebook（<code>.ipynb</code>），包含代码和实验结果。</p>
+        <p><strong>基本要求</strong><br>基于公开数据集，分别复现任意 4 个锦囊，比较使用前后的实验结果。</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
