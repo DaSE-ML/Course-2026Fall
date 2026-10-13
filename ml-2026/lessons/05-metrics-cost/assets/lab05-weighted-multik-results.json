@@ -1,0 +1,1522 @@
+{
+  "capacities": [
+    600,
+    1000,
+    1500,
+    2000
+  ],
+  "weights": [
+    1,
+    1.5,
+    2,
+    2.5,
+    3.0,
+    3.5,
+    4,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8
+  ],
+  "protocol": "fixed valid exploratory; nested selection12000fit/6000select/6000eval; refit18000; seeds101/102/103; no historical test; stable row ties",
+  "topk": [
+    {
+      "weight": 1.0,
+      "K": 600,
+      "TP": 412,
+      "P": 0.6866666666666666,
+      "R": 0.31047475508666167,
+      "delta_TP": 0,
+      "overlap": 600,
+      "overlap_rate": 1.0,
+      "gained_positive": 0,
+      "lost_positive": 0
+    },
+    {
+      "weight": 1.0,
+      "K": 1000,
+      "TP": 581,
+      "P": 0.581,
+      "R": 0.43782969103240393,
+      "delta_TP": 0,
+      "overlap": 1000,
+      "overlap_rate": 1.0,
+      "gained_positive": 0,
+      "lost_positive": 0
+    },
+    {
+      "weight": 1.0,
+      "K": 1500,
+      "TP": 718,
+      "P": 0.4786666666666667,
+      "R": 0.5410700828937453,
+      "delta_TP": 0,
+      "overlap": 1500,
+      "overlap_rate": 1.0,
+      "gained_positive": 0,
+      "lost_positive": 0
+    },
+    {
+      "weight": 1.0,
+      "K": 2000,
+      "TP": 817,
+      "P": 0.4085,
+      "R": 0.6156744536548606,
+      "delta_TP": 0,
+      "overlap": 2000,
+      "overlap_rate": 1.0,
+      "gained_positive": 0,
+      "lost_positive": 0
+    },
+    {
+      "weight": 1.5,
+      "K": 600,
+      "TP": 411,
+      "P": 0.685,
+      "R": 0.3097211755840241,
+      "delta_TP": -1,
+      "overlap": 594,
+      "overlap_rate": 0.99,
+      "gained_positive": 3,
+      "lost_positive": 4
+    },
+    {
+      "weight": 1.5,
+      "K": 1000,
+      "TP": 581,
+      "P": 0.581,
+      "R": 0.43782969103240393,
+      "delta_TP": 0,
+      "overlap": 999,
+      "overlap_rate": 0.999,
+      "gained_positive": 0,
+      "lost_positive": 0
+    },
+    {
+      "weight": 1.5,
+      "K": 1500,
+      "TP": 721,
+      "P": 0.4806666666666667,
+      "R": 0.5433308214016579,
+      "delta_TP": 3,
+      "overlap": 1494,
+      "overlap_rate": 0.996,
+      "gained_positive": 3,
+      "lost_positive": 0
+    },
+    {
+      "weight": 1.5,
+      "K": 2000,
+      "TP": 814,
+      "P": 0.407,
+      "R": 0.613413715146948,
+      "delta_TP": -3,
+      "overlap": 1995,
+      "overlap_rate": 0.9975,
+      "gained_positive": 0,
+      "lost_positive": 3
+    },
+    {
+      "weight": 2.0,
+      "K": 600,
+      "TP": 412,
+      "P": 0.6866666666666666,
+      "R": 0.31047475508666167,
+      "delta_TP": 0,
+      "overlap": 590,
+      "overlap_rate": 0.9833333333333333,
+      "gained_positive": 5,
+      "lost_positive": 5
+    },
+    {
+      "weight": 2.0,
+      "K": 1000,
+      "TP": 581,
+      "P": 0.581,
+      "R": 0.43782969103240393,
+      "delta_TP": 0,
+      "overlap": 997,
+      "overlap_rate": 0.997,
+      "gained_positive": 2,
+      "lost_positive": 2
+    },
+    {
+      "weight": 2.0,
+      "K": 1500,
+      "TP": 723,
+      "P": 0.482,
+      "R": 0.544837980406933,
+      "delta_TP": 5,
+      "overlap": 1489,
+      "overlap_rate": 0.9926666666666667,
+      "gained_positive": 5,
+      "lost_positive": 0
+    },
+    {
+      "weight": 2.0,
+      "K": 2000,
+      "TP": 814,
+      "P": 0.407,
+      "R": 0.613413715146948,
+      "delta_TP": -3,
+      "overlap": 1991,
+      "overlap_rate": 0.9955,
+      "gained_positive": 1,
+      "lost_positive": 4
+    },
+    {
+      "weight": 2.5,
+      "K": 600,
+      "TP": 411,
+      "P": 0.685,
+      "R": 0.3097211755840241,
+      "delta_TP": -1,
+      "overlap": 589,
+      "overlap_rate": 0.9816666666666667,
+      "gained_positive": 5,
+      "lost_positive": 6
+    },
+    {
+      "weight": 2.5,
+      "K": 1000,
+      "TP": 580,
+      "P": 0.58,
+      "R": 0.4370761115297664,
+      "delta_TP": -1,
+      "overlap": 992,
+      "overlap_rate": 0.992,
+      "gained_positive": 5,
+      "lost_positive": 6
+    },
+    {
+      "weight": 2.5,
+      "K": 1500,
+      "TP": 721,
+      "P": 0.4806666666666667,
+      "R": 0.5433308214016579,
+      "delta_TP": 3,
+      "overlap": 1482,
+      "overlap_rate": 0.988,
+      "gained_positive": 6,
+      "lost_positive": 3
+    },
+    {
+      "weight": 2.5,
+      "K": 2000,
+      "TP": 813,
+      "P": 0.4065,
+      "R": 0.6126601356443104,
+      "delta_TP": -4,
+      "overlap": 1987,
+      "overlap_rate": 0.9935,
+      "gained_positive": 2,
+      "lost_positive": 6
+    },
+    {
+      "weight": 3.0,
+      "K": 600,
+      "TP": 411,
+      "P": 0.685,
+      "R": 0.3097211755840241,
+      "delta_TP": -1,
+      "overlap": 587,
+      "overlap_rate": 0.9783333333333334,
+      "gained_positive": 6,
+      "lost_positive": 7
+    },
+    {
+      "weight": 3.0,
+      "K": 1000,
+      "TP": 580,
+      "P": 0.58,
+      "R": 0.4370761115297664,
+      "delta_TP": -1,
+      "overlap": 991,
+      "overlap_rate": 0.991,
+      "gained_positive": 6,
+      "lost_positive": 7
+    },
+    {
+      "weight": 3.0,
+      "K": 1500,
+      "TP": 721,
+      "P": 0.4806666666666667,
+      "R": 0.5433308214016579,
+      "delta_TP": 3,
+      "overlap": 1481,
+      "overlap_rate": 0.9873333333333333,
+      "gained_positive": 7,
+      "lost_positive": 4
+    },
+    {
+      "weight": 3.0,
+      "K": 2000,
+      "TP": 813,
+      "P": 0.4065,
+      "R": 0.6126601356443104,
+      "delta_TP": -4,
+      "overlap": 1985,
+      "overlap_rate": 0.9925,
+      "gained_positive": 2,
+      "lost_positive": 6
+    },
+    {
+      "weight": 3.5,
+      "K": 600,
+      "TP": 411,
+      "P": 0.685,
+      "R": 0.3097211755840241,
+      "delta_TP": -1,
+      "overlap": 587,
+      "overlap_rate": 0.9783333333333334,
+      "gained_positive": 6,
+      "lost_positive": 7
+    },
+    {
+      "weight": 3.5,
+      "K": 1000,
+      "TP": 580,
+      "P": 0.58,
+      "R": 0.4370761115297664,
+      "delta_TP": -1,
+      "overlap": 991,
+      "overlap_rate": 0.991,
+      "gained_positive": 6,
+      "lost_positive": 7
+    },
+    {
+      "weight": 3.5,
+      "K": 1500,
+      "TP": 722,
+      "P": 0.48133333333333334,
+      "R": 0.5440844009042954,
+      "delta_TP": 4,
+      "overlap": 1476,
+      "overlap_rate": 0.984,
+      "gained_positive": 8,
+      "lost_positive": 4
+    },
+    {
+      "weight": 3.5,
+      "K": 2000,
+      "TP": 812,
+      "P": 0.406,
+      "R": 0.611906556141673,
+      "delta_TP": -5,
+      "overlap": 1981,
+      "overlap_rate": 0.9905,
+      "gained_positive": 2,
+      "lost_positive": 7
+    },
+    {
+      "weight": 4.0,
+      "K": 600,
+      "TP": 411,
+      "P": 0.685,
+      "R": 0.3097211755840241,
+      "delta_TP": -1,
+      "overlap": 587,
+      "overlap_rate": 0.9783333333333334,
+      "gained_positive": 6,
+      "lost_positive": 7
+    },
+    {
+      "weight": 4.0,
+      "K": 1000,
+      "TP": 579,
+      "P": 0.579,
+      "R": 0.43632253202712884,
+      "delta_TP": -2,
+      "overlap": 990,
+      "overlap_rate": 0.99,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 4.0,
+      "K": 1500,
+      "TP": 721,
+      "P": 0.4806666666666667,
+      "R": 0.5433308214016579,
+      "delta_TP": 3,
+      "overlap": 1471,
+      "overlap_rate": 0.9806666666666667,
+      "gained_positive": 9,
+      "lost_positive": 6
+    },
+    {
+      "weight": 4.0,
+      "K": 2000,
+      "TP": 812,
+      "P": 0.406,
+      "R": 0.611906556141673,
+      "delta_TP": -5,
+      "overlap": 1979,
+      "overlap_rate": 0.9895,
+      "gained_positive": 2,
+      "lost_positive": 7
+    },
+    {
+      "weight": 4.5,
+      "K": 600,
+      "TP": 411,
+      "P": 0.685,
+      "R": 0.3097211755840241,
+      "delta_TP": -1,
+      "overlap": 587,
+      "overlap_rate": 0.9783333333333334,
+      "gained_positive": 6,
+      "lost_positive": 7
+    },
+    {
+      "weight": 4.5,
+      "K": 1000,
+      "TP": 579,
+      "P": 0.579,
+      "R": 0.43632253202712884,
+      "delta_TP": -2,
+      "overlap": 990,
+      "overlap_rate": 0.99,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 4.5,
+      "K": 1500,
+      "TP": 719,
+      "P": 0.47933333333333333,
+      "R": 0.5418236623963828,
+      "delta_TP": 1,
+      "overlap": 1468,
+      "overlap_rate": 0.9786666666666667,
+      "gained_positive": 9,
+      "lost_positive": 8
+    },
+    {
+      "weight": 4.5,
+      "K": 2000,
+      "TP": 811,
+      "P": 0.4055,
+      "R": 0.6111529766390355,
+      "delta_TP": -6,
+      "overlap": 1977,
+      "overlap_rate": 0.9885,
+      "gained_positive": 2,
+      "lost_positive": 8
+    },
+    {
+      "weight": 5.0,
+      "K": 600,
+      "TP": 410,
+      "P": 0.6833333333333333,
+      "R": 0.3089675960813866,
+      "delta_TP": -2,
+      "overlap": 586,
+      "overlap_rate": 0.9766666666666667,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 5.0,
+      "K": 1000,
+      "TP": 579,
+      "P": 0.579,
+      "R": 0.43632253202712884,
+      "delta_TP": -2,
+      "overlap": 987,
+      "overlap_rate": 0.987,
+      "gained_positive": 7,
+      "lost_positive": 9
+    },
+    {
+      "weight": 5.0,
+      "K": 1500,
+      "TP": 719,
+      "P": 0.47933333333333333,
+      "R": 0.5418236623963828,
+      "delta_TP": 1,
+      "overlap": 1468,
+      "overlap_rate": 0.9786666666666667,
+      "gained_positive": 9,
+      "lost_positive": 8
+    },
+    {
+      "weight": 5.0,
+      "K": 2000,
+      "TP": 811,
+      "P": 0.4055,
+      "R": 0.6111529766390355,
+      "delta_TP": -6,
+      "overlap": 1977,
+      "overlap_rate": 0.9885,
+      "gained_positive": 2,
+      "lost_positive": 8
+    },
+    {
+      "weight": 5.5,
+      "K": 600,
+      "TP": 410,
+      "P": 0.6833333333333333,
+      "R": 0.3089675960813866,
+      "delta_TP": -2,
+      "overlap": 586,
+      "overlap_rate": 0.9766666666666667,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 5.5,
+      "K": 1000,
+      "TP": 579,
+      "P": 0.579,
+      "R": 0.43632253202712884,
+      "delta_TP": -2,
+      "overlap": 987,
+      "overlap_rate": 0.987,
+      "gained_positive": 7,
+      "lost_positive": 9
+    },
+    {
+      "weight": 5.5,
+      "K": 1500,
+      "TP": 721,
+      "P": 0.4806666666666667,
+      "R": 0.5433308214016579,
+      "delta_TP": 3,
+      "overlap": 1465,
+      "overlap_rate": 0.9766666666666667,
+      "gained_positive": 11,
+      "lost_positive": 8
+    },
+    {
+      "weight": 5.5,
+      "K": 2000,
+      "TP": 811,
+      "P": 0.4055,
+      "R": 0.6111529766390355,
+      "delta_TP": -6,
+      "overlap": 1977,
+      "overlap_rate": 0.9885,
+      "gained_positive": 2,
+      "lost_positive": 8
+    },
+    {
+      "weight": 6.0,
+      "K": 600,
+      "TP": 410,
+      "P": 0.6833333333333333,
+      "R": 0.3089675960813866,
+      "delta_TP": -2,
+      "overlap": 586,
+      "overlap_rate": 0.9766666666666667,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 6.0,
+      "K": 1000,
+      "TP": 578,
+      "P": 0.578,
+      "R": 0.43556895252449135,
+      "delta_TP": -3,
+      "overlap": 987,
+      "overlap_rate": 0.987,
+      "gained_positive": 7,
+      "lost_positive": 10
+    },
+    {
+      "weight": 6.0,
+      "K": 1500,
+      "TP": 721,
+      "P": 0.4806666666666667,
+      "R": 0.5433308214016579,
+      "delta_TP": 3,
+      "overlap": 1464,
+      "overlap_rate": 0.976,
+      "gained_positive": 11,
+      "lost_positive": 8
+    },
+    {
+      "weight": 6.0,
+      "K": 2000,
+      "TP": 812,
+      "P": 0.406,
+      "R": 0.611906556141673,
+      "delta_TP": -5,
+      "overlap": 1976,
+      "overlap_rate": 0.988,
+      "gained_positive": 3,
+      "lost_positive": 8
+    },
+    {
+      "weight": 6.5,
+      "K": 600,
+      "TP": 410,
+      "P": 0.6833333333333333,
+      "R": 0.3089675960813866,
+      "delta_TP": -2,
+      "overlap": 586,
+      "overlap_rate": 0.9766666666666667,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 6.5,
+      "K": 1000,
+      "TP": 578,
+      "P": 0.578,
+      "R": 0.43556895252449135,
+      "delta_TP": -3,
+      "overlap": 986,
+      "overlap_rate": 0.986,
+      "gained_positive": 7,
+      "lost_positive": 10
+    },
+    {
+      "weight": 6.5,
+      "K": 1500,
+      "TP": 718,
+      "P": 0.4786666666666667,
+      "R": 0.5410700828937453,
+      "delta_TP": 0,
+      "overlap": 1459,
+      "overlap_rate": 0.9726666666666667,
+      "gained_positive": 11,
+      "lost_positive": 11
+    },
+    {
+      "weight": 6.5,
+      "K": 2000,
+      "TP": 813,
+      "P": 0.4065,
+      "R": 0.6126601356443104,
+      "delta_TP": -4,
+      "overlap": 1976,
+      "overlap_rate": 0.988,
+      "gained_positive": 3,
+      "lost_positive": 7
+    },
+    {
+      "weight": 7.0,
+      "K": 600,
+      "TP": 410,
+      "P": 0.6833333333333333,
+      "R": 0.3089675960813866,
+      "delta_TP": -2,
+      "overlap": 586,
+      "overlap_rate": 0.9766666666666667,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 7.0,
+      "K": 1000,
+      "TP": 578,
+      "P": 0.578,
+      "R": 0.43556895252449135,
+      "delta_TP": -3,
+      "overlap": 986,
+      "overlap_rate": 0.986,
+      "gained_positive": 7,
+      "lost_positive": 10
+    },
+    {
+      "weight": 7.0,
+      "K": 1500,
+      "TP": 719,
+      "P": 0.47933333333333333,
+      "R": 0.5418236623963828,
+      "delta_TP": 1,
+      "overlap": 1456,
+      "overlap_rate": 0.9706666666666667,
+      "gained_positive": 12,
+      "lost_positive": 11
+    },
+    {
+      "weight": 7.0,
+      "K": 2000,
+      "TP": 813,
+      "P": 0.4065,
+      "R": 0.6126601356443104,
+      "delta_TP": -4,
+      "overlap": 1975,
+      "overlap_rate": 0.9875,
+      "gained_positive": 3,
+      "lost_positive": 7
+    },
+    {
+      "weight": 7.5,
+      "K": 600,
+      "TP": 410,
+      "P": 0.6833333333333333,
+      "R": 0.3089675960813866,
+      "delta_TP": -2,
+      "overlap": 586,
+      "overlap_rate": 0.9766666666666667,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 7.5,
+      "K": 1000,
+      "TP": 577,
+      "P": 0.577,
+      "R": 0.4348153730218538,
+      "delta_TP": -4,
+      "overlap": 985,
+      "overlap_rate": 0.985,
+      "gained_positive": 7,
+      "lost_positive": 11
+    },
+    {
+      "weight": 7.5,
+      "K": 1500,
+      "TP": 719,
+      "P": 0.47933333333333333,
+      "R": 0.5418236623963828,
+      "delta_TP": 1,
+      "overlap": 1454,
+      "overlap_rate": 0.9693333333333334,
+      "gained_positive": 12,
+      "lost_positive": 11
+    },
+    {
+      "weight": 7.5,
+      "K": 2000,
+      "TP": 813,
+      "P": 0.4065,
+      "R": 0.6126601356443104,
+      "delta_TP": -4,
+      "overlap": 1974,
+      "overlap_rate": 0.987,
+      "gained_positive": 3,
+      "lost_positive": 7
+    },
+    {
+      "weight": 8.0,
+      "K": 600,
+      "TP": 410,
+      "P": 0.6833333333333333,
+      "R": 0.3089675960813866,
+      "delta_TP": -2,
+      "overlap": 586,
+      "overlap_rate": 0.9766666666666667,
+      "gained_positive": 6,
+      "lost_positive": 8
+    },
+    {
+      "weight": 8.0,
+      "K": 1000,
+      "TP": 577,
+      "P": 0.577,
+      "R": 0.4348153730218538,
+      "delta_TP": -4,
+      "overlap": 984,
+      "overlap_rate": 0.984,
+      "gained_positive": 7,
+      "lost_positive": 11
+    },
+    {
+      "weight": 8.0,
+      "K": 1500,
+      "TP": 719,
+      "P": 0.47933333333333333,
+      "R": 0.5418236623963828,
+      "delta_TP": 1,
+      "overlap": 1454,
+      "overlap_rate": 0.9693333333333334,
+      "gained_positive": 12,
+      "lost_positive": 11
+    },
+    {
+      "weight": 8.0,
+      "K": 2000,
+      "TP": 812,
+      "P": 0.406,
+      "R": 0.611906556141673,
+      "delta_TP": -5,
+      "overlap": 1973,
+      "overlap_rate": 0.9865,
+      "gained_positive": 3,
+      "lost_positive": 8
+    }
+  ],
+  "cost": [
+    {
+      "weight": 1.0,
+      "K": 600,
+      "threshold": 0.45921418067882047,
+      "reported": 599.0,
+      "TP": 412.0,
+      "FP": 187.0,
+      "FN": 915.0,
+      "cost": 3847.0
+    },
+    {
+      "weight": 1.0,
+      "K": 1000,
+      "threshold": 0.30735155439104817,
+      "reported": 1000.0,
+      "TP": 581.0,
+      "FP": 419.0,
+      "FN": 746.0,
+      "cost": 3403.0
+    },
+    {
+      "weight": 1.0,
+      "K": 1500,
+      "threshold": 0.24368568170219002,
+      "reported": 1497.0,
+      "TP": 718.0,
+      "FP": 779.0,
+      "FN": 609.0,
+      "cost": 3215.0
+    },
+    {
+      "weight": 1.0,
+      "K": 2000,
+      "threshold": 0.23509129563029021,
+      "reported": 1807.0,
+      "TP": 788.0,
+      "FP": 1019.0,
+      "FN": 539.0,
+      "cost": 3175.0
+    },
+    {
+      "weight": 1.5,
+      "K": 600,
+      "threshold": 0.5521383302341598,
+      "reported": 599.0,
+      "TP": 411.0,
+      "FP": 188.0,
+      "FN": 916.0,
+      "cost": 3852.0
+    },
+    {
+      "weight": 1.5,
+      "K": 1000,
+      "threshold": 0.3954457968301348,
+      "reported": 1000.0,
+      "TP": 581.0,
+      "FP": 419.0,
+      "FN": 746.0,
+      "cost": 3403.0
+    },
+    {
+      "weight": 1.5,
+      "K": 1500,
+      "threshold": 0.32577803150609574,
+      "reported": 1499.0,
+      "TP": 721.0,
+      "FP": 778.0,
+      "FN": 606.0,
+      "cost": 3202.0
+    },
+    {
+      "weight": 1.5,
+      "K": 2000,
+      "threshold": 0.31570762336066266,
+      "reported": 1802.0,
+      "TP": 785.0,
+      "FP": 1017.0,
+      "FN": 542.0,
+      "cost": 3185.0
+    },
+    {
+      "weight": 2.0,
+      "K": 600,
+      "threshold": 0.6149079265793143,
+      "reported": 600.0,
+      "TP": 412.0,
+      "FP": 188.0,
+      "FN": 915.0,
+      "cost": 3848.0
+    },
+    {
+      "weight": 2.0,
+      "K": 1000,
+      "threshold": 0.4637447133925156,
+      "reported": 998.0,
+      "TP": 579.0,
+      "FP": 419.0,
+      "FN": 748.0,
+      "cost": 3411.0
+    },
+    {
+      "weight": 2.0,
+      "K": 1500,
+      "threshold": 0.3920198783684241,
+      "reported": 1500.0,
+      "TP": 723.0,
+      "FP": 777.0,
+      "FN": 604.0,
+      "cost": 3193.0
+    },
+    {
+      "weight": 2.0,
+      "K": 2000,
+      "threshold": 0.38099978571599624,
+      "reported": 1803.0,
+      "TP": 786.0,
+      "FP": 1017.0,
+      "FN": 541.0,
+      "cost": 3181.0
+    },
+    {
+      "weight": 2.5,
+      "K": 600,
+      "threshold": 0.6617737532628805,
+      "reported": 597.0,
+      "TP": 411.0,
+      "FP": 186.0,
+      "FN": 916.0,
+      "cost": 3850.0
+    },
+    {
+      "weight": 2.5,
+      "K": 1000,
+      "threshold": 0.5184228540410635,
+      "reported": 992.0,
+      "TP": 575.0,
+      "FP": 417.0,
+      "FN": 752.0,
+      "cost": 3425.0
+    },
+    {
+      "weight": 2.5,
+      "K": 1500,
+      "threshold": 0.44660020733392,
+      "reported": 1497.0,
+      "TP": 721.0,
+      "FP": 776.0,
+      "FN": 606.0,
+      "cost": 3200.0
+    },
+    {
+      "weight": 2.5,
+      "K": 2000,
+      "threshold": 0.43541748812996756,
+      "reported": 1790.0,
+      "TP": 784.0,
+      "FP": 1006.0,
+      "FN": 543.0,
+      "cost": 3178.0
+    },
+    {
+      "weight": 3.0,
+      "K": 600,
+      "threshold": 0.6969851762704197,
+      "reported": 599.0,
+      "TP": 411.0,
+      "FP": 188.0,
+      "FN": 916.0,
+      "cost": 3852.0
+    },
+    {
+      "weight": 3.0,
+      "K": 1000,
+      "threshold": 0.5614495406744476,
+      "reported": 1000.0,
+      "TP": 580.0,
+      "FP": 420.0,
+      "FN": 747.0,
+      "cost": 3408.0
+    },
+    {
+      "weight": 3.0,
+      "K": 1500,
+      "threshold": 0.49225098816659957,
+      "reported": 1497.0,
+      "TP": 721.0,
+      "FP": 776.0,
+      "FN": 606.0,
+      "cost": 3200.0
+    },
+    {
+      "weight": 3.0,
+      "K": 2000,
+      "threshold": 0.48100143381956323,
+      "reported": 1785.0,
+      "TP": 784.0,
+      "FP": 1001.0,
+      "FN": 543.0,
+      "cost": 3173.0
+    },
+    {
+      "weight": 3.5,
+      "K": 600,
+      "threshold": 0.7253048232733112,
+      "reported": 599.0,
+      "TP": 411.0,
+      "FP": 188.0,
+      "FN": 916.0,
+      "cost": 3852.0
+    },
+    {
+      "weight": 3.5,
+      "K": 1000,
+      "threshold": 0.5979142370406942,
+      "reported": 1000.0,
+      "TP": 580.0,
+      "FP": 420.0,
+      "FN": 747.0,
+      "cost": 3408.0
+    },
+    {
+      "weight": 3.5,
+      "K": 1500,
+      "threshold": 0.5308091889000299,
+      "reported": 1498.0,
+      "TP": 722.0,
+      "FP": 776.0,
+      "FN": 605.0,
+      "cost": 3196.0
+    },
+    {
+      "weight": 3.5,
+      "K": 2000,
+      "threshold": 0.5196879103500665,
+      "reported": 1786.0,
+      "TP": 784.0,
+      "FP": 1002.0,
+      "FN": 543.0,
+      "cost": 3174.0
+    },
+    {
+      "weight": 4.0,
+      "K": 600,
+      "threshold": 0.7480360999908443,
+      "reported": 600.0,
+      "TP": 411.0,
+      "FP": 189.0,
+      "FN": 916.0,
+      "cost": 3853.0
+    },
+    {
+      "weight": 4.0,
+      "K": 1000,
+      "threshold": 0.6289538256473189,
+      "reported": 999.0,
+      "TP": 579.0,
+      "FP": 420.0,
+      "FN": 748.0,
+      "cost": 3412.0
+    },
+    {
+      "weight": 4.0,
+      "K": 1500,
+      "threshold": 0.5638999724219511,
+      "reported": 1497.0,
+      "TP": 721.0,
+      "FP": 776.0,
+      "FN": 606.0,
+      "cost": 3200.0
+    },
+    {
+      "weight": 4.0,
+      "K": 2000,
+      "threshold": 0.5526775781616757,
+      "reported": 1791.0,
+      "TP": 786.0,
+      "FP": 1005.0,
+      "FN": 541.0,
+      "cost": 3169.0
+    },
+    {
+      "weight": 4.5,
+      "K": 600,
+      "threshold": 0.7671110538779949,
+      "reported": 600.0,
+      "TP": 411.0,
+      "FP": 189.0,
+      "FN": 916.0,
+      "cost": 3853.0
+    },
+    {
+      "weight": 4.5,
+      "K": 1000,
+      "threshold": 0.6544584456688293,
+      "reported": 1000.0,
+      "TP": 579.0,
+      "FP": 421.0,
+      "FN": 748.0,
+      "cost": 3413.0
+    },
+    {
+      "weight": 4.5,
+      "K": 1500,
+      "threshold": 0.5927843151983485,
+      "reported": 1493.0,
+      "TP": 719.0,
+      "FP": 774.0,
+      "FN": 608.0,
+      "cost": 3206.0
+    },
+    {
+      "weight": 4.5,
+      "K": 2000,
+      "threshold": 0.5820148844149752,
+      "reported": 1769.0,
+      "TP": 781.0,
+      "FP": 988.0,
+      "FN": 546.0,
+      "cost": 3172.0
+    },
+    {
+      "weight": 5.0,
+      "K": 600,
+      "threshold": 0.7844196924995114,
+      "reported": 597.0,
+      "TP": 410.0,
+      "FP": 187.0,
+      "FN": 917.0,
+      "cost": 3855.0
+    },
+    {
+      "weight": 5.0,
+      "K": 1000,
+      "threshold": 0.6773147895919541,
+      "reported": 1000.0,
+      "TP": 579.0,
+      "FP": 421.0,
+      "FN": 748.0,
+      "cost": 3413.0
+    },
+    {
+      "weight": 5.0,
+      "K": 1500,
+      "threshold": 0.6183341466552195,
+      "reported": 1478.0,
+      "TP": 716.0,
+      "FP": 762.0,
+      "FN": 611.0,
+      "cost": 3206.0
+    },
+    {
+      "weight": 5.0,
+      "K": 2000,
+      "threshold": 0.6072726822450457,
+      "reported": 1775.0,
+      "TP": 782.0,
+      "FP": 993.0,
+      "FN": 545.0,
+      "cost": 3173.0
+    },
+    {
+      "weight": 5.5,
+      "K": 600,
+      "threshold": 0.798318982001393,
+      "reported": 599.0,
+      "TP": 410.0,
+      "FP": 189.0,
+      "FN": 917.0,
+      "cost": 3857.0
+    },
+    {
+      "weight": 5.5,
+      "K": 1000,
+      "threshold": 0.6966800642300829,
+      "reported": 1000.0,
+      "TP": 579.0,
+      "FP": 421.0,
+      "FN": 748.0,
+      "cost": 3413.0
+    },
+    {
+      "weight": 5.5,
+      "K": 1500,
+      "threshold": 0.6399869707107683,
+      "reported": 1500.0,
+      "TP": 721.0,
+      "FP": 779.0,
+      "FN": 606.0,
+      "cost": 3203.0
+    },
+    {
+      "weight": 5.5,
+      "K": 2000,
+      "threshold": 0.6297870201640235,
+      "reported": 1773.0,
+      "TP": 782.0,
+      "FP": 991.0,
+      "FN": 545.0,
+      "cost": 3171.0
+    },
+    {
+      "weight": 6.0,
+      "K": 600,
+      "threshold": 0.8104595296116398,
+      "reported": 599.0,
+      "TP": 410.0,
+      "FP": 189.0,
+      "FN": 917.0,
+      "cost": 3857.0
+    },
+    {
+      "weight": 6.0,
+      "K": 1000,
+      "threshold": 0.7140041447252015,
+      "reported": 999.0,
+      "TP": 578.0,
+      "FP": 421.0,
+      "FN": 749.0,
+      "cost": 3417.0
+    },
+    {
+      "weight": 6.0,
+      "K": 1500,
+      "threshold": 0.6598185662264338,
+      "reported": 1500.0,
+      "TP": 721.0,
+      "FP": 779.0,
+      "FN": 606.0,
+      "cost": 3203.0
+    },
+    {
+      "weight": 6.0,
+      "K": 2000,
+      "threshold": 0.6497900134548106,
+      "reported": 1772.0,
+      "TP": 782.0,
+      "FP": 990.0,
+      "FN": 545.0,
+      "cost": 3170.0
+    },
+    {
+      "weight": 6.5,
+      "K": 600,
+      "threshold": 0.8208659623097431,
+      "reported": 599.0,
+      "TP": 410.0,
+      "FP": 189.0,
+      "FN": 917.0,
+      "cost": 3857.0
+    },
+    {
+      "weight": 6.5,
+      "K": 1000,
+      "threshold": 0.7292837802035856,
+      "reported": 999.0,
+      "TP": 578.0,
+      "FP": 421.0,
+      "FN": 749.0,
+      "cost": 3417.0
+    },
+    {
+      "weight": 6.5,
+      "K": 1500,
+      "threshold": 0.677623351901544,
+      "reported": 1494.0,
+      "TP": 718.0,
+      "FP": 776.0,
+      "FN": 609.0,
+      "cost": 3212.0
+    },
+    {
+      "weight": 6.5,
+      "K": 2000,
+      "threshold": 0.6677664206656084,
+      "reported": 1773.0,
+      "TP": 782.0,
+      "FP": 991.0,
+      "FN": 545.0,
+      "cost": 3171.0
+    },
+    {
+      "weight": 7.0,
+      "K": 600,
+      "threshold": 0.8301679989841895,
+      "reported": 600.0,
+      "TP": 410.0,
+      "FP": 190.0,
+      "FN": 917.0,
+      "cost": 3858.0
+    },
+    {
+      "weight": 7.0,
+      "K": 1000,
+      "threshold": 0.7430529695156313,
+      "reported": 999.0,
+      "TP": 578.0,
+      "FP": 421.0,
+      "FN": 749.0,
+      "cost": 3417.0
+    },
+    {
+      "weight": 7.0,
+      "K": 1500,
+      "threshold": 0.6941535225583383,
+      "reported": 1467.0,
+      "TP": 713.0,
+      "FP": 754.0,
+      "FN": 614.0,
+      "cost": 3210.0
+    },
+    {
+      "weight": 7.0,
+      "K": 2000,
+      "threshold": 0.6834223979654968,
+      "reported": 1783.0,
+      "TP": 783.0,
+      "FP": 1000.0,
+      "FN": 544.0,
+      "cost": 3176.0
+    },
+    {
+      "weight": 7.5,
+      "K": 600,
+      "threshold": 0.8385909760093949,
+      "reported": 600.0,
+      "TP": 410.0,
+      "FP": 190.0,
+      "FN": 917.0,
+      "cost": 3858.0
+    },
+    {
+      "weight": 7.5,
+      "K": 1000,
+      "threshold": 0.7556625839855883,
+      "reported": 997.0,
+      "TP": 577.0,
+      "FP": 420.0,
+      "FN": 750.0,
+      "cost": 3420.0
+    },
+    {
+      "weight": 7.5,
+      "K": 1500,
+      "threshold": 0.708326521140868,
+      "reported": 1477.0,
+      "TP": 715.0,
+      "FP": 762.0,
+      "FN": 612.0,
+      "cost": 3210.0
+    },
+    {
+      "weight": 7.5,
+      "K": 2000,
+      "threshold": 0.6988118520935205,
+      "reported": 1768.0,
+      "TP": 780.0,
+      "FP": 988.0,
+      "FN": 547.0,
+      "cost": 3176.0
+    },
+    {
+      "weight": 8.0,
+      "K": 600,
+      "threshold": 0.846356826174368,
+      "reported": 600.0,
+      "TP": 410.0,
+      "FP": 190.0,
+      "FN": 917.0,
+      "cost": 3858.0
+    },
+    {
+      "weight": 8.0,
+      "K": 1000,
+      "threshold": 0.7671080149499275,
+      "reported": 997.0,
+      "TP": 577.0,
+      "FP": 420.0,
+      "FN": 750.0,
+      "cost": 3420.0
+    },
+    {
+      "weight": 8.0,
+      "K": 1500,
+      "threshold": 0.7214633850223524,
+      "reported": 1476.0,
+      "TP": 715.0,
+      "FP": 761.0,
+      "FN": 612.0,
+      "cost": 3209.0
+    },
+    {
+      "weight": 8.0,
+      "K": 2000,
+      "threshold": 0.7118803094738608,
+      "reported": 1776.0,
+      "TP": 781.0,
+      "FP": 995.0,
+      "FN": 546.0,
+      "cost": 3179.0
+    }
+  ],
+  "choices": [
+    {
+      "seed": 101,
+      "K": 600,
+      "weight": 4.5,
+      "selection_TP": 419
+    },
+    {
+      "seed": 101,
+      "K": 1000,
+      "weight": 1.0,
+      "selection_TP": 606
+    },
+    {
+      "seed": 101,
+      "K": 1500,
+      "weight": 2.5,
+      "selection_TP": 738
+    },
+    {
+      "seed": 101,
+      "K": 2000,
+      "weight": 5.0,
+      "selection_TP": 832
+    },
+    {
+      "seed": 102,
+      "K": 600,
+      "weight": 2.0,
+      "selection_TP": 424
+    },
+    {
+      "seed": 102,
+      "K": 1000,
+      "weight": 1.0,
+      "selection_TP": 578
+    },
+    {
+      "seed": 102,
+      "K": 1500,
+      "weight": 1.0,
+      "selection_TP": 720
+    },
+    {
+      "seed": 102,
+      "K": 2000,
+      "weight": 1.0,
+      "selection_TP": 827
+    },
+    {
+      "seed": 103,
+      "K": 600,
+      "weight": 7.5,
+      "selection_TP": 410
+    },
+    {
+      "seed": 103,
+      "K": 1000,
+      "weight": 7.5,
+      "selection_TP": 584
+    },
+    {
+      "seed": 103,
+      "K": 1500,
+      "weight": 1.0,
+      "selection_TP": 727
+    },
+    {
+      "seed": 103,
+      "K": 2000,
+      "weight": 1.0,
+      "selection_TP": 809
+    }
+  ],
+  "repeat": [
+    {
+      "seed": 101,
+      "K": 600,
+      "weight": 4.5,
+      "selected_TP": 395,
+      "baseline_TP": 400,
+      "delta_TP": -5
+    },
+    {
+      "seed": 101,
+      "K": 1000,
+      "weight": 1.0,
+      "selected_TP": 575,
+      "baseline_TP": 575,
+      "delta_TP": 0
+    },
+    {
+      "seed": 101,
+      "K": 1500,
+      "weight": 2.5,
+      "selected_TP": 714,
+      "baseline_TP": 715,
+      "delta_TP": -1
+    },
+    {
+      "seed": 101,
+      "K": 2000,
+      "weight": 5.0,
+      "selected_TP": 820,
+      "baseline_TP": 818,
+      "delta_TP": 2
+    },
+    {
+      "seed": 102,
+      "K": 600,
+      "weight": 2.0,
+      "selected_TP": 404,
+      "baseline_TP": 405,
+      "delta_TP": -1
+    },
+    {
+      "seed": 102,
+      "K": 1000,
+      "weight": 1.0,
+      "selected_TP": 581,
+      "baseline_TP": 581,
+      "delta_TP": 0
+    },
+    {
+      "seed": 102,
+      "K": 1500,
+      "weight": 1.0,
+      "selected_TP": 730,
+      "baseline_TP": 730,
+      "delta_TP": 0
+    },
+    {
+      "seed": 102,
+      "K": 2000,
+      "weight": 1.0,
+      "selected_TP": 819,
+      "baseline_TP": 819,
+      "delta_TP": 0
+    },
+    {
+      "seed": 103,
+      "K": 600,
+      "weight": 7.5,
+      "selected_TP": 412,
+      "baseline_TP": 416,
+      "delta_TP": -4
+    },
+    {
+      "seed": 103,
+      "K": 1000,
+      "weight": 7.5,
+      "selected_TP": 593,
+      "baseline_TP": 592,
+      "delta_TP": 1
+    },
+    {
+      "seed": 103,
+      "K": 1500,
+      "weight": 1.0,
+      "selected_TP": 742,
+      "baseline_TP": 742,
+      "delta_TP": 0
+    },
+    {
+      "seed": 103,
+      "K": 2000,
+      "weight": 1.0,
+      "selected_TP": 834,
+      "baseline_TP": 834,
+      "delta_TP": 0
+    }
+  ]
+}
