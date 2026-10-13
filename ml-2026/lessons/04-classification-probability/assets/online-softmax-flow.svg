@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="670" viewBox="0 0 980 670" role="img" aria-labelledby="title desc">
+  <title id="title">长序列注意力中，Online Softmax 避免物化完整 N 乘 N 矩阵</title>
+  <desc id="desc">左侧表示标准注意力依次写入分数矩阵 S 和概率矩阵 P。右侧表示将 Q、K、V 切块后在快速片上存储器内融合矩阵乘法、Online Softmax 和加权求和，只写出最终输出和少量归一化统计量。底部展示 4K、32K、128K 上下文时单个注意力头的分数矩阵数量和 BF16 存储量。</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#536579"/></marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#187269"/></marker>
+    <style>
+      text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#192b41}
+      .head{font-size:28px;font-weight:700}.sub{font-size:20px;fill:#536579}.small{font-size:18px;fill:#536579}.label{font-size:20px;font-weight:600}.num{font-size:25px;font-weight:700}.note{font-size:17px;fill:#536579}
+      .arrow{fill:none;stroke:#536579;stroke-width:2.5;marker-end:url(#arr)}.garrow{fill:none;stroke:#187269;stroke-width:2.7;marker-end:url(#arrGreen)}
+    </style>
+  </defs>
+  <text x="24" y="35" class="sub">Transformer 注意力：S = QKᵀ，P = Softmax(S)，O = PV</text>
+  <line x1="20" y1="52" x2="960" y2="52" stroke="#d5dfe9" stroke-width="2"/>
+
+  <text x="30" y="91" class="head" fill="#174b87">常规实现：S、P 都要往返显存</text>
+  <text x="30" y="118" class="small">N 个 token → 每个 query 对 N 个 key 归一化</text>
+  <rect x="31" y="145" width="146" height="65" rx="10" fill="#edf4fb" stroke="#adc5df" stroke-width="2"/>
+  <text x="104" y="173" text-anchor="middle" class="label">Q × Kᵀ</text><text x="104" y="195" text-anchor="middle" class="small">算分数</text>
+  <path d="M181 177H229" class="arrow"/>
+  <rect x="235" y="135" width="150" height="85" rx="10" fill="#eef3fa" stroke="#7ba3ce" stroke-width="2.5"/>
+  <path d="M265 151V205M295 151V205M325 151V205M355 151V205M250 165H370M250 180H370M250 195H370" stroke="#7ba3ce" stroke-width="1.5"/>
+  <text x="310" y="248" text-anchor="middle" class="label">S：N × N 分数</text>
+  <path d="M388 178H436" class="arrow"/>
+  <rect x="441" y="145" width="146" height="65" rx="10" fill="#fff4e9" stroke="#dda25a" stroke-width="2"/>
+  <text x="514" y="173" text-anchor="middle" class="label">Softmax</text><text x="514" y="195" text-anchor="middle" class="small">逐行归一化</text>
+  <path d="M590 178H638" class="arrow"/>
+  <rect x="644" y="135" width="150" height="85" rx="10" fill="#fff7ed" stroke="#d98e39" stroke-width="2.5"/>
+  <path d="M674 151V205M704 151V205M734 151V205M764 151V205M659 165H779M659 180H779M659 195H779" stroke="#d98e39" stroke-width="1.5"/>
+  <text x="719" y="248" text-anchor="middle" class="label">P：N × N 概率</text>
+  <path d="M797 178H844" class="arrow"/>
+  <rect x="850" y="145" width="100" height="65" rx="10" fill="#edf4fb" stroke="#adc5df" stroke-width="2"/>
+  <text x="900" y="174" text-anchor="middle" class="label">P × V</text><text x="900" y="196" text-anchor="middle" class="small">输出 O</text>
+  <path d="M235 270H794" stroke="#bfcedd" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="514" y="294" text-anchor="middle" class="sub">问题不是 Softmax 改变了数学；而是两张大矩阵 S、P 的读写占满显存带宽。</text>
+
+  <text x="30" y="341" class="head" fill="#17665f">分块 + Online Softmax：在片上内存边算边累计</text>
+  <rect x="30" y="365" width="918" height="158" rx="14" fill="#f0f8f5" stroke="#9ccdbf" stroke-width="2"/>
+  <text x="52" y="395" class="label" fill="#17665f">快速片上存储器（SRAM）</text>
+  <rect x="54" y="413" width="145" height="77" rx="9" fill="#fff" stroke="#78b6a6" stroke-width="2"/>
+  <text x="126" y="442" text-anchor="middle" class="label">Q 的一小块</text><text x="126" y="468" text-anchor="middle" class="small">Bᵣ 行</text>
+  <path d="M204 451H256" class="garrow"/>
+  <rect x="262" y="396" width="202" height="112" rx="9" fill="#fff" stroke="#4d9e8e" stroke-width="2.5"/>
+  <text x="363" y="427" text-anchor="middle" class="label">QᵢKⱼᵀ → 分数小块</text><text x="363" y="454" text-anchor="middle" class="label">Online Softmax</text><text x="363" y="480" text-anchor="middle" class="small">更新 m、ℓ、O 累计量</text>
+  <path d="M468 451H519" class="garrow"/>
+  <rect x="525" y="413" width="150" height="77" rx="9" fill="#fff" stroke="#78b6a6" stroke-width="2"/>
+  <text x="600" y="442" text-anchor="middle" class="label">K、V 的一小块</text><text x="600" y="468" text-anchor="middle" class="small">B𝑐 列</text>
+  <path d="M679 451H728" class="garrow"/>
+  <rect x="734" y="403" width="189" height="98" rx="9" fill="#e5f4ef" stroke="#23756c" stroke-width="2.5"/>
+  <text x="829" y="434" text-anchor="middle" class="label" fill="#17665f">只写出：O、m、ℓ</text><text x="829" y="460" text-anchor="middle" class="small">不物化完整 S、P</text><text x="829" y="484" text-anchor="middle" class="small">额外存储随 N 线性增长</text>
+
+  <text x="30" y="564" class="label">不同上下文长度下的分数矩阵大小（完整 N × N 的 S，BF16，未计 P）</text>
+  <rect x="30" y="581" width="286" height="70" rx="9" fill="#f3f7fb" stroke="#c7d7e8" stroke-width="1.7"/>
+  <text x="53" y="608" class="label">4K 上下文</text><text x="53" y="634" class="small">1,680 万分数 · 32 MiB</text>
+  <rect x="347" y="581" width="286" height="70" rx="9" fill="#f3f7fb" stroke="#c7d7e8" stroke-width="1.7"/>
+  <text x="370" y="608" class="label">32K 上下文</text><text x="370" y="634" class="small">10.7 亿分数 · 2 GiB</text>
+  <rect x="664" y="581" width="284" height="70" rx="9" fill="#fff3e5" stroke="#e3ad68" stroke-width="1.9"/>
+  <text x="687" y="608" class="label">128K 上下文</text><text x="687" y="634" class="small">172 亿分数 · 32 GiB</text>
+</svg>
