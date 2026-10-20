@@ -19,7 +19,6 @@ def threshold_candidates(y, score, cost_ratio=4):
     return pd.concat([empty,table], ignore_index=True)
 
 def plot_weighted_capacity(curves, topk, path):
-    plt.rcParams['font.sans-serif']=['Hiragino Sans GB','Arial Unicode MS','DejaVu Sans']
     fig, axes = plt.subplots(1,2,figsize=(12,4.8),layout='constrained')
     colors=['#245e97','#23756c','#c05835','#8b65a8']
     for (weight, curve), color in zip(curves.items(), colors):
@@ -75,7 +74,6 @@ def plot_weighted_capacity(curves, topk, path):
 def plot_weighted_rates(results, path):
     """固定0.5阈值，对比各次训练后的指标；连线只引导读图。"""
     from matplotlib.ticker import PercentFormatter
-    plt.rcParams['font.sans-serif']=['Hiragino Sans GB','Arial Unicode MS','DejaVu Sans']
     results=results.sort_values('weight')
     positions=results.weight.to_numpy()
     fig,ax=plt.subplots(figsize=(8.2,3.6),layout='constrained')
@@ -121,7 +119,6 @@ def evaluate_capacities(y, scores, capacities):
     return pd.DataFrame(top_rows),pd.DataFrame(cost_rows)
 
 def plot_capacity_sweep(table,path):
-    plt.rcParams['font.sans-serif']=['Hiragino Sans GB','Arial Unicode MS','DejaVu Sans']
     fig,ax=plt.subplots(figsize=(8,4.7),layout='constrained')
     for (k,g),color,marker in zip(table.groupby('K'),['#245e97','#23756c','#c05835','#8b65a8'],['o','s','^','D']):
         ax.plot(g.weight,g.delta_TP,color=color,marker=marker,ms=4,lw=2,label=f'K={k:,}')
@@ -134,7 +131,6 @@ def plot_capacity_sweep(table,path):
 
 def plot_weighted_cost_curves(curves, path, capacity=2000):
     """固定容量和业务代价，比较各模型阈值扫描；空心圆标容量内最低点。"""
-    plt.rcParams['font.sans-serif']=['Hiragino Sans GB','Arial Unicode MS','DejaVu Sans']
     fig,ax=plt.subplots(figsize=(8,5),layout='constrained')
     colors=['#245e97','#23756c','#c05835','#8b65a8']
     for (weight,curve),color in zip(curves.items(),colors):

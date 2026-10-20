@@ -1,6 +1,7 @@
 """Lesson05 display-only helpers. Training and evaluation stay in the notebook."""
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import font_manager, ft2font
 from matplotlib.ticker import PercentFormatter
 from matplotlib_inline.backend_inline import set_matplotlib_formats
 from sklearn.metrics import roc_curve, precision_recall_curve, roc_auc_score, average_precision_score
@@ -10,9 +11,29 @@ STYLES = {"LR": "-", "kNN3": "--", "binnedCategoricalNB": "-.", "Dummy": ":", "�
 DISPLAY_NAMES = {"LR": "Logistic", "kNN3": "kNN（k=3）", "binnedCategoricalNB": "分箱NB", "Dummy": "Dummy", "单调变换": "单调变换"}
 
 
+def _font_settings():
+    """选择实际存在的中文字体与字重，不靠字体替换或隐藏日志。"""
+    entries = font_manager.fontManager.ttflist
+    for family in ["PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Heiti SC", "Arial Unicode MS"]:
+        weights = sorted({font_manager.weight_dict.get(f.weight, f.weight)
+                          for f in entries if f.name == family and f.style == "normal"})
+        if not weights:
+            continue
+        regular = min(weights, key=lambda weight: abs(weight - 400))
+        semibold = min(weights, key=lambda weight: abs(weight - 600))
+        font_path = font_manager.findfont(
+            font_manager.FontProperties(family=family, weight=regular), fallback_to_default=False)
+        font = ft2font.FT2Font(font_path)
+        if all(font.get_char_index(ord(char)) for char in "训练违约概率样本−"):
+            return {"font.family": [family], "font.sans-serif": [family],
+                    "font.weight": regular, "axes.labelweight": regular,
+                    "axes.titleweight": regular, "figure.titleweight": semibold}
+    raise RuntimeError("缺少可用的中文绘图字体，请安装 Noto Sans CJK SC 后重新运行。")
+
+
 def setup():
     set_matplotlib_formats("retina")
-    plt.rcParams.update({"font.sans-serif": ["PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Arial Unicode MS", "DejaVu Sans"],
+    plt.rcParams.update({**_font_settings(),
                          "axes.unicode_minus": False, "font.size": 15, "axes.titlesize": 17,
                          "axes.labelsize": 15, "legend.fontsize": 13, "figure.dpi": 120,
                          "savefig.dpi": 220, "axes.spines.top": False, "axes.spines.right": False})
@@ -306,26 +327,26 @@ def plot_confusion_counts(tp, fn, fp, tn, path=None):
     ax.set_xlim(-1.75, 3.05)
     ax.set_ylim(2.55, -1.55)
     ax.axis("off")
-    fig.suptitle("Logistic 回归 · 阈值 0.5：混淆矩阵", fontsize=20, fontweight="bold", color="#192B41", y=0.98)
+    fig.suptitle("Logistic 回归 · 阈值 0.5：混淆矩阵", fontsize=20, fontweight=plt.rcParams["figure.titleweight"], color="#192B41", y=0.98)
     ax.text(0.5, -1.12, "列 = 模型预测\n列合计 = 报出人数", ha="center", va="center", fontsize=13, color="#255A91",
             bbox=dict(boxstyle="round,pad=0.35", fc="#EEF4FB", ec="#6B97C4", lw=1.5))
     ax.text(-1.4, 0.55, "行 = 真实类别\n行合计 = 实际人数", ha="center", va="center", fontsize=13, color="#6A4A1F", rotation=90,
             bbox=dict(boxstyle="round,pad=0.35", fc="#FBF2E5", ec="#C28B4B", lw=1.5))
     for j, label in enumerate(["预测违约\n（正类）", "预测未违约\n（负类）"]):
-        ax.text(j, -0.62, label, ha="center", va="center", fontsize=14, fontweight="bold", color="#192B41")
+        ax.text(j, -0.62, label, ha="center", va="center", fontsize=14, fontweight=plt.rcParams["figure.titleweight"], color="#192B41")
     for i, label in enumerate(["实际违约\n（正类）", "实际未违约\n（负类）"]):
-        ax.text(-0.62, i, label, ha="center", va="center", fontsize=13, fontweight="bold", color="#192B41")
+        ax.text(-0.62, i, label, ha="center", va="center", fontsize=13, fontweight=plt.rcParams["figure.titleweight"], color="#192B41")
     for i in range(2):
         for j in range(2):
             ax.add_patch(Rectangle((j-0.43, i-0.43), 0.86, 0.86, facecolor=cell_colors[i][j], edgecolor="white", lw=4))
-            ax.text(j, i, f"{cell_labels[i][j]}\n{counts[i, j]:,}", ha="center", va="center", fontsize=13, fontweight="bold", color="#192B41", linespacing=1.35)
+            ax.text(j, i, f"{cell_labels[i][j]}\n{counts[i, j]:,}", ha="center", va="center", fontsize=13, fontweight=plt.rcParams["figure.titleweight"], color="#192B41", linespacing=1.35)
     for i, total in enumerate(counts.sum(axis=1)):
-        ax.text(2.03, i, f"{total:,}", ha="center", va="center", fontsize=15, fontweight="bold", color="#6A4A1F",
+        ax.text(2.03, i, f"{total:,}", ha="center", va="center", fontsize=15, fontweight=plt.rcParams["figure.titleweight"], color="#6A4A1F",
                 bbox=dict(boxstyle="round,pad=0.22", fc="#FBF2E5", ec="#C28B4B", lw=1.3))
     for j, total in enumerate(counts.sum(axis=0)):
-        ax.text(j, 1.63, f"{total:,}", ha="center", va="center", fontsize=15, fontweight="bold", color="#255A91",
+        ax.text(j, 1.63, f"{total:,}", ha="center", va="center", fontsize=15, fontweight=plt.rcParams["figure.titleweight"], color="#255A91",
                 bbox=dict(boxstyle="round,pad=0.22", fc="#EEF4FB", ec="#6B97C4", lw=1.3))
-    ax.text(2.03, 1.63, "6,000", ha="center", va="center", fontsize=14, fontweight="bold", color="#192B41",
+    ax.text(2.03, 1.63, "6,000", ha="center", va="center", fontsize=14, fontweight=plt.rcParams["figure.titleweight"], color="#192B41",
             bbox=dict(boxstyle="round,pad=0.22", fc="#F2F4F6", ec="#9AA6B2", lw=1.2))
     ax.text(2.03, -0.62, "行合计", ha="center", va="center", fontsize=12, color="#6A4A1F")
     ax.text(0.5, 1.94, "列合计", ha="center", va="center", fontsize=12, color="#255A91")
