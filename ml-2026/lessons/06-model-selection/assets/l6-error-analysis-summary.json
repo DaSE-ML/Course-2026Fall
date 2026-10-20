@@ -1,0 +1,13 @@
+{
+  "train_n": 1077,
+  "valid_n": 360,
+  "before_errors": 10,
+  "after_errors": 9,
+  "nine_n": 36,
+  "nine_before": 3,
+  "nine_after": 1,
+  "fixed": 7,
+  "added": 6,
+  "retained": 3,
+  "uses_reserved": false
+}

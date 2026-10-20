@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker></defs>
+<text x="600.0" y="42" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#174B87" text-anchor="middle">5 折交叉验证：每列是一组样本</text>
+<text x="287.5" y="88" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">块 1</text>
+<text x="457.5" y="88" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">块 2</text>
+<text x="627.5" y="88" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">块 3</text>
+<text x="797.5" y="88" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">块 4</text>
+<text x="967.5" y="88" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">块 5</text>
+<text x="165" y="136" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 1 折</text>
+<rect x="210" y="106" width="155" height="39" rx="8" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="287.5" y="134" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">valid</text>
+<rect x="380" y="106" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="457.5" y="134" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="550" y="106" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="627.5" y="134" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="720" y="106" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="797.5" y="134" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="890" y="106" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="967.5" y="134" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<text x="165" y="185" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 2 折</text>
+<rect x="210" y="155" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="287.5" y="183" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="380" y="155" width="155" height="39" rx="8" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="457.5" y="183" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">valid</text>
+<rect x="550" y="155" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="627.5" y="183" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="720" y="155" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="797.5" y="183" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="890" y="155" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="967.5" y="183" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<text x="165" y="234" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 3 折</text>
+<rect x="210" y="204" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="287.5" y="232" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="380" y="204" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="457.5" y="232" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="550" y="204" width="155" height="39" rx="8" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="627.5" y="232" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">valid</text>
+<rect x="720" y="204" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="797.5" y="232" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="890" y="204" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="967.5" y="232" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<text x="165" y="283" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 4 折</text>
+<rect x="210" y="253" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="287.5" y="281" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="380" y="253" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="457.5" y="281" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="550" y="253" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="627.5" y="281" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="720" y="253" width="155" height="39" rx="8" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="797.5" y="281" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">valid</text>
+<rect x="890" y="253" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="967.5" y="281" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<text x="165" y="332" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 5 折</text>
+<rect x="210" y="302" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="287.5" y="330" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="380" y="302" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="457.5" y="330" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="550" y="302" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="627.5" y="330" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="720" y="302" width="155" height="39" rx="8" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="797.5" y="330" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">train</text>
+<rect x="890" y="302" width="155" height="39" rx="8" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="967.5" y="330" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">valid</text>
+<line x1="100" y1="375" x2="1120" y2="375" stroke="#E8EDF2" stroke-width="2"/>
+<text x="600" y="422" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="700" fill="#174B87" text-anchor="middle">留一交叉验证 LOO：每列只有 1 个样本</text>
+<text x="287.5" y="473" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">样本 A</text>
+<text x="457.5" y="473" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">样本 B</text>
+<text x="627.5" y="473" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">样本 C</text>
+<text x="797.5" y="473" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">样本 D</text>
+<text x="967.5" y="473" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="middle">样本 E</text>
+<text x="165" y="518" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 1 次</text>
+<circle cx="287.5" cy="508" r="21" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="287.5" y="518" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">A</text>
+<circle cx="457.5" cy="508" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="457.5" y="518" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">B</text>
+<circle cx="627.5" cy="508" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="627.5" y="518" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">C</text>
+<circle cx="797.5" cy="508" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="797.5" y="518" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">D</text>
+<circle cx="967.5" cy="508" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="967.5" y="518" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">E</text>
+<text x="165" y="566" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 2 次</text>
+<circle cx="287.5" cy="556" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="287.5" y="566" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A</text>
+<circle cx="457.5" cy="556" r="21" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="457.5" y="566" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">B</text>
+<circle cx="627.5" cy="556" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="627.5" y="566" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">C</text>
+<circle cx="797.5" cy="556" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="797.5" y="566" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">D</text>
+<circle cx="967.5" cy="556" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="967.5" y="566" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">E</text>
+<text x="165" y="614" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 3 次</text>
+<circle cx="287.5" cy="604" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="287.5" y="614" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A</text>
+<circle cx="457.5" cy="604" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="457.5" y="614" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">B</text>
+<circle cx="627.5" cy="604" r="21" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="627.5" y="614" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">C</text>
+<circle cx="797.5" cy="604" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="797.5" y="614" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">D</text>
+<circle cx="967.5" cy="604" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="967.5" y="614" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">E</text>
+<text x="165" y="662" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 4 次</text>
+<circle cx="287.5" cy="652" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="287.5" y="662" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A</text>
+<circle cx="457.5" cy="652" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="457.5" y="662" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">B</text>
+<circle cx="627.5" cy="652" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="627.5" y="662" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">C</text>
+<circle cx="797.5" cy="652" r="21" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="797.5" y="662" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">D</text>
+<circle cx="967.5" cy="652" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="967.5" y="662" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">E</text>
+<text x="165" y="710" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#6B7280" text-anchor="end">第 5 次</text>
+<circle cx="287.5" cy="700" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="287.5" y="710" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A</text>
+<circle cx="457.5" cy="700" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="457.5" y="710" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">B</text>
+<circle cx="627.5" cy="700" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="627.5" y="710" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">C</text>
+<circle cx="797.5" cy="700" r="21" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="797.5" y="710" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#2F6DB0" text-anchor="middle">D</text>
+<circle cx="967.5" cy="700" r="21" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="967.5" y="710" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#D9822B" text-anchor="middle">E</text>
+<text x="600" y="765" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="400" fill="#174B87" text-anchor="middle">下图仅用 5 个样本示意：每次 4 个训练、1 个验证</text>
+<rect x="260" y="793" width="680" height="54" rx="10" fill="#F5F7FA" stroke="#E8EDF2" stroke-width="1"/>
+<rect x="290" y="809" width="24" height="24" rx="5" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="2"/>
+<text x="330" y="832" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#174B87" text-anchor="start">训练 train</text>
+<rect x="620" y="809" width="24" height="24" rx="5" fill="#F7E4CF" stroke="#D9822B" stroke-width="2"/>
+<text x="660" y="832" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#D9822B" text-anchor="start">验证 valid</text>
+<text x="600" y="886" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#6B7280" text-anchor="middle">一般 n 个开发样本：LOO 需拟合 n 次，而不是固定 5 次</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker></defs>
+<text x="600.0" y="42" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#174B87" text-anchor="middle">评价新用户：同一用户记录不能跨评估侧</text>
+<rect x="45" y="90" width="520" height="570" rx="18" fill="#F9FBFD" stroke="#E8EDF2" stroke-width="2"/>
+<rect x="620" y="90" width="560" height="570" rx="18" fill="#F9FBFD" stroke="#E8EDF2" stroke-width="2"/>
+<text x="305" y="140" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="34px" font-weight="700" fill="#174B87" text-anchor="middle">随机划分</text>
+<text x="895" y="140" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="34px" font-weight="700" fill="#174B87" text-anchor="middle">按用户分组</text>
+<rect x="95" y="175" width="180" height="52" rx="10" fill="#FFFFFF" stroke="#2F6DB0" stroke-width="2"/>
+<text x="185" y="211" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#2F6DB0" text-anchor="middle">训练集</text>
+<rect x="350" y="175" width="180" height="52" rx="10" fill="#FFFFFF" stroke="#D9822B" stroke-width="2"/>
+<text x="440" y="211" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#D9822B" text-anchor="middle">验证集</text>
+<rect x="685" y="175" width="180" height="52" rx="10" fill="#FFFFFF" stroke="#2F6DB0" stroke-width="2"/>
+<text x="775" y="211" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#2F6DB0" text-anchor="middle">训练集</text>
+<rect x="940" y="175" width="180" height="52" rx="10" fill="#FFFFFF" stroke="#D9822B" stroke-width="2"/>
+<text x="1030" y="211" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#D9822B" text-anchor="middle">验证集</text>
+<text x="75" y="325" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#6B7280" text-anchor="start">用户 A</text>
+<rect x="180" y="300" width="78" height="58" rx="10" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="3"/>
+<text x="219" y="339" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A1</text>
+<rect x="400" y="300" width="78" height="58" rx="10" fill="#F7E4CF" stroke="#2F6DB0" stroke-width="3"/>
+<text x="439" y="339" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A2</text>
+<text x="75" y="425" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#6B7280" text-anchor="start">用户 B</text>
+<rect x="180" y="400" width="78" height="58" rx="10" fill="#DDEAF7" stroke="#D9822B" stroke-width="3"/>
+<text x="219" y="439" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#D9822B" text-anchor="middle">B2</text>
+<rect x="400" y="400" width="78" height="58" rx="10" fill="#F7E4CF" stroke="#D9822B" stroke-width="3"/>
+<text x="439" y="439" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#D9822B" text-anchor="middle">B1</text>
+<text x="75" y="525" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#6B7280" text-anchor="start">用户 C</text>
+<rect x="180" y="500" width="78" height="58" rx="10" fill="#DDEAF7" stroke="#7B61A8" stroke-width="3"/>
+<text x="219" y="539" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#7B61A8" text-anchor="middle">C1</text>
+<rect x="400" y="500" width="78" height="58" rx="10" fill="#F7E4CF" stroke="#7B61A8" stroke-width="3"/>
+<text x="439" y="539" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#7B61A8" text-anchor="middle">C2</text>
+<text x="665" y="325" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#6B7280" text-anchor="start">用户 A</text>
+<rect x="780" y="300" width="78" height="58" rx="10" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="3"/>
+<text x="819" y="339" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A1</text>
+<rect x="875" y="300" width="78" height="58" rx="10" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="3"/>
+<text x="914" y="339" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A2</text>
+<text x="665" y="425" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#6B7280" text-anchor="start">用户 B</text>
+<rect x="780" y="400" width="78" height="58" rx="10" fill="#DDEAF7" stroke="#D9822B" stroke-width="3"/>
+<text x="819" y="439" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#D9822B" text-anchor="middle">B1</text>
+<rect x="875" y="400" width="78" height="58" rx="10" fill="#DDEAF7" stroke="#D9822B" stroke-width="3"/>
+<text x="914" y="439" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#D9822B" text-anchor="middle">B2</text>
+<text x="665" y="525" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#6B7280" text-anchor="start">用户 C</text>
+<rect x="990" y="500" width="78" height="58" rx="10" fill="#F7E4CF" stroke="#7B61A8" stroke-width="3"/>
+<text x="1029" y="539" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#7B61A8" text-anchor="middle">C1</text>
+<rect x="1085" y="500" width="78" height="58" rx="10" fill="#F7E4CF" stroke="#7B61A8" stroke-width="3"/>
+<text x="1124" y="539" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#7B61A8" text-anchor="middle">C2</text>
+<text x="305" y="610" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#D9822B" text-anchor="middle">同一用户 A/B 的记录分到两侧</text>
+<text x="895" y="610" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#174B87" text-anchor="middle">同一用户只出现在一侧</text>
+<text x="600" y="720" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#6B7280" text-anchor="middle">教学示意：评价新用户时，不能让同一用户跨两侧</text>
+</svg>

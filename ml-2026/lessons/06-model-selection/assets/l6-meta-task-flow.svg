@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="760" viewBox="0 0 1250 760">
+<defs><marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 z" fill="#6B7280"/></marker></defs>
+<text x="625.0" y="44" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="29px" font-weight="700" fill="#174B87" text-anchor="middle">跨任务共享学习：支持集适应，查询集评价</text>
+<text x="160" y="105" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#2F6DB0" text-anchor="middle">元训练</text>
+<text x="625" y="105" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#468568" text-anchor="middle">元验证</text>
+<text x="1060" y="105" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#D9822B" text-anchor="middle">元测试</text>
+<rect x="70" y="155" width="280" height="145" rx="16" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="3"/>
+<text x="210" y="208" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#2F6DB0" text-anchor="middle">任务 1 / 2 / …</text>
+<text x="210" y="250" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="21px" font-weight="400" fill="#263238" text-anchor="middle">各自抽支持与查询</text>
+<text x="210" y="277" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="19px" font-weight="400" fill="#6B7280" text-anchor="middle">查询标签用于本阶段目标</text>
+<rect x="520" y="155" width="280" height="145" rx="16" fill="#E2F0EA" stroke="#468568" stroke-width="3"/>
+<text x="660" y="208" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#468568" text-anchor="middle">任务集合</text>
+<text x="660" y="250" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="21px" font-weight="400" fill="#263238" text-anchor="middle">选择全局方案</text>
+<text x="660" y="277" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="19px" font-weight="400" fill="#6B7280" text-anchor="middle">查询标签用于本阶段目标</text>
+<rect x="950" y="155" width="280" height="145" rx="16" fill="#F7E4CF" stroke="#D9822B" stroke-width="3"/>
+<text x="1090" y="208" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#D9822B" text-anchor="middle">新任务 T*</text>
+<text x="1090" y="250" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="21px" font-weight="400" fill="#263238" text-anchor="middle">类别或目标未见</text>
+<text x="1090" y="277" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="19px" font-weight="400" fill="#6B7280" text-anchor="middle">查询标签用于本阶段目标</text>
+<line x1="360" y1="228" x2="500" y2="228" stroke="#6B7280" stroke-width="4" marker-end="url(#arrow)"/>
+<line x1="810" y1="228" x2="930" y2="228" stroke="#6B7280" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="95" y="360" width="1010" height="105" rx="16" fill="#FFFFFF" stroke="#174B87" stroke-width="3"/>
+<text x="600" y="402" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#174B87" text-anchor="middle">共享知识</text>
+<text x="600" y="442" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="24px" font-weight="400" fill="#174B87" text-anchor="middle">表示 / 初始化 / 适应规则  ←  元训练查询损失可更新</text>
+<line x1="210" y1="300" x2="210" y2="350" stroke="#2F6DB0" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="350" y1="300" x2="350" y2="350" stroke="#2F6DB0" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="660" y1="300" x2="660" y2="350" stroke="#468568" stroke-width="3" stroke-dasharray="7,6" marker-end="url(#arrow)"/>
+<text x="660" y="337" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="19px" font-weight="700" fill="#468568" text-anchor="middle">选方案</text>
+<line x1="1090" y1="300" x2="1090" y2="350" stroke="#D9822B" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="900" y="510" width="200" height="68" rx="12" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="3"/>
+<text x="1000" y="553" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#2F6DB0" text-anchor="middle">支持集</text>
+<line x1="1000" y1="580" x2="1000" y2="622" stroke="#2F6DB0" stroke-width="4" marker-end="url(#arrow)"/>
+<rect x="900" y="625" width="200" height="68" rx="12" fill="#F7E4CF" stroke="#D9822B" stroke-width="3"/>
+<text x="1000" y="668" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="25px" font-weight="700" fill="#D9822B" text-anchor="middle">查询集：只评分</text>
+<text x="750" y="547" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="25px" font-weight="700" fill="#174B87" text-anchor="middle">先适应</text>
+<text x="1000" y="735" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="18px" font-weight="700" fill="#D9822B" text-anchor="middle">标签只作最后评分</text>
+<line x1="1095" y1="470" x2="1095" y2="500" stroke="#6B7280" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="55" y="510" width="710" height="183" rx="14" fill="#F5F7FA" stroke="#E8EDF2" stroke-width="1"/>
+<text x="410" y="550" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="25px" font-weight="700" fill="#174B87" text-anchor="middle">信息边界</text>
+<text x="410" y="592" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="22px" font-weight="400" fill="#263238" text-anchor="middle">元训练：查询损失可回传，更新共享知识</text>
+<text x="410" y="628" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="22px" font-weight="400" fill="#263238" text-anchor="middle">元验证：比较候选方案，不能把结果当最终测试</text>
+<text x="410" y="664" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="22px" font-weight="400" fill="#263238" text-anchor="middle">元测试：支持集可适应；查询标签只作最后评分</text>
+</svg>

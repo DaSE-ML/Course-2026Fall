@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker></defs>
+<text x="550.0" y="42" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#174B87" text-anchor="middle">miniImageNet：先隔离类别，再抽取任务</text>
+<rect x="30" y="80" width="310" height="150" rx="12" fill="#FFFFFF" stroke="#2F6DB0" stroke-width="2"/>
+<text x="185" y="120" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="23px" font-weight="700" fill="#2F6DB0" text-anchor="middle">元训练 Meta-train</text>
+<text x="185" y="168" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="700" fill="#2F6DB0" text-anchor="middle">64 类</text>
+<text x="185" y="205" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="25px" font-weight="400" fill="#263238" text-anchor="middle">38,400 张</text>
+<rect x="395" y="80" width="310" height="150" rx="12" fill="#FFFFFF" stroke="#2F6DB0" stroke-width="2"/>
+<text x="550" y="120" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="23px" font-weight="700" fill="#2F6DB0" text-anchor="middle">元验证 Meta-validation</text>
+<text x="550" y="168" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="700" fill="#2F6DB0" text-anchor="middle">16 类</text>
+<text x="550" y="205" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="25px" font-weight="400" fill="#263238" text-anchor="middle">9,600 张</text>
+<rect x="760" y="80" width="310" height="150" rx="12" fill="#FFFFFF" stroke="#D9822B" stroke-width="2"/>
+<text x="915" y="120" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="23px" font-weight="700" fill="#D9822B" text-anchor="middle">元测试 Meta-test</text>
+<text x="915" y="168" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="700" fill="#D9822B" text-anchor="middle">20 类</text>
+<text x="915" y="205" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="25px" font-weight="400" fill="#263238" text-anchor="middle">12,000 张</text>
+<text x="550" y="275" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="26px" font-weight="400" fill="#263238" text-anchor="middle">三部分的类别互不重叠；每类各有 600 张图片</text>
+<line x1="915" y1="240" x2="915" y2="325" stroke="#6B7280" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="30" y="340" width="1040" height="375" rx="12" fill="#F8FAFC" stroke="#E8EDF2" stroke-width="2"/>
+<text x="550" y="385" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="26px" font-weight="700" fill="#174B87" text-anchor="middle">从元测试的 20 类中抽 5 类：一个 5-way 1-shot 任务</text>
+<text x="240" y="450" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#263238" text-anchor="middle">支持集 Support set</text>
+<text x="780" y="450" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#263238" text-anchor="middle">查询集 Query set</text>
+<rect x="80" y="480" width="56" height="60" rx="8" fill="#FFFFFF" stroke="#2F6DB0" stroke-width="3"/>
+<text x="108" y="520" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#2F6DB0" text-anchor="middle">A</text>
+<rect x="610" y="480" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#2F6DB0" stroke-width="3"/>
+<text x="638" y="516" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#2F6DB0" text-anchor="middle">?</text>
+<rect x="610" y="548" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#2F6DB0" stroke-width="3"/>
+<text x="638" y="584" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#2F6DB0" text-anchor="middle">?</text>
+<rect x="147" y="480" width="56" height="60" rx="8" fill="#FFFFFF" stroke="#D9822B" stroke-width="3"/>
+<text x="175" y="520" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#D9822B" text-anchor="middle">B</text>
+<rect x="677" y="480" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#D9822B" stroke-width="3"/>
+<text x="705" y="516" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#D9822B" text-anchor="middle">?</text>
+<rect x="677" y="548" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#D9822B" stroke-width="3"/>
+<text x="705" y="584" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#D9822B" text-anchor="middle">?</text>
+<rect x="214" y="480" width="56" height="60" rx="8" fill="#FFFFFF" stroke="#468568" stroke-width="3"/>
+<text x="242" y="520" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#468568" text-anchor="middle">C</text>
+<rect x="744" y="480" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#468568" stroke-width="3"/>
+<text x="772" y="516" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#468568" text-anchor="middle">?</text>
+<rect x="744" y="548" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#468568" stroke-width="3"/>
+<text x="772" y="584" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#468568" text-anchor="middle">?</text>
+<rect x="281" y="480" width="56" height="60" rx="8" fill="#FFFFFF" stroke="#8663A4" stroke-width="3"/>
+<text x="309" y="520" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#8663A4" text-anchor="middle">D</text>
+<rect x="811" y="480" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#8663A4" stroke-width="3"/>
+<text x="839" y="516" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#8663A4" text-anchor="middle">?</text>
+<rect x="811" y="548" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#8663A4" stroke-width="3"/>
+<text x="839" y="584" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#8663A4" text-anchor="middle">?</text>
+<rect x="348" y="480" width="56" height="60" rx="8" fill="#FFFFFF" stroke="#B25469" stroke-width="3"/>
+<text x="376" y="520" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="700" fill="#B25469" text-anchor="middle">E</text>
+<rect x="878" y="480" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#B25469" stroke-width="3"/>
+<text x="906" y="516" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#B25469" text-anchor="middle">?</text>
+<rect x="878" y="548" width="56" height="54" rx="8" fill="#FFFFFF" stroke="#B25469" stroke-width="3"/>
+<text x="906" y="584" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="27px" font-weight="400" fill="#B25469" text-anchor="middle">?</text>
+<text x="240" y="590" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="25px" font-weight="400" fill="#263238" text-anchor="middle">每类 1 张，提供标签</text>
+<text x="780" y="640" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="24px" font-weight="400" fill="#263238" text-anchor="middle">同 5 类的新图片，标签用于评价</text>
+<text x="550" y="690" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="25px" font-weight="400" fill="#174B87" text-anchor="middle">同一任务：类别相同，支持图片与查询图片不重叠</text>
+<text x="550" y="750" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="21px" font-weight="400" fill="#6B7280" text-anchor="middle">色框表示类别；仅为协议示意，不是真实图片或预测结果</text>
+</svg>

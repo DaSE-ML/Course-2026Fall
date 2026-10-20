@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/></marker></defs>
+<text x="600.0" y="42" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="28px" font-weight="700" fill="#174B87" text-anchor="middle">嵌套交叉验证</text>
+<rect x="70" y="160" width="330" height="300" rx="18" fill="#DDEAF7" stroke="#2F6DB0" stroke-width="3"/>
+<text x="235" y="225" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="36px" font-weight="700" fill="#2F6DB0" text-anchor="middle">外层训练集</text>
+<text x="235" y="295" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="700" fill="#2F6DB0" text-anchor="middle">内层 3 折</text>
+<text x="235" y="343" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="400" fill="#263238" text-anchor="middle">比较候选 C</text>
+<text x="235" y="391" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="400" fill="#263238" text-anchor="middle">选出 C*</text>
+<rect x="435" y="160" width="330" height="300" rx="18" fill="#F5F7FA" stroke="#263238" stroke-width="3"/>
+<text x="600" y="225" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="36px" font-weight="700" fill="#263238" text-anchor="middle">重训</text>
+<text x="600" y="295" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="700" fill="#263238" text-anchor="middle">用 C*</text>
+<text x="600" y="343" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="400" fill="#263238" text-anchor="middle">在外层训练集</text>
+<text x="600" y="391" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="400" fill="#263238" text-anchor="middle">重新拟合</text>
+<rect x="800" y="160" width="330" height="300" rx="18" fill="#F7E4CF" stroke="#D9822B" stroke-width="3"/>
+<text x="965" y="225" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="36px" font-weight="700" fill="#D9822B" text-anchor="middle">外层验证集</text>
+<text x="965" y="295" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="700" fill="#D9822B" text-anchor="middle">只评估一次</text>
+<text x="965" y="343" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="400" fill="#263238" text-anchor="middle">汇总泛化误差</text>
+<text x="965" y="391" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="32px" font-weight="400" fill="#263238" text-anchor="middle">不参与选 C</text>
+<line x1="405" y1="310" x2="425" y2="310" stroke="#6B7280" stroke-width="5" marker-end="url(#arrow)"/>
+<line x1="770" y1="310" x2="790" y2="310" stroke="#6B7280" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="600" y="535" font-family="PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial Unicode MS, sans-serif" font-size="30px" font-weight="700" fill="#174B87" text-anchor="middle">每个外层折重复：选 C → 重训 → 外层验证</text>
+</svg>
