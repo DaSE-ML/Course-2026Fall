@@ -67,6 +67,7 @@
         <p><strong>提交什么？</strong><br>① “慢科研”指标设计说明（1–2 页 A4 PDF）<br>② 数据和代码<br>③ 社交媒体分享链接（如有）</p>
         <p><strong>基本要求</strong><br>自行设计指标，收集倡议签署者的相关数据，计算并比较他们具体有多“慢”。</p>
         <p>详细要求、加分项与资源见<a href="assignments/lab05.md">实验说明</a>和任务海报。</p>
+        <p><strong>相关材料</strong><br><a href="assignments/resources/README.md">倡议与签署名单备份（2026-10-17 快照）</a>，原网页不可达时可下载参考。</p>
       </td>
     </tr>
 
