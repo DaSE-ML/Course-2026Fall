@@ -52,6 +52,24 @@
         <p><strong>基本要求</strong><br>基于公开数据集，分别复现任意 4 个锦囊，比较使用前后的实验结果。</p>
       </td>
     </tr>
+    <tr>
+      <td valign="top"><strong>Lesson 4</strong><br><br>待发布</td>
+      <td align="center" valign="top">海报待发布</td>
+      <td valign="top">
+        <p>预留 <code>lab04/</code>，任务与提交要求待发布。</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><strong>Lesson 5</strong><br><br>设计“慢科研”<br>Metrics</td>
+      <td align="center" valign="top"><a href="assignments/lab05-poster.jpg"><img src="assignments/lab05-poster-thumb.jpg" width="320" alt="Lab 5 设计慢科研 Metrics 任务海报缩略图"></a></td>
+      <td valign="top">
+        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab05/</code> 文件夹。</p>
+        <p><strong>提交什么？</strong><br>① “慢科研”指标设计说明（1–2 页 A4 PDF）<br>② 数据和代码<br>③ 社交媒体分享链接（如有）</p>
+        <p><strong>基本要求</strong><br>自行设计指标，收集倡议签署者的相关数据，计算并比较他们具体有多“慢”。</p>
+        <p>详细要求、加分项与资源见<a href="assignments/lab05.md">实验说明</a>和任务海报。</p>
+      </td>
+    </tr>
+
   </tbody>
 </table>
 
