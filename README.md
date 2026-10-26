@@ -53,10 +53,14 @@
       </td>
     </tr>
     <tr>
-      <td valign="top"><strong>Lesson 4</strong><br><br>待发布</td>
-      <td align="center" valign="top">海报待发布</td>
+      <td valign="top"><strong>Lesson 4</strong><br><br>群雄逐鹿：<br>Kaggle<br>初出茅庐</td>
+      <td align="center" valign="top"><a href="assignments/lab04-poster.jpg"><img src="assignments/lab04-poster-thumb.jpg" width="320" alt="Lab 4 群雄逐鹿：Kaggle 初出茅庐任务海报缩略图"></a></td>
       <td valign="top">
-        <p>预留 <code>lab04/</code>，任务与提交要求待发布。</p>
+        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab04/</code> 文件夹。</p>
+        <p><strong>提交什么？</strong><br>方案解读文档，附比赛及 Top-1 方案来源链接。</p>
+        <p><strong>基本要求</strong><br>六选一，了解比赛任务、数据和评价指标，详细解读 Top-1 方案。</p>
+        <p>详细要求与加分项见<a href="assignments/lab04.md">实验说明</a>和任务海报。</p>
+        <p><strong>相关资料</strong><br><a href="assignments/resources/lab04-kaggle.md">六张人物牌对应的 Kaggle 比赛链接</a></p>
       </td>
     </tr>
     <tr>
@@ -81,7 +85,9 @@
 <!-- group-progress:start -->
 **各组完成情况一览**（参考数据，更新于 2026-10-23 16:46 · 共 8 次作业）
 
-| 组 | L1 | L2 | L3 | 🔒L4 | L5 | 🔒L6 | 🔒L7 | 🔒L8 |
+Lesson 4 已发布，L4 列暂未统计（·）；其余列仍为上述时间的参考快照。
+
+| 组 | L1 | L2 | L3 | L4 | L5 | 🔒L6 | 🔒L7 | 🔒L8 |
 |---|---|---|---|---|---|---|---|---|
 | 01 | 🟢 | 🟢 | 🟢 | · | ⚪ | · | · | · |
 | 02 | 🟢 | 🟢 | 🟢 | · | ⚪ | · | · | · |
@@ -107,7 +113,7 @@
 | 23 | ⚪ | ⚪ | ⚪ | · | ⚪ | · | · | · |
 | 25 | 🟢 | 🟢 | 🟢 | · | ⚪ | · | · | · |
 
-图例：🟢 基础材料齐备　🟡 进行中　⚪ 未开始　🔒 该次作业尚未发布。本表仅为参考快照，不构成评分依据。
+图例：🟢 基础材料齐备　🟡 进行中　⚪ 未开始　· 暂无统计数据　🔒 该次作业尚未发布。本表仅为参考快照，不构成评分依据。
 <!-- group-progress:end -->
 
 ## 机器学习课程材料
