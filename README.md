@@ -58,8 +58,7 @@
       <td valign="top">
         <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab04/</code> 文件夹。</p>
         <p><strong>提交什么？</strong><br>方案解读文档，附比赛及 Top-1 方案来源链接。</p>
-        <p><strong>基本要求</strong><br>六选一，了解比赛任务、数据和评价指标，详细解读 Top-1 方案。</p>
-        <p>详细要求与加分项见<a href="assignments/lab04.md">实验说明</a>和任务海报。</p>
+        <p><strong>基本要求</strong><br>了解比赛任务、数据和评价指标，详细解读 Top-1 方案。</p>
         <p><strong>相关资料</strong><br><a href="assignments/resources/lab04-kaggle.md">六张人物牌对应的 Kaggle 比赛链接</a></p>
       </td>
     </tr>
