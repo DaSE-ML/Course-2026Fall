@@ -18,7 +18,7 @@
 ## 03 补充说明
 
 - **排名口径**：Top-1、Top-3 均以 **Private Leaderboard** 为准；若对应队伍未公开 Solution，则按该榜单排名依次顺延。
-- 比赛链接见[相关资料：六张人物牌与 Kaggle 比赛](resources/lab04-kaggle.md)。
+- 比赛链接见[相关资料：Kaggle 比赛链接和详细规则](resources/lab04-kaggle.md)。
 - **不能照搬任一支队伍的方案（Red Line）。**
 - 可以使用“机器学习邪道锦囊”。
 - 参与“实战出征”或“榜上争锋”加分项时，须在 Kaggle 的 **Solution** 中注明本组编号 `ML26-XX`（如 `ML26-01`）。
