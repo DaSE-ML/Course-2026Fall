@@ -15,7 +15,7 @@
 
 ## 03 可用资源
 
-1. [慢科研倡议](https://gaplab.cuhk.edu.cn/slow_research/)：查看声明与签署名单。 [备份存档与下载说明](resources/README.md)（2026-10-17 快照；原网页不可达时可用，不代表实时名单）。
+1. [慢科研倡议](https://gaplab.cuhk.edu.cn/slow_research/)：查看声明与签署名单。 [备份存档与下载说明](README.md)（2026-10-17 快照；原网页不可达时可用，不代表实时名单）。
 2. [DBLP](https://dblp.org/)、作者主页：查找作者与论文。
 3. [OpenAlex](https://openalex.org/)、[Semantic Scholar](https://www.semanticscholar.org/)：获取论文与合作信息。
 4. [ECNU 文献快速获取](https://github.com/morningD/ECNU-literature-quick-access)：辅助获取论文全文。
@@ -34,4 +34,4 @@
 2. 数据和代码。
 3. 社交媒体分享链接（如有）。
 
-![Lesson 5 任务海报](lab05-poster.jpg)
+![Lesson 5 任务海报](../lab05-poster.jpg)
