@@ -52,6 +52,7 @@
         <p><strong>基本要求</strong><br>基于公开数据集，分别复现任意 4 个锦囊，比较使用前后的实验结果。</p>
       </td>
     </tr>
+    <!-- Lesson 4 入口暂时隐藏，待医疗比赛替换完成后恢复。
     <tr>
       <td valign="top"><strong>Lesson 4</strong><br><br>群雄逐鹿：<br>Kaggle<br>初出茅庐</td>
       <td align="center" valign="top"><a href="assignments/lab04-poster.jpg"><img src="assignments/lab04-poster-thumb.jpg" width="320" alt="Lab 4 群雄逐鹿：Kaggle 初出茅庐任务海报缩略图"></a></td>
@@ -62,6 +63,7 @@
         <p><strong>相关资料</strong><br><a href="assignments/resources/lab04-kaggle.md">Kaggle 比赛链接和详细规则</a></p>
       </td>
     </tr>
+    -->
     <tr>
       <td valign="top"><strong>Lesson 5</strong><br><br>设计“慢科研”<br>Metrics</td>
       <td align="center" valign="top"><a href="assignments/lab05-poster.jpg"><img src="assignments/lab05-poster-thumb.jpg" width="320" alt="Lab 5 设计慢科研 Metrics 任务海报缩略图"></a></td>
@@ -84,9 +86,9 @@
 <!-- group-progress:start -->
 **各组完成情况一览**（参考数据，更新于 2026-10-23 16:46 · 共 8 次作业）
 
-Lesson 4 已发布，L4 列暂未统计（·）；其余列仍为上述时间的参考快照。
+Lesson 4 暂缓发布，等待更新；其余列仍为上述时间的参考快照。
 
-| 组 | L1 | L2 | L3 | L4 | L5 | 🔒L6 | 🔒L7 | 🔒L8 |
+| 组 | L1 | L2 | L3 | 🔒L4 | L5 | 🔒L6 | 🔒L7 | 🔒L8 |
 |---|---|---|---|---|---|---|---|---|
 | 01 | 🟢 | 🟢 | 🟢 | · | ⚪ | · | · | · |
 | 02 | 🟢 | 🟢 | 🟢 | · | ⚪ | · | · | · |
