@@ -74,6 +74,14 @@
       </td>
     </tr>
 
+    <tr>
+      <td valign="top"><strong>Lesson 4</strong><br><br>群雄逐鹿：<br>Kaggle 初出茅庐</td>
+      <td align="center" valign="top"><a href="assignments/lab04-poster.jpg"><img src="assignments/lab04-poster-thumb.jpg" width="320" alt="Lab 4 任务海报缩略图"></a></td>
+      <td valign="top">
+        <p><strong>任务</strong><br>从六张人物卡对应的 Kaggle 比赛中任选一个出征：了解任务与评估指标，研读 Top-1 方案的兵法（数据处理/特征工程/建模），提交<strong>方案解读文档</strong>（附比赛与 Top-1 方案来源链接）。</p>
+        <p><strong>红线</strong><br>不能照搬任何一支队伍的方案。可以使用「机器学习邪修锦囊」。比赛链接见本仓 README。</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
