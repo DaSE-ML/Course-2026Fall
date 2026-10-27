@@ -11,8 +11,6 @@
 | 华佗 | WiDS 糖尿病识别 | [WiDS Datathon 2021](https://www.kaggle.com/competitions/widsdatathon2021) |
 | 周瑜 | March Mania 胜负预测 | [March Machine Learning Mania 2025](https://www.kaggle.com/competitions/march-machine-learning-mania-2025) |
 
-华佗卡对应比赛已更换为 **WiDS Datathon 2021**；已发布海报中的旧比赛信息待换图更新。
-
 ## 去哪里找方案
 
 进入比赛后，先在 **Private Leaderboard** 核对队伍名次，再到 **Discussion** 和 **Code** 查找对应队伍的方案说明与代码。解读文档中保留实际采用的方案来源链接。
