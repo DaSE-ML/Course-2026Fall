@@ -8,8 +8,10 @@
 | 荀彧 | M5 销量预测 | [M5 Forecasting - Accuracy](https://www.kaggle.com/competitions/m5-forecasting-accuracy) |
 | 诸葛亮 | ASHRAE 能耗预测 | [ASHRAE - Great Energy Predictor III](https://www.kaggle.com/competitions/ashrae-energy-prediction) |
 | 管辂 | LANL 地震预测 | [LANL Earthquake Prediction](https://www.kaggle.com/competitions/LANL-Earthquake-Prediction) |
-| 华佗 | MSK 癌症变异分类 | [Personalized Medicine: Redefining Cancer Treatment](https://www.kaggle.com/competitions/msk-redefining-cancer-treatment) |
+| 华佗 | WiDS 糖尿病识别 | [WiDS Datathon 2021](https://www.kaggle.com/competitions/widsdatathon2021) |
 | 周瑜 | March Mania 胜负预测 | [March Machine Learning Mania 2025](https://www.kaggle.com/competitions/march-machine-learning-mania-2025) |
+
+华佗卡对应比赛已更换为 **WiDS Datathon 2021**；已发布海报中的旧比赛信息待换图更新。
 
 ## 去哪里找方案
 
@@ -23,6 +25,16 @@
 ## 公开方案与代码
 
 参见[六个比赛 Top-3 方案与代码核对表](lab04-top3-code.md)。表中区分公开代码、代码片段及暂未找到的情况；有方案说明不等于提供了完整代码。
+
+## WiDS Datathon 2021：任务与方案
+
+使用进入 ICU 后前 24 小时的临床数据，识别患者是否患有糖尿病，评价指标为 ROC-AUC。
+
+- [Top-1：Dihydrogen Oxide / H2O.ai](https://www.kaggle.com/competitions/widsdatathon2021/writeups/dihydrogen-oxide-h2o-ai-first-place-solution)
+- [Top-2：EPFL](https://www.kaggle.com/competitions/widsdatathon2021/writeups/epfl-2nd-place-solution)
+- [Top-3：scientificmind](https://www.kaggle.com/competitions/widsdatathon2021/writeups/scientificmind-3rd-place-solution)
+
+三份方案均可公开阅读，基本要求是详细解读方案，不要求完整复现冠军代码。在线提交及排名加分项以平台当前开放情况和参赛规则为准；原比赛每队最多 4 人，至少半数成员为女性。
 
 ## Kaggle 方案备注
 

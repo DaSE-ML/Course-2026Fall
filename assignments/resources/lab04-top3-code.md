@@ -1,6 +1,6 @@
 # Lesson 4：六个比赛 Top-3 方案与代码核对
 
-核对日期：2026-10-27。以下按各比赛最终 **Private Leaderboard** 名次整理，未将顺延后的方案重新编号。M5 对应 **Accuracy** 赛道，March Mania 对应 **2025** 年比赛，MSK 对应第二阶段最终榜单。
+核对日期：2026-10-27。以下按各比赛最终 **Private Leaderboard** 名次整理，未将顺延后的方案重新编号。M5 对应 **Accuracy** 赛道，March Mania 对应 **2025** 年比赛，华佗对应 WiDS Datathon 2021，已替换 MSK。
 
 **“已公开”表示找到了可查看的作者代码或主办方归档，不表示已在当前环境运行成功或能完整复现获奖分数。**“部分公开”表示仅找到代码片段、关键组件或所引用的基线；“暂未找到”不等于作者从未公开。
 
@@ -38,17 +38,17 @@
 | 2 | Jun Koda | [方案说明](https://www.kaggle.com/competitions/LANL-Earthquake-Prediction/writeups/jun-koda-2nd-place-solution)公开了训练样本构造、32 个特征及 CatBoost 方法；**暂未找到完整的作者训练与预测代码**。 |
 | 3 | currypurin / hmdhmd | [方案说明](https://www.kaggle.com/competitions/LANL-Earthquake-Prediction/writeups/character-ranking-3rd-place-memo)；**部分公开**：正文有目标值调整代码，作者评论提供 LightGBM 参数，暂未找到完整训练与预测流程。 |
 
-## 华佗：Personalized Medicine — Redefining Cancer Treatment
+## 华佗：WiDS Datathon 2021
 
 | 私榜名次 | 队伍 | 方案与代码提供情况 |
 | --- | --- | --- |
-| 1 | ilmirashaim | **暂未找到可确认属于最终第一名的公开方案及代码**。 |
-| 2 | Waterpls | **暂未找到可确认属于最终第二名的公开方案及代码**。 |
-| 3 | Yang（jeffcao） | **暂未找到可确认属于最终第三名的公开方案及代码**。 |
+| 1 | Dihydrogen Oxide / H2O.ai | [冠军方案](https://www.kaggle.com/competitions/widsdatathon2021/writeups/dihydrogen-oxide-h2o-ai-first-place-solution)可公开阅读。正文介绍特征工程与 stacking，评论补充目标编码、调参与 AutoML 细节；**暂未找到完整冠军代码或独立代码仓库**，不能标为完整代码已公开。 |
+| 2 | EPFL | [亚军方案](https://www.kaggle.com/competitions/widsdatathon2021/writeups/epfl-2nd-place-solution)可公开阅读，并提供 [Google Drive Notebook 附件](https://drive.google.com/file/d/1JZGqsTgmCpdAzMiLcu5rGLrqNSYfjMRE/view)。文件页可访问，显示 single-lgbm-wids2021[public=87553][private=0.8770].ipynb；本次下载未成功，未核验代码内容。作者称其为单模型思路示例，最终提交为多个模型的集成，不能直接当作完整亚军流程。 |
+| 3 | scientificmind（官方获奖公告称 .IL） | [季军方案](https://www.kaggle.com/competitions/widsdatathon2021/writeups/scientificmind-3rd-place-solution)可公开阅读，详细介绍特征工程、特征选择、插补、验证、约 120 个模型及逻辑回归集成；**正文及已显示评论未找到独立最终代码链接**。 |
 
-三队名次已在[最终 Private Leaderboard](https://www.kaggle.com/competitions/msk-redefining-cancer-treatment/leaderboard)核对。本次同时检索了比赛讨论区的 Solution 相关帖子及队伍名，未将一般学习项目、第一阶段方案或主办方所说的“solution labels”（测试集标签）当成前三名代码。
+前三名及方法另可参照[主办方获奖者访谈汇总](https://www.widsworldwide.org/get-inspired/blog/learn-from-wids-datathon-2021-winners-including-a-kaggle-grandmaster/)。主办方[获奖公告](https://www.widsworldwide.org/get-inspired/blog/the-wids-datathon-phase-2-is-now-open-supporting-excellence-in-research/)确认三队获奖。
 
-该比赛有两个阶段，[主办方结赛说明](https://www.kaggle.com/competitions/msk-redefining-cancer-treatment/discussion/40676)也提到第二阶段标注人员和变异分布存在差异。**目前不能保证该题能直接找到符合本实验要求的 Top-1 公开方案，选题前需进一步确认。**
+**适用性**：符合本实验“解读 Top-1、基于 Top-3 提出改进”的要求，不等于三甲代码全部开源。任务是利用进入 ICU 后前 24 小时的数据识别糖尿病，不是预测未来是否发病。赛后提交评分尚未通过登录后实际操作确认。
 
 ## 周瑜：March Machine Learning Mania 2025
 
