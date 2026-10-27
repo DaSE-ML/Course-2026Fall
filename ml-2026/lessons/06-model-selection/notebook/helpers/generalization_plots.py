@@ -9,15 +9,15 @@ def search_budget_plot(grid, random, assets_dir):
     fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.5), sharex=True, sharey=True)
     low = min(grid.mean_test_score.min(), random.mean_test_score.min())
     high = max(grid.mean_test_score.max(), random.mean_test_score.max())
-    for ax, table, title in zip(axes, [grid, random], ["网格：3个C × 3档列数", "随机：9个实际采样组合"]):
-        dots = ax.scatter(table.param_logistic__C.astype(float),
-                          table.param_select__k.astype(int), c=table.mean_test_score,
+    for ax, table, title in zip(axes, [grid, random], ["网格：3个C × 3档旋转角度", "随机：9个实际采样组合"]):
+        dots = ax.scatter(table.param_C.astype(float),
+                          table.param_angle.astype(int), c=table.mean_test_score,
                           cmap="viridis", vmin=low, vmax=high, s=160, edgecolors="white")
         ax.set_xscale("log")
-        ax.set(xlim=(.008, 1.25), xticks=[.01, .1, 1], ylim=(10, 54),
-               yticks=[16, 32, 48], xlabel="C（对数尺度；本次范围 0.01–1）", title=title)
+        ax.set(xlim=(.008, 1.25), xticks=[.01, .1, 1], ylim=(-3, 23),
+               yticks=[0, 10, 20], xlabel="C（对数尺度；本次范围 0.01–1）", title=title)
         ax.grid(alpha=.15)
-    axes[0].set_ylabel("每折保留特征数 k")
+    axes[0].set_ylabel("训练折旋转角度（度；0表示不增强）")
     fig.colorbar(dots, ax=axes, label="相同三折的平均验证准确率", shrink=.8)
     fig.suptitle("C 范围 0.01–1；相同候选数、相同折：每种策略9×3＝27次拟合；refit=False", y=1.06)
     fig.savefig(assets_dir / "l6-search-budget.png", bbox_inches="tight")
@@ -32,9 +32,17 @@ def early_stopping_plot(table, best_epoch, assets_dir):
     row = table.loc[table.epoch == best_epoch].iloc[0]
     ax.axvline(best_epoch, ls=":", color="#666")
     ax.scatter([best_epoch], [row.valid_loss], facecolor="white", edgecolor="#D9822B", zorder=4, s=75)
-    ax.annotate(f"候选轮次中最低：第{best_epoch}轮", (best_epoch, row.valid_loss),
-                xytext=(12, 30), textcoords="offset points", fontsize=13)
-    ax.set(xlabel="训练轮次 Epoch", ylabel="Log Loss（越小越好）", title="训练多久，也要由验证结果决定")
+    stop_epoch = int(table.epoch.iloc[-1])
+    ax.axvspan(best_epoch, stop_epoch, color="#D9822B", alpha=.09)
+    ax.axvline(stop_epoch, ls="--", color="#A33A32")
+    ax.annotate(f"保存第{best_epoch}轮，停止后恢复", (best_epoch, row.valid_loss),
+                xytext=(-170, -36), textcoords="offset points", fontsize=12,
+                arrowprops={"arrowstyle": "->", "color": "#666"})
+    ax.text(.98, .95, f"第{stop_epoch}轮停止\n连续{int(table.wait.iloc[-1])}轮未达改善要求",
+            transform=ax.transAxes, ha="right", va="top", fontsize=12,
+            bbox={"facecolor": "white", "edgecolor": "none", "alpha": .9})
+    ax.set(xlabel="训练轮次 Epoch", ylabel="Log Loss（越小越好）",
+           title="实际早停：最小改善量0.001，耐心10轮")
     ax.legend()
     ax.grid(alpha=.15)
     fig.tight_layout()

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-19T23:32:00.569813</dc:date>
+    <dc:date>2026-10-27T22:32:56.088804</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,7 +35,7 @@ L 185.481 207.16
 L 185.481 165.58 
 L 49.887 165.58 
 z
-" clip-path="url(#p218ae7d884)" style="fill: #eef3fa; stroke: #356dac; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p5ff906832a)" style="fill: #eef3fa; stroke: #356dac; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 316.053 207.16 
@@ -43,7 +43,7 @@ L 461.691 207.16
 L 461.691 165.58 
 L 316.053 165.58 
 z
-" clip-path="url(#p218ae7d884)" style="fill: #ffffff; stroke: #af6b26; stroke-width: 1.5; stroke-linejoin: miter"/>
+" clip-path="url(#p5ff906832a)" style="fill: #ffffff; stroke: #af6b26; stroke-width: 1.5; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- 原始记录 A、B、C、D、E -->
@@ -1731,7 +1731,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p218ae7d884">
+  <clipPath id="p5ff906832a">
    <rect x="7.2" y="8.5" width="502.2" height="277.2"/>
   </clipPath>
  </defs>

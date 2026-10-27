@@ -53,14 +53,12 @@ def rates(ax, x=True, y=True):
     ax.grid(alpha=.15)
 
 
-def plot_roc(y, scores, path=None, demo=None):
+def plot_roc(y, scores, path=None):
     fig, ax = plt.subplots(figsize=(6.8, 5.2), layout="constrained")
     for name, p in scores.items():
         fpr, tpr, _ = roc_curve(y, p)
         ax.plot(fpr, tpr, color=COLORS[name], ls=STYLES[name], lw=2,
                 label=f"{DISPLAY_NAMES[name]} · AUC={roc_auc_score(y, p):.3f}")
-    if demo is not None:
-        ax.plot(demo[0], demo[1], "--o", color="#B66C25", label=f"四样本 · AUC={demo[2]:.2f}")
     ax.plot([0, 1], [0, 1], ":", color="#686868", label="随机排序参考")
     ax.set(xlim=(0, 1), ylim=(0, 1.02), xlabel="假正率 FPR", ylabel="真正率 TPR（召回率）",
            title="ROC｜同一验证集 6,000 人")
@@ -72,7 +70,7 @@ def plot_roc(y, scores, path=None, demo=None):
 def plot_pr(y, scores, baseline, path=None):
     fig, ax = plt.subplots(figsize=(6.8, 5.2), layout="constrained")
     for name, p in scores.items():
-        precision, recall, _ = precision_recall_curve(y, p)
+        precision, recall, thresholds = precision_recall_curve(y, p)
         # Descending recall + post uses P_i on the segment R_i -> R_(i+1).
         # Its positive area is exactly sklearn's non-interpolated AP sum.
         staircase_area = -np.sum(np.diff(recall) * precision[:-1])
@@ -80,6 +78,17 @@ def plot_pr(y, scores, baseline, path=None):
         assert np.isclose(staircase_area, average_precision_score(y, p))
         ax.step(recall, precision, where="post", color=COLORS[name], ls=STYLES[name], lw=2,
                 label=f"{DISPLAY_NAMES[name]} · AP={average_precision_score(y, p):.3f}")
+        if name == "kNN3":
+            # 只标真正有阈值的工作点；末尾(Recall=0, Precision=1)是绘图端点。
+            labels = ["t=0", "t=1/3", "t=2/3", "t=1"]
+            offsets = [(-50, -30), (12, -30), (15, 18), (15, 18)]
+            assert np.allclose(thresholds, [0, 1/3, 2/3, 1])
+            ax.scatter(recall[:-1], precision[:-1], s=42, color=COLORS[name], zorder=5)
+            for r, pr, label, offset in zip(recall[:-1], precision[:-1], labels, offsets):
+                ax.annotate(label, (r, pr), xytext=offset, textcoords="offset points",
+                            fontsize=12, color=COLORS[name],
+                            bbox=dict(facecolor="white", edgecolor="none", alpha=.9, pad=2),
+                            arrowprops=dict(arrowstyle="-", color=COLORS[name], lw=.8))
     ax.axhline(baseline, color="#686868", ls=":", label=f"正类率参考 {baseline:.1%}")
     ax.set(xlim=(0, 1), ylim=(0, 1.03), xlabel="召回率 Recall", ylabel="查准率 Precision",
            title="PR｜同一验证集 6,000 人；图例为非插值 AP")
@@ -207,7 +216,7 @@ def plot_capacity(table, path=None):
             ax.plot(group.k, group[field], marker="o", color=COLORS[name], ls=STYLES[name], label=DISPLAY_NAMES[name])
     for ax, label in zip(axes, ["前 K 名查准率 Precision@K", "前 K 名召回率 Recall@K"]):
         ax.axvline(600, color="#686868", ls=":", lw=1)
-        ax.set(xlabel="核查名额 K（验证集 6,000 人）", ylabel=label, ylim=(0, 1), xticks=[300, 600, 1200])
+        ax.set(xlabel="核查名额 K（验证集 6,000 人）", ylabel=label, ylim=(0, 1), xticks=sorted(table.k.unique()))
         rates(ax, x=False)
     axes[0].legend(loc="upper right")
     fig.suptitle("固定容量比较｜并列按验证行顺序；不表示因果收益")
@@ -228,7 +237,7 @@ def plot_cost(table, best, path=None):
     finish(fig, path)
 
 
-def plot_slide_views(p, changed, calibration_tables, capacity, costs, best, asset_dir):
+def plot_slide_views(p, changed, calibration_tables, capacity, asset_dir):
     """One panel per slide; retain the full multi-panel figures in the notebook."""
     fig, ax = plt.subplots(figsize=(6.8, 5.2), layout="constrained")
     order = np.argsort(p, kind="stable")
@@ -268,9 +277,6 @@ def plot_slide_views(p, changed, calibration_tables, capacity, costs, best, asse
            ylabel="前K名查准率 P@K", title="复核量变化：每50人计算一次")
     rates(ax, x=False); ax.legend(loc="upper right")
     finish(fig, asset_dir / "lab05-slide-capacity.png")
-
-    plot_capacity_cost(costs, asset_dir / "lab05-slide-cost.png")
-
 
 def plot_capacity_cost(costs, path=None, capacity=600):
     """Compare actual candidate costs, retaining only capacity-feasible choices."""

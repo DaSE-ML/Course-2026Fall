@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="830" viewBox="0 0 1000 830">
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#627486" stroke-width="1.4"/></marker></defs>
+<rect width="1000" height="830" fill="white"/>
+<g font-family="PingFang SC,Microsoft YaHei,sans-serif" fill="#193247" text-anchor="middle">
+<text x="500" y="42" font-size="34" font-weight="600">同一次验证，分别做两个判断</text>
+<rect x="265" y="70" width="470" height="76" rx="14" fill="#edf2f7" stroke="#a9bacb"/>
+<text x="500" y="118" font-size="29">验证结束：读取 val_loss</text>
+<path d="M500 146 V173 H250 V201 M500 173 H750 V201" fill="none" stroke="#627486" stroke-width="3" marker-end="url(#a)"/>
+<rect x="25" y="212" width="450" height="440" rx="18" fill="#f0f6fd" stroke="#9dbbda" stroke-width="2"/>
+<rect x="525" y="212" width="450" height="440" rx="18" fill="#f0f8f4" stroke="#9bc5b5" stroke-width="2"/>
+<text x="250" y="259" font-size="33" font-weight="600">EarlyStopping</text>
+<text x="750" y="259" font-size="33" font-weight="600">ModelCheckpoint</text>
+<text x="250" y="303" font-size="29" fill="#346b9e">决定何时停止</text>
+<text x="750" y="303" font-size="29" fill="#26785b">保存最佳模型</text>
+<path d="M55 325 H445 M555 325 H945" stroke="#ccd8e2" stroke-width="2"/>
+<text x="250" y="373" font-size="27">比参考值降低超过 min_delta？</text>
+<text x="250" y="425" font-size="28">是：更新指标，计数清零</text>
+<text x="250" y="477" font-size="28">否：未改善计数 +1</text>
+<text x="250" y="548" font-size="28">计数达到 patience</text>
+<text x="250" y="596" font-size="30" font-weight="600">→ 请求停止训练</text>
+<text x="750" y="373" font-size="28">比已保存的最佳值更低？</text>
+<text x="750" y="425" font-size="28">是：保存当前模型</text>
+<text x="750" y="477" font-size="28">否：保留已有检查点</text>
+<text x="750" y="548" font-size="28">save_top_k=1</text>
+<text x="750" y="596" font-size="30" font-weight="600">仅保留最佳一份</text>
+<path d="M250 652 V678 H500 M750 652 V678 H500 V704" fill="none" stroke="#627486" stroke-width="3" marker-end="url(#a)"/>
+<rect x="120" y="714" width="760" height="65" rx="13" fill="#fff5e7" stroke="#d4b58b"/>
+<text x="500" y="756" font-size="29">训练结束后：加载 best_model_path</text>
+<text x="500" y="815" font-size="23" fill="#627486">依据 PyTorch Lightning 官方 API 整理 · 非训练结果图</text>
+</g></svg>
