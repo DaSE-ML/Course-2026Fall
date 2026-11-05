@@ -58,8 +58,7 @@
       <td valign="top">
         <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab04/</code> 文件夹。</p>
         <p><strong>提交什么？</strong><br>方案解读文档，附比赛及 Top-1 方案来源链接。</p>
-        <p><strong>基本要求</strong><br>从六张人物卡对应的 Kaggle 比赛中任选一个出征：了解比赛任务、数据和评价指标，详细解读 Top-1 方案的兵法（数据处理/特征工程/建模）。</p>
-        <p><strong>红线</strong><br>不能照搬任何一支队伍的方案。可以使用「机器学习邪修锦囊」。</p>
+        <p><strong>基本要求</strong><br>了解比赛任务、数据和评价指标，详细解读 Top-1 方案。</p>
         <p><strong>相关资料</strong><br><a href="assignments/resources/lab04-kaggle.md">Kaggle 比赛链接和详细规则</a></p>
       </td>
     </tr>
