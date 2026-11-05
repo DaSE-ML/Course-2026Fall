@@ -58,7 +58,8 @@
       <td valign="top">
         <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab04/</code> 文件夹。</p>
         <p><strong>提交什么？</strong><br>方案解读文档，附比赛及 Top-1 方案来源链接。</p>
-        <p><strong>基本要求</strong><br>了解比赛任务、数据和评价指标，详细解读 Top-1 方案。</p>
+        <p><strong>基本要求</strong><br>从六张人物卡对应的 Kaggle 比赛中任选一个出征：了解比赛任务、数据和评价指标，详细解读 Top-1 方案的兵法（数据处理/特征工程/建模）。</p>
+        <p><strong>红线</strong><br>不能照搬任何一支队伍的方案。可以使用「机器学习邪修锦囊」。</p>
         <p><strong>相关资料</strong><br><a href="assignments/resources/lab04-kaggle.md">Kaggle 比赛链接和详细规则</a></p>
       </td>
     </tr>
@@ -71,15 +72,6 @@
         <p><strong>基本要求</strong><br>自行设计指标，收集倡议签署者的相关数据，计算并比较他们具体有多“慢”。</p>
         <p>详细要求、加分项与资源见<a href="assignments/resources/lab05.md">实验说明</a>和任务海报。</p>
         <p><strong>相关材料</strong><br><a href="assignments/resources/README.md">倡议与签署名单备份（2026-10-17 快照）</a>，原网页不可达时可下载参考。</p>
-      </td>
-    </tr>
-
-    <tr>
-      <td valign="top"><strong>Lesson 4</strong><br><br>群雄逐鹿：<br>Kaggle 初出茅庐</td>
-      <td align="center" valign="top"><a href="assignments/lab04-poster.jpg"><img src="assignments/lab04-poster-thumb.jpg" width="320" alt="Lab 4 任务海报缩略图"></a></td>
-      <td valign="top">
-        <p><strong>任务</strong><br>从六张人物卡对应的 Kaggle 比赛中任选一个出征：了解任务与评估指标，研读 Top-1 方案的兵法（数据处理/特征工程/建模），提交<strong>方案解读文档</strong>（附比赛与 Top-1 方案来源链接）。</p>
-        <p><strong>红线</strong><br>不能照搬任何一支队伍的方案。可以使用「机器学习邪修锦囊」。比赛链接见本仓 README。</p>
       </td>
     </tr>
   </tbody>
