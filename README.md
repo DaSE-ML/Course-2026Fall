@@ -73,6 +73,16 @@
         <p><strong>相关材料</strong><br><a href="assignments/resources/README.md">倡议与签署名单备份（2026-10-17 快照）</a>，原网页不可达时可下载参考。</p>
       </td>
     </tr>
+    <tr>
+      <td valign="top"><strong>Lesson 6</strong><br><br>古字新识：<br>AI 能读懂<br>我们的校训吗？</td>
+      <td align="center" valign="top"><a href="assignments/lab06-poster.jpg"><img src="assignments/lab06-poster-thumb.jpg" width="320" alt="Lab 6 古字新识任务海报缩略图"></a></td>
+      <td valign="top">
+        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab06/</code> 文件夹。</p>
+        <p><strong>提交什么？</strong><br>① 校训古汉字图片<br>② 数据集及标签<br>③ 训练好的分类器（一个或多个）<br>④ Jupyter Notebook（<code>.ipynb</code>），包含代码、实验结果与简要分析。</p>
+        <p><strong>基本要求</strong><br>任选一种字形体系写出校训，自行准备带标签的单字图片，训练分类器识别校训八字。</p>
+        <p><strong>相关资料</strong><br><a href="assignments/resources/lab06.md">实验说明与古汉字资源</a></p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
