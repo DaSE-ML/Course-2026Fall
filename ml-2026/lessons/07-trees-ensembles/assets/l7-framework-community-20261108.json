@@ -1,0 +1,218 @@
+{
+  "checked_on": "2026-11-08",
+  "source": "GitHub REST API",
+  "repositories": [
+    {
+      "repo": "dmlc/xgboost",
+      "stars": 28956,
+      "pushed_at": "2026-11-07T15:40:58Z",
+      "archived": false,
+      "url": "https://github.com/dmlc/xgboost",
+      "releases": [
+        {
+          "tag": "v3.4.2",
+          "published_at": "2026-09-15T08:31:52Z",
+          "url": "https://github.com/dmlc/xgboost/releases/tag/v3.4.2",
+          "prerelease": false
+        },
+        {
+          "tag": "v3.3.1",
+          "published_at": "2026-09-15T08:48:08Z",
+          "url": "https://github.com/dmlc/xgboost/releases/tag/v3.3.1",
+          "prerelease": false
+        },
+        {
+          "tag": "v3.4.1",
+          "published_at": "2026-08-15T08:30:07Z",
+          "url": "https://github.com/dmlc/xgboost/releases/tag/v3.4.1",
+          "prerelease": false
+        },
+        {
+          "tag": "v3.4.0",
+          "published_at": "2026-08-04T10:46:20Z",
+          "url": "https://github.com/dmlc/xgboost/releases/tag/v3.4.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v3.3.0",
+          "published_at": "2026-06-17T20:56:43Z",
+          "url": "https://github.com/dmlc/xgboost/releases/tag/v3.3.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v3.2.0",
+          "published_at": "2026-02-10T08:14:33Z",
+          "url": "https://github.com/dmlc/xgboost/releases/tag/v3.2.0",
+          "prerelease": false
+        }
+      ]
+    },
+    {
+      "repo": "catboost/catboost",
+      "stars": 9195,
+      "pushed_at": "2026-11-07T12:07:49Z",
+      "archived": false,
+      "url": "https://github.com/catboost/catboost",
+      "releases": [
+        {
+          "tag": "node-package-v1.27.0",
+          "published_at": "2026-02-21T21:05:42Z",
+          "url": "https://github.com/catboost/catboost/releases/tag/node-package-v1.27.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v1.2.10",
+          "published_at": "2026-02-19T12:38:26Z",
+          "url": "https://github.com/catboost/catboost/releases/tag/v1.2.10",
+          "prerelease": false
+        },
+        {
+          "tag": "v1.2.9",
+          "published_at": "2026-02-18T12:10:34Z",
+          "url": "https://github.com/catboost/catboost/releases/tag/v1.2.9",
+          "prerelease": false
+        },
+        {
+          "tag": "v1.2.8",
+          "published_at": "2025-04-13T10:45:50Z",
+          "url": "https://github.com/catboost/catboost/releases/tag/v1.2.8",
+          "prerelease": false
+        },
+        {
+          "tag": "node-package-v1.26.0",
+          "published_at": "2024-12-07T11:22:32Z",
+          "url": "https://github.com/catboost/catboost/releases/tag/node-package-v1.26.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v1.2.7",
+          "published_at": "2024-09-07T20:11:05Z",
+          "url": "https://github.com/catboost/catboost/releases/tag/v1.2.7",
+          "prerelease": false
+        }
+      ]
+    },
+    {
+      "repo": "lightgbm-org/LightGBM",
+      "stars": 18954,
+      "pushed_at": "2026-11-02T19:27:12Z",
+      "archived": false,
+      "url": "https://github.com/lightgbm-org/LightGBM",
+      "releases": [
+        {
+          "tag": "v4.7.0",
+          "published_at": "2026-07-18T20:20:12Z",
+          "url": "https://github.com/lightgbm-org/LightGBM/releases/tag/v4.7.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v4.6.0",
+          "published_at": "2025-02-15T03:46:41Z",
+          "url": "https://github.com/lightgbm-org/LightGBM/releases/tag/v4.6.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v4.5.0",
+          "published_at": "2024-07-25T22:10:25Z",
+          "url": "https://github.com/lightgbm-org/LightGBM/releases/tag/v4.5.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v4.4.0",
+          "published_at": "2024-06-15T04:08:32Z",
+          "url": "https://github.com/lightgbm-org/LightGBM/releases/tag/v4.4.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v4.3.0",
+          "published_at": "2024-01-26T02:11:11Z",
+          "url": "https://github.com/lightgbm-org/LightGBM/releases/tag/v4.3.0",
+          "prerelease": false
+        },
+        {
+          "tag": "v4.2.0",
+          "published_at": "2023-12-21T18:58:56Z",
+          "url": "https://github.com/lightgbm-org/LightGBM/releases/tag/v4.2.0",
+          "prerelease": false
+        }
+      ]
+    },
+    {
+      "repo": "Xtra-Computing/thundergbm",
+      "stars": 716,
+      "pushed_at": "2025-03-19T09:06:36Z",
+      "archived": false,
+      "url": "https://github.com/Xtra-Computing/thundergbm",
+      "releases": [
+        {
+          "tag": "0.3.2",
+          "published_at": "2019-05-07T08:47:56Z",
+          "url": "https://github.com/Xtra-Computing/thundergbm/releases/tag/0.3.2",
+          "prerelease": false
+        },
+        {
+          "tag": "ipdps-version",
+          "published_at": "2018-09-25T11:04:20Z",
+          "url": "https://github.com/Xtra-Computing/thundergbm/releases/tag/ipdps-version",
+          "prerelease": false
+        },
+        {
+          "tag": "before-reorganize",
+          "published_at": "2017-12-12T06:54:33Z",
+          "url": "https://github.com/Xtra-Computing/thundergbm/releases/tag/before-reorganize",
+          "prerelease": true
+        }
+      ]
+    },
+    {
+      "repo": "AMD-Ecosystem/ThunderGBM-amd",
+      "stars": 0,
+      "pushed_at": "2026-07-16T18:58:22Z",
+      "archived": false,
+      "url": "https://github.com/AMD-Ecosystem/ThunderGBM-amd",
+      "releases": []
+    }
+  ],
+  "selected_releases": [
+    {
+      "name": "XGBoost",
+      "repo": "dmlc/xgboost",
+      "version": "v3.4.2",
+      "release_date": "2026-09-15",
+      "stars": 28956,
+      "release_url": "https://github.com/dmlc/xgboost/releases/tag/v3.4.2",
+      "repo_url": "https://github.com/dmlc/xgboost",
+      "pushed_at": "2026-11-07T15:40:58Z"
+    },
+    {
+      "name": "CatBoost",
+      "repo": "catboost/catboost",
+      "version": "v1.2.10",
+      "release_date": "2026-02-19",
+      "stars": 9195,
+      "release_url": "https://github.com/catboost/catboost/releases/tag/v1.2.10",
+      "repo_url": "https://github.com/catboost/catboost",
+      "pushed_at": "2026-11-07T12:07:49Z"
+    },
+    {
+      "name": "LightGBM",
+      "repo": "lightgbm-org/LightGBM",
+      "version": "v4.7.0",
+      "release_date": "2026-07-18",
+      "stars": 18954,
+      "release_url": "https://github.com/lightgbm-org/LightGBM/releases/tag/v4.7.0",
+      "repo_url": "https://github.com/lightgbm-org/LightGBM",
+      "pushed_at": "2026-11-02T19:27:12Z"
+    },
+    {
+      "name": "ThunderGBM",
+      "repo": "Xtra-Computing/thundergbm",
+      "version": "0.3.2",
+      "release_date": "2019-05-07",
+      "stars": 716,
+      "release_url": "https://github.com/Xtra-Computing/thundergbm/releases/tag/0.3.2",
+      "repo_url": "https://github.com/Xtra-Computing/thundergbm",
+      "pushed_at": "2025-03-19T09:06:36Z"
+    }
+  ]
+}

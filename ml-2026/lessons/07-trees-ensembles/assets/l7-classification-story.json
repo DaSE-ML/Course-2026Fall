@@ -1,0 +1,25 @@
+{
+  "example": "constructed 10 samples, not UCI observations",
+  "class_order": [
+    "low",
+    "high"
+  ],
+  "parent_counts": [
+    2,
+    8
+  ],
+  "left_counts": [
+    0,
+    5
+  ],
+  "right_counts": [
+    2,
+    3
+  ],
+  "parent_error": 0.2,
+  "child_error": 0.2,
+  "parent_gini": 0.31999999999999984,
+  "weighted_child_gini": 0.24,
+  "parent_binary_mse": 0.16,
+  "child_binary_mse": 0.12000000000000002
+}

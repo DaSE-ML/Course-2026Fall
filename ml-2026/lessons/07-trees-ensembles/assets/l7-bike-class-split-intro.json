@@ -1,0 +1,30 @@
+[
+  {
+    "feature": "temp",
+    "threshold": 0.3895455002784729,
+    "class_counts_low_high": [
+      [
+        172,
+        21
+      ],
+      [
+        85,
+        213
+      ]
+    ]
+  },
+  {
+    "feature": "hum",
+    "threshold": 0.65,
+    "class_counts_low_high": [
+      [
+        137,
+        132
+      ],
+      [
+        120,
+        102
+      ]
+    ]
+  }
+]

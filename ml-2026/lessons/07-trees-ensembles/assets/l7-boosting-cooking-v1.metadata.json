@@ -1,0 +1,9 @@
+{
+  "asset": "l7-boosting-cooking-v1.png",
+  "approved_on": "2026-11-06",
+  "type": "AI-generated teaching illustration",
+  "sha256": "1beadf8ad2b79c2be5cb389e5c02d808524e86853e29557714536649f26f9be7",
+  "source_image": "exec-c1a44d35-c587-4c8f-b7cf-4a8a5ad182c8.png",
+  "meaning": "common preference survives aggregation; incremental corrections under fixed feedback target",
+  "data_boundary": "fictional taste settings, not UCI outputs; regional diversity is not the definition of boosting"
+}

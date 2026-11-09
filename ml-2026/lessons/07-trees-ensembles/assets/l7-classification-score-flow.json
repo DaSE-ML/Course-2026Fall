@@ -1,0 +1,48 @@
+{
+  "sample": {
+    "date": "2011-04-21",
+    "cnt": 4189,
+    "y": 1,
+    "threshold": 0.5
+  },
+  "rows": [
+    {
+      "round": 0,
+      "score": -0.09375496953751826,
+      "probability": 0.47657841140529533,
+      "predicted_class": 0,
+      "tree_update": null
+    },
+    {
+      "round": 1,
+      "score": 0.001729225538638712,
+      "probability": 0.5004323062769354,
+      "predicted_class": 1,
+      "tree_update": 0.9548419507615701
+    },
+    {
+      "round": 5,
+      "score": 0.3314459218610843,
+      "probability": 0.5821111502569288,
+      "predicted_class": 1,
+      "tree_update": 0.5643191894505474
+    },
+    {
+      "round": 20,
+      "score": 0.5911398458006858,
+      "probability": 0.6436266364902086,
+      "predicted_class": 1,
+      "tree_update": 0.23689981616594882
+    }
+  ],
+  "learning_rate": 0.1,
+  "first_tree_update": 0.9548419507615701,
+  "features": [
+    "temp",
+    "hum"
+  ],
+  "fit_rows": 491,
+  "max_depth": 1,
+  "n_estimators": 50,
+  "seed": 42
+}

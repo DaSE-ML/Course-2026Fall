@@ -1,0 +1,39 @@
+{
+  "source_url": "https://traningslara.se/wp-content/uploads/2025/12/Hilleboe1957.pdf",
+  "source_sha256": "574bbd4e9ec69ed759c71dfefb4d15f948461e299fb83aca1681de9f2e75e3ba",
+  "checked": "2026-11-05",
+  "appendix_page": 2353,
+  "pdf_page": 11,
+  "records": 22,
+  "method": "Manual transcription checked against scanned Table I and Table II; not OCR or graph digitization.",
+  "diet_period": "1951–1954 national average food supplies",
+  "mortality_period": "1951–1953 where possible",
+  "mortality_definition": "Male age 55–59, B-26 + B-27 combined, per 100000",
+  "not_fig3_data": "Figure 3 uses B-26 only. Do not plot this table as a reproduction of Figure 3.",
+  "figure_excerpts": {
+    "l2-keys-six-original.png": {
+      "pdf_page": 2,
+      "printed_page": 2344,
+      "figure": 1,
+      "scale_to": 3000,
+      "crop_pixels": [
+        1130,
+        217,
+        870,
+        1080
+      ]
+    },
+    "l2-hilleboe-22-original.png": {
+      "pdf_page": 4,
+      "printed_page": 2346,
+      "figure": 3,
+      "scale_to": 3000,
+      "crop_pixels": [
+        254,
+        245,
+        860,
+        705
+      ]
+    }
+  }
+}

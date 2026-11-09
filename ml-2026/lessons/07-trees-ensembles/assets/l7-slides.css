@@ -1,0 +1,599 @@
+/* 第7讲：只作用于本章，不改变前面已确认的课件。 */
+.slide.l7-production{padding:4vh 6vw 88px}
+.l7-production .content{max-width:1380px}
+.l7-production h1{font-size:clamp(28px,2.8vw,43px);line-height:1.24;margin-bottom:18px}
+.l7-production .topic{margin-bottom:12px}
+.l7-production .body{font-size:clamp(20px,1.65vw,25px);line-height:1.52}
+.l7-production .body p{margin:12px 0}
+.l7-production .body .note,.l7-production .figure-note{font-size:clamp(16px,1.2vw,18px);line-height:1.43;color:#52657a}
+.l7-production table{font-size:.89em;line-height:1.4;table-layout:fixed}
+.l7-production th,.l7-production td{padding:10px 12px;overflow-wrap:anywhere}
+.l7-production code{font-size:.9em;overflow-wrap:anywhere}
+.l7-production details{font-size:.86em;margin:8px 0}
+.l7-production details p{margin:6px 0}
+.l7-production .question{border-left:3px solid #9ab9cf;padding-left:12px;margin-top:15px}
+.l7-production .l7-math{margin:15px 0}
+.l7-production .l7-math img{display:block;width:100%;max-height:112px;object-fit:contain;object-position:left center}
+.l7-production.l7-kernel-menu .l7-math img{max-height:140px}
+.slide.l7-production.figure-right.with-figure .content{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);column-gap:30px;align-items:center}
+.slide.l7-production.figure-right .body{font-size:clamp(19px,1.48vw,23px);line-height:1.5}
+.slide.l7-production.figure-right .figure-column{grid-area:figure;min-width:0}
+.slide.l7-production.figure-right .figure img{max-height:58vh}
+.l7-production .figure-note p{margin:7px 0}
+.slide.l7-production.l7-wide-chart.figure-right .content{grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);column-gap:24px}
+.slide.l7-production.l7-cover.figure-right .figure img{max-height:66vh;border-radius:8px}
+.slide.l7-production.l7-big-chart .content{display:flex;flex-direction:column}
+.l7-production.l7-big-chart .topic,.l7-production.l7-big-chart h1{align-self:stretch}
+.slide.l7-production.l7-big-chart .figure-column,.slide.l7-production.l7-big-chart .figure{order:1;width:100%}
+.slide.l7-production.l7-big-chart .figure img{max-height:55vh}
+.l7-production.l7-big-chart .body{order:2;font-size:clamp(18px,1.4vw,21px);margin-top:10px}
+.l7-production.l7-big-chart .figure-note{display:none}
+.l7-production.l7-class-intro .body{order:0}
+.l7-production .l7-mobile-hint{display:none}
+.l7-production .l7-reading{font-size:clamp(16px,1.32vw,20px);line-height:1.5}
+.l7-production .l7-reading p{margin:10px 0}
+@media screen and (min-width:651px) and (max-width:1350px){
+ .slide.l7-production{padding:3vh 4vw 82px}
+ .l7-production .body p{margin:9px 0}
+ .l7-production .topic{font-size:16px;margin-bottom:8px}
+ .l7-production h1{margin-bottom:12px}
+ .l7-production .l7-math{margin:10px 0}
+ .l7-production th,.l7-production td{padding:7px 9px}
+ .slide.l7-production.figure-right .body{font-size:19px;line-height:1.42}
+}
+@media(max-width:650px){
+ .l7-production .l7-mobile-hint{display:block;font-size:16px;color:#52657a}
+ .slide.l7-production{padding:30px 22px 150px}
+ .l7-production .body,.slide.l7-production.figure-right .body{font-size:20px;line-height:1.6}
+ .l7-production h1{font-size:31px}
+ .slide.l7-production.figure-right.with-figure .content{display:flex;flex-direction:column}
+ .slide.l7-production.figure-right .body{order:1;margin-top:0}
+ .slide.l7-production.figure-right .figure-column,.slide.l7-production.figure-right .figure{order:2;width:100%;margin-top:16px}
+ .slide.l7-production.figure-right .figure img,.slide.l7-production.l7-big-chart .figure img{max-height:none}
+ .l7-production .l7-math img{max-height:none}
+ .l7-production.l7-kernel-menu .l7-math img{max-height:none}
+ .l7-production table{font-size:16px}
+ .l7-production th,.l7-production td{padding:9px 6px}
+ .l7-production .l7-table-scroll{overflow-x:auto;width:100%}
+ .l7-production .l7-table-scroll table{min-width:620px}
+}
+@media print{
+ .slide.l7-production{padding:9mm 12mm;height:190mm;min-height:0}
+ .l7-production h1{font-size:25pt;margin-bottom:5mm}
+ .l7-production .body{font-size:14.5pt;line-height:1.4}
+ .slide.l7-production.figure-right .body{font-size:12.5pt;line-height:1.4}
+ .l7-production .body p{margin:3mm 0}
+ .l7-production .topic{font-size:10.5pt;margin-bottom:3mm}
+ .l7-production .body .note,.l7-production .figure-note{font-size:10pt;line-height:1.35}
+ .slide.l7-production.figure-right.with-figure .content{grid-template-columns:43% 57%;column-gap:5mm}
+ .slide.l7-production.l7-wide-chart.figure-right .content{grid-template-columns:36% 64%}
+ .slide.l7-production.figure-right .figure img{max-height:115mm}
+ .slide.l7-production.l7-cover.figure-right .figure img{max-height:122mm}
+ .l7-production .l7-math{margin:3mm 0}
+ .l7-production .l7-math img{max-height:25mm}
+ .l7-production.l7-kernel-menu .l7-math img{max-height:34mm}
+ .l7-production table{font-size:.83em}
+ .l7-production td,.l7-production th{padding:2mm}
+ .l7-production details{font-size:10pt}
+ .slide.l7-production.l7-big-chart .figure img{max-height:115mm}
+ .l7-production.l7-big-chart .body{font-size:11pt;margin-top:2mm}
+ .l7-production .l7-reading{font-size:12pt;line-height:1.4}
+ .slide.l7-production.l7-print-gamma .figure img{max-height:83mm}
+ .l7-production.l7-print-gamma .body p{margin:2mm 0}
+}
+
+/* 第7讲多联图使用整行；单图保留足够正文宽度。 */
+.l7-production .l7-math img{max-height:100px}
+.l7-production.l7-gini .l7-math img{max-height:65px}
+.slide.l7-production.l7-big-chart .figure img{max-height:49vh}
+.slide.l7-production.l7-big-chart .body p{margin:7px 0}
+.l7-production.l7-boost-step .l7-math img{max-height:55px}
+.l7-production.l7-boost-step .l7-math{margin:7px 0}
+@media print{.slide.l7-production.l7-big-chart .figure img{max-height:94mm}.l7-production .l7-math img{max-height:21mm}.l7-production.l7-gini .l7-math img{max-height:15mm}}
+@media print{
+ .slide.l7-production.figure-right .figure img{max-height:103mm}
+ .slide.l7-production.l7-cover.figure-right .figure img{max-height:118mm}
+ .slide.l7-production.l7-boost-step .figure img{max-height:85mm}
+ .l7-production.l7-boost-step .l7-math img{max-height:15mm}
+}
+
+/* 数据概览：曲线分析紧随图片，以灰字图注呈现。 */
+.slide.l7-production.l7-data-overview .figure-note{display:block;color:#657384;font-size:clamp(15px,1.2vw,18px);line-height:1.5;text-align:left}
+.slide.l7-production.l7-data-overview .figure-note p{margin:4px 0}
+@media print{.slide.l7-production.l7-data-overview .figure-note{font-size:10pt}}
+
+.l7-production .l7-sse-proof .l7-math img{max-height:230px}
+
+@media print{.l7-production .l7-sse-proof .l7-math img{max-height:20mm}.l7-production .l7-sse-proof{font-size:9pt;line-height:1.3}.l7-production .l7-sse-proof p{margin:2mm 0}}
+
+.l7-production.l7-criteria-table .body{font-size:clamp(18px,1.45vw,22px);line-height:1.45}
+.l7-production.l7-criteria-table table{font-size:1em}
+.l7-production.l7-criteria-table td,.l7-production.l7-criteria-table th{padding:9px 12px}
+@media print{.l7-production.l7-criteria-table .body{font-size:11pt}}
+
+.slide.l7-production.l7-split-search .body{font-size:clamp(17px,1.3vw,20px);line-height:1.42}
+.l7-production.l7-split-search .body p{margin:8px 0}
+.l7-production.l7-split-search .l7-math img{max-height:165px}
+@media print{.slide.l7-production.l7-split-search .body{font-size:10pt}.l7-production.l7-split-search .l7-math img{max-height:36mm}}
+
+/* p8：右图按当前宽度缩至80%，居中显示。 */
+.slide.l7-production.l7-split-search .figure img{width:100%;margin-left:auto;margin-right:auto}
+
+.l7-split-search .l7-split-fold{color:#263e52;text-align:left}
+.l7-split-search .l7-split-fold[open]{max-height:none;overflow:visible}
+.slide.l7-production.l7-split-search .l7-split-fold .l7-math img{width:100%;max-height:230px;object-position:left center}
+@media(max-width:650px){.l7-split-search .l7-split-fold[open]{max-height:none;overflow:visible}}
+@media print{.l7-split-search .l7-split-fold[open]{max-height:none;overflow:visible}.slide.l7-production.l7-split-search .l7-split-fold .l7-math img{max-height:22mm}.l7-split-search .l7-split-fold{font-size:9pt;line-height:1.2}}
+
+/* p8：列宽按缩小后的图幅分配，图注与推导共享图的实际宽度。 */
+.slide.l7-production.l7-split-search.figure-right.with-figure .content{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);column-gap:32px;align-items:start}
+.l7-split-search .figure-note{width:100%;margin-left:0;margin-right:0}
+
+.l7-production.l7-split-search .l7-math{margin:9px 0}
+
+.slide.l7-production.l7-split-search .body .l7-math img{height:222px;max-height:222px;object-fit:contain;object-position:left center}
+@media print{.slide.l7-production.l7-split-search .body .l7-math img{height:33mm;max-height:33mm}}
+
+/* p8：右侧图表与图注整体在正文区域垂直居中。 */
+.slide.l7-production.l7-split-search.figure-right.with-figure .figure-column{align-self:center}
+
+.l7-production .l7-poisson-reading .l7-math img{max-height:190px}
+@media print{.l7-production .l7-poisson-reading{font-size:8.5pt;line-height:1.2}.l7-production .l7-poisson-reading .l7-math img{max-height:21mm}}
+
+/* p8：图幅放大1.1倍，图注保留原宽度；通过布局增加高度，避免覆盖图注。 */
+@media screen and (min-width:651px){
+ .slide.l7-production.l7-split-search .figure{width:110%;max-width:none;position:relative;left:-5%}
+}
+
+/* p12：保留可见的时序重抽样边界说明。 */
+.slide.l7-production.l7-bootstrap-demo .figure-note{display:block;margin-top:8px;text-align:left}
+
+/* 分类树：先解释切分评分，再给出实际树；推导展开后不设内部滚动。 */
+.l7-class-story details[open]{max-height:none;overflow:visible}
+.l7-class-story .body .l7-math{margin:10px 0}
+.l7-class-story .body .l7-math img{max-height:130px}
+.l7-gini-meaning .body .l7-math img{max-height:100px}
+.l7-criteria-comparison table{font-size:.84em}
+.l7-criteria-comparison th,.l7-criteria-comparison td{padding:8px 9px}
+@media print{
+ .l7-class-story .body .l7-math img{max-height:24mm}
+ .l7-gini-meaning .body .l7-math img{max-height:20mm}
+ .l7-class-story details .l7-math img{max-height:19mm}
+}
+
+/* p12打印：为完整实验配置与时序限制图注预留高度。 */
+@media print{.slide.l7-production.l7-bootstrap-demo .figure img{max-height:90mm}}
+
+/* 完整分类树放宽显示，保留可读的分支条件与叶内计数。 */
+.slide.l7-production.l7-class-prediction .figure img{max-height:36vh}
+.slide.l7-production.l7-class-prediction .figure-note{display:block;margin-top:5px;text-align:left}
+.l7-class-prediction .body p{margin:7px 0}
+.l7-class-prediction .body details{margin:5px 0}
+.slide.l7-production.l7-criteria-comparison .figure img{max-height:30vh}
+@media(max-width:650px){.slide.l7-production.l7-class-prediction .figure img{max-height:none}}
+@media print{.slide.l7-production.l7-class-prediction .figure img{max-height:65mm}.l7-class-prediction .figure-note{font-size:9pt}}
+
+/* p15：右图下的单行算例按正文公式大小显示，留出引用空间。 */
+.slide.l7-production.l7-gini-meaning .figure-note .l7-math img{max-height:42px;object-position:left center}
+@media print{.slide.l7-production.l7-gini-meaning .figure-note .l7-math img{max-height:10mm}}
+
+/* p15打印时完整展开推导，压缩段距与辅助公式，保持单页。 */
+@media print{
+ .l7-gini-meaning .body p{margin:2mm 0}
+ .l7-gini-meaning details{font-size:9pt;line-height:1.25}
+ .slide.l7-production.l7-gini-meaning .body details .l7-math img{max-height:14mm}
+}
+
+/* 新p15：用三步数值抽样推导，不与后页一般公式挤在一起。 */
+.slide.l7-production.l7-gini-sampling .body .l7-math img{max-height:44px}
+.l7-gini-sampling .body p{margin:9px 0}
+@media print{
+ .slide.l7-production.l7-gini-sampling .body .l7-math img{max-height:12mm}
+ .l7-gini-sampling .body p{margin:2mm 0}
+}
+
+/* 一般公式页恢复完整主公式后，仅收紧打印空白，不压缩投影内容。 */
+@media print{
+ .l7-gini-meaning .body p{margin:1.5mm 0}
+ .l7-gini-meaning .body .l7-math{margin:1mm 0}
+}
+
+/* p16：右侧图与图注整体收窄至原宽度80%，在原列内居中。 */
+@media screen and (min-width:651px){
+ .slide.l7-production.l7-gini-meaning.figure-right.with-figure .figure-column{width:80%;justify-self:center}
+}
+
+/* p16：把右侧缩减的宽度分给左侧正文，右列自身无需再次缩窄。 */
+@media screen and (min-width:651px){
+ .slide.l7-production.l7-gini-meaning.figure-right.with-figure .content{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr)}
+ .slide.l7-production.l7-gini-meaning.figure-right.with-figure .figure-column{width:100%;justify-self:stretch}
+}
+
+/* p16：符号释义与叶内MSE公式紧邻，左侧按概念分段。 */
+.l7-gini-meaning .l7-leaf-mse-symbols{display:grid;grid-template-columns:32px minmax(0,1fr);gap:4px 10px;margin:8px 0;line-height:1.4}
+.l7-leaf-mse-symbols dt{font-family:"STIX Two Math","Times New Roman",serif;font-size:1.1em}
+.l7-leaf-mse-symbols dd{margin:0}
+.slide.l7-production.l7-gini-meaning .body .l7-leaf-mse-equation img{max-height:70px}
+@media print{
+ .l7-gini-meaning .l7-leaf-mse-symbols{gap:1mm 2mm;margin:1.5mm 0;grid-template-columns:7mm minmax(0,1fr)}
+ .slide.l7-production.l7-gini-meaning .body .l7-leaf-mse-equation img{max-height:13mm}
+}
+
+/* p16：符号说明用较小字号，正文保留平方误差联系。 */
+.l7-gini-meaning .l7-leaf-mse-symbols{font-size:clamp(15px,1.1vw,17px);line-height:1.35;gap:3px 9px;margin:6px 0;grid-template-columns:26px minmax(0,1fr);color:#52657a}
+@media print{.l7-gini-meaning .l7-leaf-mse-symbols{font-size:9pt;gap:.5mm 2mm;margin:1mm 0;grid-template-columns:6mm minmax(0,1fr)}}
+
+@media screen and (min-width:651px) and (max-height:800px){
+ .l7-gini-meaning .body > p{margin:6px 0}
+ .l7-gini-meaning .body > .l7-math{margin:7px 0}
+}
+
+/* p19：深度3真实树与示例说明左右排列，右图保留7个叶节点的阅读空间。 */
+.slide.l7-production.l7-depth3-tree .figure img{max-height:60vh}
+.l7-depth3-tree .body ol{padding-left:1.35em;margin:9px 0}
+.l7-depth3-tree .body li{margin:5px 0}
+@media print{.slide.l7-production.l7-depth3-tree .figure img{max-height:110mm}}
+@media(max-width:650px){.slide.l7-production.l7-depth3-tree .figure img{max-height:none}}
+
+/* 熵：定义与切分计算分两页，沿用Gini的需求类别配色。 */
+.slide.l7-production.l7-entropy-intro .content,
+.slide.l7-production.l7-entropy-gain .content{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;row-gap:0}
+.l7-entropy-intro .body .l7-math{margin:9px 0}
+.l7-entropy-intro .body .l7-math img{max-height:70px}
+.slide.l7-production.l7-entropy-intro .figure img{max-height:52vh}
+.slide.l7-production.l7-entropy-gain .figure img{max-height:47vh}
+.l7-entropy-gain .body .l7-math img{max-height:90px}
+@media print{
+ .slide.l7-production.l7-entropy-intro .figure img{max-height:95mm}
+ .slide.l7-production.l7-entropy-gain .figure img{max-height:85mm}
+ .l7-entropy-intro .body .l7-math img{max-height:16mm}
+ .l7-entropy-gain .body .l7-math img{max-height:20mm}
+}
+@media(max-width:650px){
+ .slide.l7-production.l7-entropy-intro .figure img,
+ .slide.l7-production.l7-entropy-gain .figure img{max-height:none}
+}
+
+.l7-entropy-intro .body .l7-math:first-of-type img{width:60%;max-height:48px}
+@media screen and (min-width:651px) and (max-width:1100px){
+ .slide.l7-production.l7-entropy-gain .body{font-size:18.5px;line-height:1.4}
+}
+
+/* 分类树预测到熵：标题采用同一顶部基线，不随正文高度上下漂移。 */
+@media screen and (min-width:651px){
+ .slide.l7-depth3-tree,.slide.l7-entropy-intro,.slide.l7-entropy-gain{justify-content:flex-start}
+}
+
+.l7-entropy-intro .body .l7-math.l7-additive-proof img{width:100%;max-height:70px}
+
+/* 增益率接在信息增益之后，标题沿用同一基线。 */
+.slide.l7-gain-ratio{justify-content:flex-start}
+.slide.l7-production.l7-gain-ratio.figure-right .content{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);column-gap:28px;row-gap:0}
+.l7-gain-ratio .body .l7-math img{max-height:135px}
+.slide.l7-production.l7-gain-ratio .figure img{max-height:53vh}
+@media print{
+ .l7-gain-ratio .body .l7-math img{max-height:29mm}
+ .slide.l7-production.l7-gain-ratio .figure img{max-height:95mm}
+}
+@media(max-width:650px){.slide.l7-production.l7-gain-ratio .figure img{max-height:none}}
+
+/* 算法概览：维持清晰字号，给名称与本课接口留出空间。 */
+@media screen and (min-width:651px){.slide.l7-criteria-table{justify-content:flex-start}}
+.l7-criteria-table .l7-algorithm-names{margin:8px 0}
+.l7-criteria-table .body .note{line-height:1.4}
+@media screen and (min-width:651px) and (max-width:1350px){
+ .l7-production.l7-criteria-table .body{font-size:18.5px;line-height:1.4}
+ .l7-production.l7-criteria-table td,.l7-production.l7-criteria-table th{padding:8px 10px}
+}
+
+@media(max-width:650px){.l7-criteria-table .l7-algorithm-table{width:100%;overflow-x:auto}.l7-criteria-table .l7-algorithm-table table{min-width:720px}}
+
+/* p11提问跟随右图，实验说明保持灰色。 */
+.l7-complexity-question{color:#142d46;font-size:1em;margin-top:12px;text-align:left}
+.l7-complexity-question .question{font-size:1em;font-weight:400;line-height:inherit;margin-bottom:8px}
+.l7-complexity-question details{max-height:none;overflow:visible}
+
+/* 三种评分的边界对照占整行，避免三幅图被挤入窄栏。 */
+.slide.l7-production.l7-boundaries .content{display:flex;flex-direction:column;align-items:stretch}
+.l7-boundaries .body{font-size:clamp(17px,1.35vw,21px);line-height:1.45}
+.l7-boundaries .body p{margin:5px 0}
+.l7-boundaries .figure-column{width:100%;margin-top:6px}
+.l7-boundaries .figure{margin:0}
+.slide.l7-boundaries .figure img{max-height:none;width:100%;object-fit:contain}
+.slide.l7-boundaries .figure-note{display:block;font-size:clamp(14px,1.1vw,17px);line-height:1.4;text-align:left}
+.l7-boundaries .figure-note p{margin:5px 0}
+@media(max-width:650px){.slide.l7-boundaries .figure img{max-height:none}.l7-boundaries .figure{overflow-x:auto}.slide.l7-boundaries .figure img{min-width:850px}.l7-boundaries .body{font-size:19px}}
+@media print{.slide.l7-boundaries .figure img{max-height:82mm}.l7-boundaries .body{font-size:11pt}.slide.l7-boundaries .figure-note{font-size:9pt}}
+
+/* 名称来源：突出组成BAGGING的字母。 */
+.l7-bagging-origin{white-space:nowrap}
+.l7-bagging-origin strong{color:#ad4c15;font-weight:800}
+
+/* Bagging合并页：完整流程与真实逐树预测并排。 */
+.slide.l7-bagging-merged .content{display:flex;flex-direction:column;align-items:stretch}
+.l7-bagging-merged .body{font-size:clamp(17px,1.35vw,21px);line-height:1.4}
+.l7-bagging-merged .body p{margin:5px 0}
+.l7-bagging-merged .figure-column{width:100%;margin-top:5px}
+.l7-bagging-merged .figure{margin:0}
+.slide.l7-bagging-merged .figure img{width:100%;max-height:none;object-fit:contain}
+.slide.l7-bagging-merged .figure-note{display:block;font-size:clamp(14px,1.1vw,17px);line-height:1.4;text-align:left}
+.l7-bagging-merged .figure-note p{margin:5px 0}
+.l7-bagging-question{color:#142d46}
+.l7-bagging-question .question{font-size:1em;font-weight:400;margin-top:8px}
+.l7-bagging-question details{font-size:1em;max-height:none;overflow:visible}
+@media(max-width:650px){.l7-bagging-merged .figure{overflow-x:auto}.slide.l7-bagging-merged .figure img{min-width:850px}.l7-bagging-merged .body{font-size:19px}}
+@media print{.slide.l7-bagging-merged .figure img{max-height:80mm}.l7-bagging-merged .body{font-size:11pt}.slide.l7-bagging-merged .figure-note{font-size:9pt}}
+
+/* 两类集成总结：去除重复插图，留出整行做对照。 */
+.slide.l7-family-summary{justify-content:flex-start}
+.l7-family-summary .body{font-size:clamp(17px,1.35vw,21px);line-height:1.38}
+.l7-family-summary table{font-size:1em;line-height:1.35;width:100%}
+.l7-family-summary th,.l7-family-summary td{padding:7px 10px}
+.l7-family-summary tbody th{font-weight:600;text-align:left}
+.l7-family-summary .body p{margin:8px 0}
+.l7-family-summary .body .question{font-size:1em;font-weight:400;margin-top:10px}
+.l7-family-summary .body details{font-size:.92em;margin:5px 0;max-height:none;overflow:visible}
+.l7-family-summary .body .note{font-size:.84em;line-height:1.4}
+@media(max-width:650px){.l7-family-summary .l7-family-table{overflow-x:auto}.l7-family-summary table{min-width:850px}.l7-family-summary .body{font-size:18px}}
+@media print{.l7-family-summary .body{font-size:10.2pt}.l7-family-summary th,.l7-family-summary td{padding:2mm}.l7-family-summary .body .note{font-size:9pt}}
+
+/* RF从Bagging的局限引入，再分开讲递归与停止。 */
+.slide.l7-rf-motivation.figure-right .content{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
+.l7-rf-motivation .body{font-size:clamp(18px,1.45vw,22px);line-height:1.45}
+.l7-rf-motivation .body p{margin:10px 0}
+.l7-rf-motivation .l7-math img{max-height:75px}
+.l7-rf-motivation .l7-math{margin:8px 0}
+.slide.l7-rf-recursion.figure-right .content{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px}
+.l7-rf-recursion .body{font-size:clamp(18px,1.45vw,22px);line-height:1.45}
+.l7-rf-recursion .body li{margin:10px 0}
+.slide.l7-rf-stopping.figure-right .content{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:24px}
+.l7-rf-stopping .body{font-size:clamp(17px,1.37vw,21px);line-height:1.4}
+.l7-rf-stopping .body table{font-size:.94em;line-height:1.35}
+.l7-rf-stopping td,.l7-rf-stopping th{padding:7px 9px}
+.l7-rf-stopping .body p{margin:8px 0}
+.l7-rf-stopping .body .question{font-size:1em;font-weight:400}
+.l7-rf-stopping .body details{font-size:.94em;max-height:none;overflow:visible}
+@media print{.l7-rf-motivation .body,.l7-rf-recursion .body{font-size:11pt}.l7-rf-stopping .body{font-size:10.5pt}.l7-rf-motivation .l7-math img{max-height:16mm}}
+
+@media(max-width:650px){.l7-rf-param-table{overflow-x:auto;max-width:100%}.l7-rf-param-table table{min-width:500px}.l7-rf-param-table td:first-child{white-space:nowrap}}
+
+/* RF选参：表格与真实多参数验证曲线并排。 */
+.slide.l7-rf-tuning.figure-right .content{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:24px}
+.l7-rf-tuning .body{font-size:clamp(17px,1.4vw,21px);line-height:1.42}
+.l7-rf-tuning .body p{margin:9px 0}
+.l7-rf-tuning .body table{font-size:.88em;line-height:1.35}
+.l7-rf-tuning td,.l7-rf-tuning th{padding:6px 7px}
+.l7-rf-tuning td:first-child{white-space:nowrap}
+@media(max-width:650px){.l7-rf-tuning-table{overflow-x:auto;max-width:100%}.l7-rf-tuning-table table{min-width:510px}}
+@media print{.l7-rf-tuning .body{font-size:10.5pt}.l7-rf-tuning .body table{font-size:9pt}}
+
+/* 五参数子图全宽展示，保留投影可读字号。 */
+.slide.l7-production.l7-rf-effects .figure img{max-height:65vh;width:100%;object-fit:contain}
+.slide.l7-production.l7-rf-effects .body{font-size:clamp(17px,1.33vw,20px);line-height:1.4;margin-top:6px}
+.l7-rf-effects .body p{margin:6px 0}
+.l7-rf-effects .body .note{font-size:clamp(15px,1.15vw,17px);line-height:1.4}
+@media(max-width:650px){.slide.l7-production.l7-rf-effects .figure{overflow-x:auto}.slide.l7-production.l7-rf-effects .figure img{width:1050px;max-width:none;max-height:none}.slide.l7-production.l7-rf-effects .body{font-size:18px}}
+@media print{.slide.l7-production.l7-rf-effects .figure img{max-height:110mm}.slide.l7-production.l7-rf-effects .body{font-size:10.5pt}.l7-rf-effects .body .note{font-size:9.5pt}}
+@media(max-width:650px){.l7-rf-effects .figure::before{content:'← 左右滑动图表，查看全部5个子图 →';display:block;margin:0 0 10px;padding:8px 10px;background:#edf4f9;border-left:3px solid #638fa9;color:#274b64;font-size:16px;line-height:1.4}}
+
+/* 在具体残差之前建立Boosting的动机与流程。 */
+.slide.l7-boosting-intro.figure-right .content{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:24px}
+.slide.l7-boosting-intro.figure-right .body{font-size:clamp(18px,1.45vw,22px);line-height:1.5}
+.l7-boosting-intro .body p{margin:12px 0}
+@media print{.slide.l7-boosting-intro.figure-right .body{font-size:11.5pt}.l7-boosting-intro .body p{margin:3mm 0}}
+
+/* 已确认的调味插画以完整方图展示，不裁切人物、贴牌和反馈箭头。 */
+.slide.l7-production.l7-boosting-intro.figure-right .figure img{max-height:63vh;object-fit:contain}
+@media(max-width:650px){.slide.l7-production.l7-boosting-intro.figure-right .figure img{max-height:none;width:100%}}
+@media print{.slide.l7-production.l7-boosting-intro.figure-right .figure img{max-height:112mm}}
+
+/* 完整二元交叉熵与负梯度，使用两行数学公式。 */
+.l7-gradient-bridge .l7-logloss-complete img{max-height:145px}
+@media print{.l7-gradient-bridge .l7-logloss-complete img{max-height:28mm}}
+
+/* 分类先操作再讲负梯度，两页独立阅读。 */
+.slide.l7-classification-flow.figure-right .content{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:26px}
+.slide.l7-classification-flow.figure-right .body{font-size:clamp(18px,1.48vw,22px);line-height:1.48}
+.l7-classification-flow ol{padding-left:1.35em;margin:8px 0}
+.l7-classification-flow li{margin:10px 0}
+.l7-classification-flow .l7-math{margin:10px 0}
+.l7-classification-flow .l7-math img{max-height:62px}
+@media print{.slide.l7-classification-flow.figure-right .body{font-size:11.5pt}.l7-classification-flow li{margin:2mm 0}.l7-classification-flow .l7-math img{max-height:16mm}}
+
+/* 初始化补全odds/logit，不缩小正文，通过段间距保持页面高度。 */
+.l7-classification-flow .body p{margin:8px 0}
+.l7-classification-flow li{margin:8px 0}
+.l7-classification-flow .l7-math{margin:6px 0}
+.l7-classification-flow .l7-init-odds img{max-height:48px}
+
+/* p34取消标题行间的额外网格空隙，整体顶端对齐。 */
+.slide.l7-classification-flow.figure-right .content{row-gap:0}
+@media screen{.slide.l7-production.l7-classification-flow{justify-content:flex-start}}
+
+.l7-classification-flow .l7-inline-probability{display:inline-block;width:auto;height:1.35em;vertical-align:-.3em;object-fit:contain;margin:0 .15em}
+
+/* p34: optional leaf-value derivation; expand in the page, without an inner scrollbar. */
+.l7-classification-flow .l7-leaf-update-proof{max-height:none;overflow:visible;font-size:.85em;line-height:1.5}
+.l7-classification-flow .l7-leaf-update-proof .l7-math img{max-height:none;width:100%;height:auto}
+.l7-classification-flow:has(.l7-leaf-update-proof[open]){overflow-y:auto;justify-content:flex-start}
+.l7-classification-flow:has(.l7-leaf-update-proof[open]) .content{padding-bottom:64px}
+@media print{.l7-classification-flow .l7-leaf-update-proof:not([open]){display:none}}
+.l7-classification-flow:has(.l7-leaf-update-proof[open]) .body{align-self:start}
+.l7-classification-flow .l7-leaf-update-proof .l7-math img{width:auto;max-width:100%;max-height:180px;object-fit:contain;object-position:left center}
+
+/* Optional leaf-value derivation follows the gradient explanation on p35. */
+.l7-gradient-bridge .l7-leaf-update-proof{max-height:none;overflow:visible;font-size:.85em;line-height:1.5}
+.l7-gradient-bridge .l7-leaf-update-proof .l7-math img{width:auto;max-width:100%;max-height:180px;height:auto;object-fit:contain;object-position:left center}
+.slide.l7-gradient-bridge:has(.l7-leaf-update-proof[open]){justify-content:flex-start;overflow-y:auto}
+.l7-gradient-bridge:has(.l7-leaf-update-proof[open]) .content{padding-bottom:64px}
+@media print{.l7-gradient-bridge .l7-leaf-update-proof:not([open]){display:none}}
+
+@media print{.slide.l7-gradient-bridge details.l7-leaf-update-proof{display:none!important}}
+
+/* p35 optional loss reference: native table, mathematical SVG cells. */
+.l7-gradient-bridge .l7-loss-reference{font-size:.85em}
+.l7-loss-table{font-size:18px;line-height:1.4;table-layout:fixed}
+.l7-loss-table td,.l7-loss-table th{padding:12px 10px;vertical-align:middle}
+.l7-loss-table small{display:block;font-size:14px;font-weight:400;margin-top:5px}
+.slide.l7-gradient-bridge .l7-loss-table img{display:block;width:100%;height:66px;max-height:90px;object-fit:contain;object-position:left center}
+.l7-loss-reference .l7-loss-notation img{max-height:110px!important}
+.l7-gradient-bridge .l7-newton-proof{max-height:none;overflow:visible;font-size:1em}
+@media(max-width:650px){.l7-loss-table-wrap{overflow-x:auto}.l7-loss-table{min-width:1000px}.l7-loss-table-wrap:before{content:"表格可左右滑动查看";display:block;font-size:14px;color:#52657a}}
+.slide.l7-gradient-bridge .l7-loss-table img{width:auto;max-width:100%;height:auto;max-height:140px}
+
+/* p35: loss comparison is the main content; only derivation is folded. */
+.slide.l7-loss-main{justify-content:flex-start}
+.slide.l7-loss-main .body{font-size:clamp(16px,1.35vw,20px);line-height:1.35}
+.l7-loss-main .body p{margin:5px 0}
+.l7-loss-main-notation img{display:block;max-width:100%;height:37px;width:auto;margin:5px 0;object-fit:contain;object-position:left center}
+.l7-loss-main .l7-loss-table{font-size:16px;line-height:1.25}
+.l7-loss-main .l7-loss-table td,.l7-loss-main .l7-loss-table th{padding:4px 8px}
+.l7-loss-main .l7-loss-table small{font-size:12px;margin-top:2px}
+.slide.l7-loss-main .l7-loss-table img{max-height:54px;width:auto;max-width:100%;height:auto}
+.l7-loss-main .l7-loss-symbols,.l7-loss-main .l7-loss-reading{font-size:14px;color:#64748b;line-height:1.35}
+.l7-loss-main .l7-loss-reading a{color:inherit}
+.l7-loss-main .l7-loss-derivations{font-size:16px;margin:5px 0}
+.l7-loss-main .l7-loss-derivations .l7-math img{max-height:150px}
+@media(min-width:1600px){.l7-loss-main .l7-loss-table{font-size:19px}.l7-loss-main .l7-loss-table small{font-size:14px}.slide.l7-loss-main .l7-loss-table img{max-height:68px}.l7-loss-main .l7-loss-symbols,.l7-loss-main .l7-loss-reading{font-size:16px}}
+@media(max-width:650px){.slide.l7-loss-main .body{font-size:18px}.l7-loss-main-notation img{height:auto;width:100%}.l7-loss-main .l7-loss-symbols,.l7-loss-main .l7-loss-reading{font-size:15px}}
+@media print{.slide.l7-loss-main .body{font-size:11pt}.l7-loss-main .l7-loss-table{font-size:9pt}.l7-loss-main .l7-loss-table td,.l7-loss-main .l7-loss-table th{padding:1mm 2mm}.slide.l7-loss-main .l7-loss-table img{max-height:12mm}.l7-loss-main .l7-loss-symbols,.l7-loss-main .l7-loss-reading{font-size:8pt}.l7-loss-main-notation img{height:9mm}}
+
+@media screen and (min-width:651px){.slide.l7-loss-main .l7-loss-row-logloss td:last-child img{max-height:66px}}
+
+/* Three optional boosting readings precede the family comparison. */
+.slide.l7-boost-extension{justify-content:flex-start}
+.slide.l7-boost-extension.figure-right .content{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;row-gap:0}
+.slide.l7-boost-extension .body{font-size:clamp(17px,1.45vw,22px);line-height:1.45}
+.l7-boost-extension .body p{margin:8px 0}
+.l7-boost-extension ol{padding-left:1.4em;margin:8px 0}
+.l7-boost-extension .l7-math img{max-height:94px;max-width:100%;width:auto;object-position:left center}
+.l7-boost-extension .figure img{max-height:53vh;object-fit:contain}
+.l7-boost-extension .figure-note{font-size:16px;line-height:1.4;color:#64748b}
+.l7-boost-extension .figure-note a{color:inherit}
+@media(max-width:650px){.slide.l7-boost-extension.figure-right .content{grid-template-columns:1fr}.l7-boost-extension .figure img{max-height:none}.slide.l7-boost-extension .body{font-size:19px}.l7-boost-extension .figure-note{font-size:16px}}
+@media print{.slide.l7-boost-extension .body{font-size:11pt;line-height:1.35}.l7-boost-extension .body p{margin:2mm 0}.l7-boost-extension .figure-note{font-size:9pt}.l7-boost-extension .l7-math img{max-height:22mm}.l7-boost-extension .figure img{max-height:90mm}}
+
+@media screen and (min-width:651px) and (max-width:1100px){.slide.l7-ada-general .body p{margin:5px 0}.l7-ada-general ol{margin:5px 0}}
+
+/* Three-round linear AdaBoost: six panels share coordinates. */
+.slide.l7-ada-linear{justify-content:flex-start;padding-left:3vw;padding-right:3vw}
+.slide.l7-ada-linear .content{max-width:1500px}
+.slide.l7-ada-linear .figure img{max-height:62vh;width:100%;object-fit:contain}
+.slide.l7-ada-linear .body{font-size:clamp(16px,1.3vw,20px);line-height:1.35;margin-top:4px}
+.l7-ada-linear .body p{margin:4px 0}
+.l7-ada-linear .body .note{font-size:14px;line-height:1.35}
+@media(max-width:650px){.l7-ada-linear .figure{overflow-x:auto}.slide.l7-ada-linear .figure img{min-width:1000px;max-height:none}.l7-ada-linear .figure:before{content:"图可左右滑动查看三轮过程";display:block;font-size:14px;color:#64748b}.slide.l7-ada-linear .body{font-size:18px}.l7-ada-linear .body .note{font-size:16px}}
+@media print{.slide.l7-ada-linear .figure img{max-height:110mm}.slide.l7-ada-linear .body{font-size:10pt}.l7-ada-linear .body .note{font-size:9pt}}
+
+@media screen and (min-width:651px){.slide.l7-production.l7-big-chart.l7-ada-linear .figure img{max-height:61vh}}
+
+.l7-ada-general .l7-ada-loss-proof{max-height:none;overflow:visible;font-size:.83em}
+.l7-ada-general .l7-ada-loss-proof .l7-math img{max-height:180px}
+.slide.l7-ada-general:has(.l7-ada-loss-proof[open]){justify-content:flex-start;overflow-y:auto}
+.l7-ada-general:has(.l7-ada-loss-proof[open]) .content{padding-bottom:60px}
+@media print{.slide.l7-ada-general details.l7-ada-loss-proof{display:none!important}}
+
+/* AdaBoost now presents execution only; theoretical derivation is linked. */
+.l7-ada-general .l7-ada-algorithm{margin:6px 0}
+.l7-ada-general .l7-ada-algorithm li{margin:6px 0}
+.l7-ada-general .l7-ada-algorithm .l7-math{margin:5px 0}
+.l7-ada-general .l7-ada-algorithm .l7-math img{max-height:80px}
+.l7-ada-general .l7-ada-algorithm .l7-ada-vote img{max-height:38px}
+@media print{.l7-ada-general .l7-ada-algorithm .l7-math img{max-height:17mm}.l7-ada-general .l7-ada-algorithm .l7-ada-vote img{max-height:10mm}}
+@media screen and (min-width:651px){.slide.l7-production.figure-right.l7-ada-general .figure img{max-height:52vh}}
+
+/* p36: shorter steps, symbols under the illustration, one-line contribution formulas. */
+.l7-ada-general .l7-ada-algorithm li{margin:13px 0}
+.l7-ada-general .l7-ada-algorithm .l7-math{margin:10px 0}
+.l7-ada-general .l7-ada-algorithm .l7-math img{max-height:46px;width:100%;object-position:left center}
+.l7-ada-general .figure-note p{margin:8px 0}
+@media print{.l7-ada-general .l7-ada-algorithm li{margin:3mm 0}.l7-ada-general .l7-ada-algorithm .l7-math img{max-height:12mm}}
+
+.slide.l7-production.figure-right.l7-ada-general .content{align-items:start}
+
+/* AdaBoost五步留出阅读间隔，公式使用足够高度而不缩成正文大小。 */
+.slide.l7-ada-general .body{font-size:clamp(18px,1.5vw,22px);line-height:1.4}
+.l7-ada-general .l7-ada-algorithm li{margin:10px 0}
+.l7-ada-general .l7-ada-algorithm .l7-math{margin:8px 0}
+.l7-ada-general .l7-ada-algorithm .l7-math img{height:66px;max-height:66px;width:100%;object-fit:contain;object-position:left center}
+.l7-ada-general .l7-ada-algorithm .l7-ada-vote img{height:58px;max-height:58px;width:auto;max-width:100%}
+@media print{.slide.l7-ada-general .body{font-size:11pt;line-height:1.45}.l7-ada-general .l7-ada-algorithm li{margin:3mm 0}.l7-ada-general .l7-ada-algorithm .l7-math{margin:2mm 0}.l7-ada-general .l7-ada-algorithm .l7-math img{height:16mm;max-height:16mm}.l7-ada-general .l7-ada-algorithm .l7-ada-vote img{height:14mm;max-height:14mm}}
+/* 单特征AdaBoost图注保留实验条件与累计投票边界。 */
+.slide.l7-production.l7-ada-linear .figure-note{display:block;font-size:14px;line-height:1.35;text-align:left}
+@media print{.slide.l7-production.l7-ada-linear .figure-note{font-size:9pt}}
+/* p37增加读图说明后收紧图文间距，保留图的显示尺寸。 */
+.slide.l7-production.l7-ada-linear .body{margin-top:0}
+.l7-ada-linear .figure-note p{margin:4px 0}
+
+/* 树提升实现合并为概览页，保留表格与选择建议的阅读空间。 */
+.slide.l7-frameworks{justify-content:flex-start}
+.slide.l7-frameworks .content{max-width:1450px}
+.slide.l7-frameworks .body{font-size:clamp(18px,1.55vw,23px);line-height:1.5}
+.l7-frameworks .body p{margin:12px 0}
+.l7-framework-table{width:100%;table-layout:fixed;font-size:1em}
+.l7-framework-table th,.l7-framework-table td{padding:13px 16px;vertical-align:middle}
+.l7-frameworks .body .note{font-size:.78em;line-height:1.5;color:#64748b}
+@media(max-width:650px){.slide.l7-frameworks .body{font-size:18px}.l7-framework-table{table-layout:auto;font-size:16px}.l7-framework-table th,.l7-framework-table td{padding:9px 7px}.l7-frameworks .body .note{font-size:15px}}
+@media print{.slide.l7-frameworks .body{font-size:13pt}.l7-framework-table th,.l7-framework-table td{padding:3mm}.l7-frameworks .body .note{font-size:10pt}}
+/* p38扩充默认行为后，以单元格内行距和留白控制高度，正文保持投影字号。 */
+.l7-frameworks .l7-framework-table{line-height:1.38}
+.l7-frameworks .l7-framework-table th,.l7-frameworks .l7-framework-table td{padding:9px 14px}
+.l7-frameworks .body code{font-size:.86em;overflow-wrap:anywhere}
+.l7-frameworks .body .l7-framework-choice{margin:10px 0}
+@media(max-width:650px){.l7-frameworks .l7-framework-table th,.l7-frameworks .l7-framework-table td{padding:8px 6px}}
+@media print{.l7-frameworks .l7-framework-table th,.l7-frameworks .l7-framework-table td{padding:2.4mm 3mm}}
+/* p38社区快照在框架名下显示，日期统一使用Release发布时间。 */
+.l7-frameworks .l7-community-meta{font-size:.75em;line-height:1.45;font-weight:400;margin-top:4px;white-space:nowrap;color:#64748b}
+.l7-frameworks .l7-community-meta a{color:inherit}
+.l7-frameworks .l7-community-reading{font-size:.78em;line-height:1.4;margin:6px 0;color:#64748b}
+.l7-frameworks .l7-community-reading p.note{font-size:1em}
+@media(max-width:650px){.l7-frameworks .l7-community-meta{font-size:12px;white-space:normal}}
+@media print{.l7-frameworks .l7-community-meta{font-size:9pt}.l7-frameworks .l7-community-reading{display:none}}
+/* 社区快照保留三行，略减单元格空白以避开720p底部导航。 */
+.l7-frameworks .l7-framework-table th,.l7-frameworks .l7-framework-table td{padding-top:8px;padding-bottom:8px}
+.l7-frameworks .l7-community-meta{margin-top:2px;line-height:1.35}
+@media print{.l7-frameworks .l7-framework-table th,.l7-frameworks .l7-framework-table td{padding-top:2.2mm;padding-bottom:2.2mm}}
+/* 框架名同行显示stars，版本日期另起一行。 */
+.l7-frameworks .l7-framework-name{white-space:nowrap}
+.l7-frameworks .l7-framework-stars{font-size:.72em;font-weight:400;color:#64748b}
+@media(max-width:650px){.l7-frameworks .l7-framework-name{white-space:normal}}
+/* 三类集成同页比较：保留字号，收紧单元格留白，为定义与Stacking说明留空间。 */
+.l7-family-summary th,.l7-family-summary td{padding-top:5px;padding-bottom:5px}
+@media print{.l7-family-summary th,.l7-family-summary td{padding-top:1.7mm;padding-bottom:1.7mm}}
+/* 用户确认的单车三类集成图独立成页，不压缩原五模型实测内容。 */
+.slide.l7-ensemble-cartoon{justify-content:flex-start}
+.slide.l7-ensemble-cartoon .content{max-width:1380px}
+.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{max-height:73vh;width:auto;max-width:100%;object-fit:contain}
+.slide.l7-ensemble-cartoon .figure{margin:6px auto 0}
+.slide.l7-ensemble-cartoon .body:empty{display:none}
+@media(max-width:650px){.slide.l7-ensemble-cartoon .figure{max-width:100%;overflow-x:auto}.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{min-width:1050px;max-width:none;max-height:none}.slide.l7-ensemble-cartoon .figure:before{content:"图片可左右滑动查看";display:block;font-size:14px;color:#64748b;text-align:left}}
+@media print{.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{max-height:145mm;max-width:100%;width:auto;min-width:0}.slide.l7-ensemble-cartoon .figure{overflow:visible}.slide.l7-ensemble-cartoon .figure:before{display:none}}
+/* 图片自带标题，避免重复标题占据投影空间，并将整图居中。 */
+.slide.l7-ensemble-cartoon h1{display:none}
+.slide.l7-ensemble-cartoon .figure{display:flex;justify-content:center;align-items:center;width:100%}
+.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{max-height:84vh}
+@media(max-width:650px){.slide.l7-ensemble-cartoon .figure{display:block}.slide.l7-ensemble-cartoon h1{display:block}.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{max-height:none}}
+@media print{.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{max-height:168mm}}
+/* p40使用指定的课件标题，图在标题下居中。 */
+.slide.l7-ensemble-cartoon h1{display:block}
+.slide.l7-ensemble-cartoon .figure{display:flex;justify-content:center;align-items:center;margin:6px auto 0;width:100%}
+.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{max-height:73vh}
+@media(max-width:650px){.slide.l7-ensemble-cartoon .figure{display:block}.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{max-height:none}}
+@media print{.slide.l7-ensemble-cartoon h1{display:block}.slide.l7-production.l7-big-chart.l7-ensemble-cartoon .figure img{max-height:145mm}}
+
+/* 展开AdaBoost条件问答时，略收紧步骤间距，保留答案可见空间。 */
+@media screen and (min-width:651px){
+ .l7-ada-general:has(.l7-ada-condition-question details[open]) .l7-ada-algorithm li{margin:6px 0}
+}
+
+/* p36左栏增加约两个汉字的宽度，右栏相应收窄。 */
+@media screen and (min-width:651px){
+ .slide.l7-production.figure-right.with-figure.l7-ada-general .content{
+  grid-template-columns:minmax(0,calc(45% + 28px)) minmax(0,1fr);
+ }
+}
+@media print{
+ .slide.l7-production.figure-right.with-figure.l7-ada-general .content{
+  grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);
+ }
+}

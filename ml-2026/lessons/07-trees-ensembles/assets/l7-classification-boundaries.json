@@ -1,0 +1,150 @@
+{
+  "rows": 491,
+  "features": [
+    "temp",
+    "hum"
+  ],
+  "max_depth": 7,
+  "min_samples_leaf": 1,
+  "training_macro_f1": {
+    "Gini": 0.9224650930851064,
+    "IG": 0.8980142904619475,
+    "GR": 0.869648901572974
+  },
+  "gr_scope": "ratio-only binary split demo, not full C4.5",
+  "root_thresholds": {
+    "Gini": 0.3895455002784729,
+    "IG": 0.34083350002765656
+  },
+  "gr_tree": {
+    "prediction": 0,
+    "column": 0,
+    "threshold": 0.3408335,
+    "left": {
+      "prediction": 0,
+      "column": 1,
+      "threshold": 0.296087,
+      "left": {
+        "prediction": 1
+      },
+      "right": {
+        "prediction": 0,
+        "column": 0,
+        "threshold": 0.2866665,
+        "left": {
+          "prediction": 0
+        },
+        "right": {
+          "prediction": 0,
+          "column": 0,
+          "threshold": 0.287663,
+          "left": {
+            "prediction": 1
+          },
+          "right": {
+            "prediction": 0,
+            "column": 1,
+            "threshold": 0.525625,
+            "left": {
+              "prediction": 0
+            },
+            "right": {
+              "prediction": 0,
+              "column": 1,
+              "threshold": 0.5422914999999999,
+              "left": {
+                "prediction": 1
+              },
+              "right": {
+                "prediction": 0,
+                "column": 1,
+                "threshold": 0.5645830000000001,
+                "left": {
+                  "prediction": 0
+                },
+                "right": {
+                  "prediction": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "prediction": 1,
+      "column": 1,
+      "threshold": 0.9041665,
+      "left": {
+        "prediction": 1,
+        "column": 0,
+        "threshold": 0.807083,
+        "left": {
+          "prediction": 1,
+          "column": 1,
+          "threshold": 0.221042,
+          "left": {
+            "prediction": 0
+          },
+          "right": {
+            "prediction": 1,
+            "column": 0,
+            "threshold": 0.4570835,
+            "left": {
+              "prediction": 0,
+              "column": 1,
+              "threshold": 0.375,
+              "left": {
+                "prediction": 1
+              },
+              "right": {
+                "prediction": 0,
+                "column": 1,
+                "threshold": 0.575,
+                "left": {
+                  "prediction": 1
+                },
+                "right": {
+                  "prediction": 0
+                }
+              }
+            },
+            "right": {
+              "prediction": 1,
+              "column": 1,
+              "threshold": 0.8685415000000001,
+              "left": {
+                "prediction": 1,
+                "column": 1,
+                "threshold": 0.7691665000000001,
+                "left": {
+                  "prediction": 1
+                },
+                "right": {
+                  "prediction": 1
+                }
+              },
+              "right": {
+                "prediction": 0,
+                "column": 1,
+                "threshold": 0.8989585,
+                "left": {
+                  "prediction": 0
+                },
+                "right": {
+                  "prediction": 1
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "prediction": 0
+        }
+      },
+      "right": {
+        "prediction": 0
+      }
+    }
+  }
+}
