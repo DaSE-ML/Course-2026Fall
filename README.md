@@ -87,10 +87,10 @@
       <td valign="top"><strong>Lesson 7</strong><br><br>AI Slop<br>科研检测器</td>
       <td align="center" valign="top"><a href="assignments/lab07-poster.jpg"><img src="assignments/lab07-poster-thumb.jpg" width="320" alt="Lab 7 AI Slop科研检测器任务海报缩略图"></a></td>
       <td valign="top">
-        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code><br>根目录下的 <code>lab07/</code> 文件夹。</p>
-        <p><strong>提交什么？</strong><br>① 3 页 A4 PDF 分析报告<br>② 可复现的 Jupyter Notebook（<code>.ipynb</code>），附序列化保存的模型和实验数据。<br>③ AI Slop 比例分析报告，1 页 PDF（加分项）<br>④ 降低 AI 率的 Skill、原稿和修订稿，附修订前后的检测结果（加分项）</p>
-        <p><strong>基本要求</strong><br>收集论文并提炼特征，比较单分类器版与集成版（如 Bagging、Boosting），分别报告在 SciSlopBench 和 OpenReview 案例论文上的结果。</p>
-        <p><strong>相关资料</strong><br><a href="assignments/resources/lab07.md">实验说明与资源</a><br><a href="assignments/resources/lab07.md#openreview-cases">OpenReview 9 篇案例论文</a></p>
+        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code> 根目录下的 <code>lab07/</code>。</p>
+        <p><strong>提交什么？</strong><br>① 3 页 A4 PDF 分析报告<br>② 可复现的 Jupyter Notebook，附序列化保存的模型和实验数据<br>③ AI Slop 比例分析报告（1 页 PDF，加分项）<br>④ 降低 AI 率的 Skill、原稿、修订稿及修订前后检测结果（加分项）</p>
+        <p><strong>基本要求</strong><br>收集论文并提炼特征，比较单分类器版与集成版，分别报告 SciSlopBench 和 OpenReview 案例的验证结果。</p>
+        <p><strong>相关资料</strong><br><a href="assignments/resources/lab07.md">实验说明与资源</a>，<a href="assignments/resources/lab07.md#openreview-cases">OpenReview 9 篇案例论文</a></p>
       </td>
     </tr>
   </tbody>
