@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第8讲练习｜怎样分开手写的1和7？</title><style>*{box-sizing:border-box}body{margin:0;background:#f0f3f7;color:#192b41;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;font-size:17px}main{max-width:980px;margin:0 auto;padding:55px 40px 80px}h1{font-size:34px;line-height:1.3;margin:14px 0 22px;color:#192b41}h2{font-size:24px;margin-top:34px;border-left:4px solid #4177b7;padding-left:12px}h3{font-size:20px;margin-top:26px;color:#174b87}a{color:#174b87;text-underline-offset:4px}code{font-family:"SFMono-Regular",Consolas,monospace;background:#eef3fa;padding:2px 6px;border-radius:3px;font-size:.9em}pre{background:#eef3fa;padding:14px 16px;overflow:auto;line-height:1.5}pre code{padding:0;background:none}table{width:100%;border-collapse:collapse;font-size:.92em;margin:14px 0}th{text-align:left;color:#174b87;background:#eef3fa}td,th{padding:8px 12px;border-bottom:1px solid #d5dfe9}blockquote{border-left:5px solid #23756c;background:#f1f8f6;margin:16px 0;padding:10px 18px}blockquote p{margin:6px 0}li{margin:6px 0}img{max-width:100%}.back{display:inline-block;margin-bottom:18px;font-size:15px}hr{border:0;border-top:1px solid #d5dfe9;margin:30px 0}@media print{body{background:white;font-size:11pt}main{padding:0;max-width:none}}</style></head><body><main><a class="back" href="../../index.html">← 返回课程目录</a><h1
+id="第8讲练习怎样分开手写的1和7">第8讲练习｜怎样分开手写的1和7？</h1>
+<p>用第6讲的开发划分，从 <a
+href="notebook/08-svm-kernels.ipynb">手写数字 Notebook</a>
+开始。二分类取其中289张「1」和「7」，用左右不对称度和上部三行笔迹强度。验证使用相同分层五折，标准化在每折训练部分拟合。报告平衡准确率，结果用于开发比较。</p>
+<h2 id="1-先看图再解释间隔25分">1. 先看图，再解释间隔（25分）</h2>
+<p>看 <a
+href="notebook.html#ref-l8-candidates">三条候选线</a>。写出各线离最近样本的距离，选出这三条里间隔最大的线。再比较
+<a
+href="notebook.html#ref-l8-support">删点复训</a>，说明哪个点约束了这次的边界。交一张标注图和两句解释。</p>
+<h2 id="2-固定一项只改一项40分">2. 固定一项，只改一项（40分）</h2>
+<p>从 <a href="notebook.html#ref-l8-search">RBF 热力图</a>
+读取同折结果，按下表比较。画边界时用全部289张开发图像重训。表中同时记录训练准确率、五折平衡准确率和支持向量数。</p>
+<table>
+<thead>
+<tr>
+<th>配置</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: right;">gamma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基准</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>A</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.01</td>
+</tr>
+<tr>
+<td>B</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+<p>先写你预计哪一种改动会缩小核的影响范围，再用图和分数说明实际发生了什么。指出16组候选中按验证均值选中的一组。</p>
+<h2 id="3-给模型更多信息再比较核35分">3.
+给模型更多信息，再比较核（35分）</h2>
+<p>从 <a
+href="notebook.html#ref-l8-real-cv">两项摘要和完整像素的对照</a>
+抄录三行结果，逐行计算 RBF 减线性核的百分点差。解释为什么同一个「1 对
+7」任务在换输入后，换核收益会改变。附上你的代码和输出。</p>
+<p>选做：在 <a href="notebook.html#ref-l8-scores">分数表</a>
+找两张分数接近0的图，打开原图，看看它们在哪一项特征上接近。</p>
+</main></body></html>

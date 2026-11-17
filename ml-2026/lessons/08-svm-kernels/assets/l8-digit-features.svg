@@ -1,0 +1,1740 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="984.66pt" height="353.99952pt" viewBox="0 0 984.66 353.99952" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-13T20:55:54.933903</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 353.99952
+L 984.66 353.99952
+L 984.66 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 7.68612 153.96776
+L 137.27388 153.96776
+L 137.27388 24.38
+L 7.68612 24.38
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pd37b63fd4c)">
+    <image xlink:href="data:image/png;base64,
+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" id="image3e72625cf9" transform="scale(1 -1) translate(0 -129.6)" x="7.68" y="-24.47952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="text_1">
+     <!-- $x_1$ = 0.098    $x_2$ = 0.242 -->
+     <g transform="translate(7.2 168.28776) scale(0.12 -0.12)">
+      <defs>
+       <path id="STIXGeneral-Italic-5b" d="M 1555 2272
+L 1632 1907
+Q 1971 2426 2179 2624
+Q 2387 2822 2598 2822
+Q 2714 2822 2787 2755
+Q 2861 2688 2861 2585
+Q 2861 2483 2800 2419
+Q 2739 2355 2643 2355
+Q 2586 2355 2490 2409
+Q 2394 2464 2310 2464
+Q 2125 2464 1683 1690
+Q 1683 1606 1734 1402
+L 1939 544
+Q 2003 282 2131 282
+Q 2234 282 2432 538
+Q 2451 563 2476 598
+Q 2502 634 2521 662
+Q 2541 691 2566 717
+L 2662 659
+Q 2387 230 2227 80
+Q 2067 -70 1882 -70
+Q 1728 -70 1645 26
+Q 1562 122 1504 365
+L 1318 1126
+L 755 365
+Q 557 96 432 13
+Q 307 -70 147 -70
+Q 0 -70 -86 0
+Q -173 70 -173 198
+Q -173 294 -112 361
+Q -51 429 45 429
+Q 122 429 250 358
+Q 346 301 416 301
+Q 525 301 742 614
+L 1267 1357
+L 1088 2150
+Q 1024 2432 969 2509
+Q 915 2586 794 2586
+Q 717 2586 544 2541
+L 429 2509
+L 410 2611
+L 480 2637
+Q 992 2822 1229 2822
+Q 1350 2822 1420 2707
+Q 1491 2592 1555 2272
+z
+" transform="scale(0.015625)"/>
+       <path id="STIXGeneral-Regular-14" d="M 2522 0
+L 755 0
+L 755 96
+Q 1107 115 1235 227
+Q 1363 339 1363 608
+L 1363 3482
+Q 1363 3795 1171 3795
+Q 1082 3795 883 3718
+L 710 3654
+L 710 3744
+L 1856 4326
+L 1914 4307
+L 1914 486
+Q 1914 275 2042 185
+Q 2170 96 2522 96
+L 2522 0
+z
+" transform="scale(0.015625)"/>
+       <path id="PingFangSC-Regular-3" transform="scale(0.015625)"/>
+       <path id="PingFangSC-Regular-20" d="M 320 2528
+L 320 2099
+L 3552 2099
+L 3552 2528
+L 320 2528
+z
+M 320 1216
+L 320 781
+L 3552 781
+L 3552 1216
+L 320 1216
+z
+" transform="scale(0.015625)"/>
+       <path id="PingFangSC-Regular-13" d="M 1920 4659
+C 1370 4659 960 4422 685 3936
+C 442 3526 320 2976 320 2285
+C 320 1594 442 1043 685 634
+C 960 154 1370 -90 1920 -90
+C 2464 -90 2874 154 3155 634
+C 3398 1043 3520 1594 3520 2285
+C 3520 2976 3398 3526 3155 3936
+C 2874 4422 2464 4659 1920 4659
+z
+M 1920 4211
+C 2330 4211 2624 3994 2803 3552
+C 2931 3245 3002 2822 3002 2285
+C 3002 1754 2931 1331 2803 1018
+C 2624 582 2330 358 1920 358
+C 1510 358 1216 582 1037 1018
+C 909 1331 845 1754 845 2285
+C 845 2822 909 3245 1037 3552
+C 1216 3994 1510 4211 1920 4211
+z
+" transform="scale(0.015625)"/>
+       <path id="PingFangSC-Regular-11" d="M 845 762
+C 730 762 640 723 570 646
+C 493 570 454 480 454 365
+C 454 256 493 166 570 90
+C 640 13 730 -26 845 -26
+C 947 -26 1043 13 1120 90
+C 1197 166 1235 256 1235 365
+C 1235 480 1197 570 1120 646
+C 1043 723 947 762 845 762
+z
+" transform="scale(0.015625)"/>
+       <path id="PingFangSC-Regular-1c" d="M 1869 4659
+C 1421 4659 1050 4512 762 4211
+C 467 3917 326 3546 326 3091
+C 326 2650 454 2291 717 2016
+C 986 1728 1338 1581 1779 1581
+C 2048 1581 2285 1651 2490 1779
+C 2701 1914 2867 2099 2982 2330
+L 3008 2330
+C 3008 2253 3014 2195 3014 2163
+C 3014 1651 2912 1222 2714 883
+C 2502 531 2221 352 1869 352
+C 1331 352 1018 614 922 1133
+L 403 1133
+C 525 320 1011 -90 1862 -90
+C 2374 -90 2784 154 3091 627
+C 3373 1088 3520 1677 3520 2406
+C 3520 3110 3386 3661 3117 4045
+C 2835 4454 2419 4659 1869 4659
+z
+M 1882 4218
+C 2195 4218 2451 4109 2643 3891
+C 2829 3686 2925 3424 2925 3104
+C 2925 2790 2822 2528 2630 2323
+C 2426 2118 2176 2016 1882 2016
+C 1562 2016 1312 2118 1126 2317
+C 934 2509 845 2771 845 3091
+C 845 3424 934 3693 1126 3904
+C 1318 4115 1568 4218 1882 4218
+z
+" transform="scale(0.015625)"/>
+       <path id="PingFangSC-Regular-1b" d="M 1920 4659
+C 1440 4659 1069 4538 800 4288
+C 550 4064 429 3782 429 3450
+C 429 3206 486 3002 602 2835
+C 723 2656 902 2522 1146 2438
+L 1146 2426
+C 902 2368 704 2234 538 2029
+C 358 1811 269 1555 269 1261
+C 269 858 410 531 691 288
+C 979 38 1389 -90 1920 -90
+C 2445 -90 2854 38 3149 288
+C 3430 531 3571 858 3571 1261
+C 3571 1555 3482 1811 3302 2029
+C 3136 2234 2931 2368 2694 2426
+L 2694 2438
+C 2931 2522 3110 2656 3238 2835
+C 3354 3002 3411 3206 3411 3450
+C 3411 3782 3283 4064 3040 4288
+C 2771 4538 2394 4659 1920 4659
+z
+M 1920 4230
+C 2240 4230 2496 4147 2682 3981
+C 2835 3840 2918 3654 2918 3430
+C 2918 3200 2848 3008 2707 2867
+C 2534 2701 2272 2611 1920 2611
+C 1562 2611 1299 2701 1133 2867
+C 992 3008 922 3200 922 3430
+C 922 3654 998 3840 1158 3981
+C 1338 4147 1594 4230 1920 4230
+z
+M 1920 2202
+C 2285 2202 2573 2112 2778 1926
+C 2957 1760 3053 1536 3053 1261
+C 3053 992 2957 774 2778 608
+C 2573 429 2291 339 1920 339
+C 1549 339 1261 429 1069 602
+C 877 768 787 992 787 1261
+C 787 1536 877 1760 1069 1926
+C 1267 2112 1549 2202 1920 2202
+z
+" transform="scale(0.015625)"/>
+       <path id="STIXGeneral-Regular-15" d="M 3034 877
+L 2688 0
+L 186 0
+L 186 77
+L 1325 1286
+Q 1773 1754 1965 2144
+Q 2157 2534 2157 2950
+Q 2157 3379 1920 3616
+Q 1683 3853 1267 3853
+Q 922 3853 720 3673
+Q 518 3494 326 3021
+L 192 3053
+Q 301 3648 630 3987
+Q 960 4326 1523 4326
+Q 2054 4326 2380 4006
+Q 2707 3686 2707 3200
+Q 2707 2477 1888 1613
+L 832 486
+L 2330 486
+Q 2541 486 2665 569
+Q 2790 653 2944 915
+L 3034 877
+z
+" transform="scale(0.015625)"/>
+       <path id="PingFangSC-Regular-15" d="M 1984 4659
+C 1523 4659 1146 4506 864 4198
+C 582 3898 435 3488 435 2976
+L 960 2976
+C 966 3379 1062 3686 1242 3891
+C 1408 4109 1651 4211 1965 4211
+C 2259 4211 2496 4134 2662 3981
+C 2829 3827 2912 3616 2912 3334
+C 2912 3040 2790 2765 2560 2515
+C 2438 2387 2202 2202 1843 1946
+C 1357 1613 1030 1338 851 1133
+C 544 794 397 416 397 0
+L 3443 0
+L 3443 467
+L 1043 467
+C 1126 774 1459 1126 2042 1517
+C 2515 1837 2829 2086 2989 2253
+C 3283 2573 3437 2931 3437 3328
+C 3437 3725 3296 4051 3027 4294
+C 2752 4538 2406 4659 1984 4659
+z
+" transform="scale(0.015625)"/>
+       <path id="PingFangSC-Regular-17" d="M 2458 4570
+L 154 1536
+L 154 1037
+L 2451 1037
+L 2451 0
+L 2950 0
+L 2950 1037
+L 3693 1037
+L 3693 1466
+L 2950 1466
+L 2950 4570
+L 2458 4570
+z
+M 2432 3885
+L 2451 3885
+L 2451 1466
+L 595 1466
+L 2432 3885
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1c" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1b" transform="translate(417.399611 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(477.39955 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(510.699522 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(543.999495 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(577.299467 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(610.59944 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(654.999403 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(694.499371 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(727.799344 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(788.299283 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(821.599255 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(881.599194 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(907.999173 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-17" transform="translate(967.999112 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(1027.999051 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="line2d_1">
+    <path d="M 7.68612 72.97541
+L 137.27388 72.97541
+" clip-path="url(#pd37b63fd4c)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 72.48 153.96776
+L 72.48 24.38
+" clip-path="url(#pd37b63fd4c)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 72.48 153.96776
+L 72.48 24.38
+" clip-path="url(#pd37b63fd4c)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 7.68612 153.96776
+L 7.68612 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 137.27388 153.96776
+L 137.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 7.68612 153.96776
+L 137.27388 153.96776
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 7.68612 24.38
+L 137.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_2">
+    <!-- 数字 1 · #303 -->
+    <g transform="translate(31.531016 18.38) scale(0.13 -0.13)">
+     <defs>
+      <path id="PingFangSC-Regular-dc4" d="M 4211 3808
+L 5158 3808
+C 5133 2944 4998 2189 4749 1542
+C 4493 2080 4288 2726 4128 3475
+L 4211 3808
+z
+M 4538 1082
+C 4243 538 3853 96 3354 -250
+L 3590 -634
+C 4070 -288 4467 141 4774 653
+C 5094 115 5478 -320 5926 -640
+L 6176 -262
+C 5715 51 5325 493 4992 1069
+C 5350 1824 5549 2739 5581 3808
+L 5997 3808
+L 5997 4250
+L 4307 4250
+C 4358 4531 4410 4838 4448 5165
+L 4000 5242
+C 3872 4026 3616 3059 3238 2342
+L 3526 1990
+C 3661 2221 3789 2483 3904 2778
+C 4077 2138 4288 1574 4538 1082
+z
+M 1504 2253
+C 1459 2125 1408 1990 1350 1850
+L 416 1850
+L 416 1446
+L 1171 1446
+C 1043 1190 896 928 730 646
+C 1043 531 1338 410 1619 288
+C 1248 77 794 -96 269 -237
+L 486 -621
+C 1126 -442 1658 -205 2080 90
+C 2458 -77 2784 -250 3066 -416
+L 3315 -58
+C 3034 96 2739 237 2432 378
+C 2765 685 3002 1050 3142 1472
+L 3142 1850
+L 1805 1850
+C 1843 1965 1888 2080 1933 2202
+L 1504 2253
+z
+M 2010 557
+C 1779 653 1536 742 1280 832
+C 1408 1024 1523 1229 1626 1446
+L 2726 1446
+C 2573 1114 2330 813 2010 557
+z
+M 922 5107
+L 557 4986
+C 710 4742 851 4467 986 4154
+L 1318 4307
+C 1203 4589 1075 4858 922 5107
+z
+M 2867 5126
+C 2752 4858 2586 4589 2381 4314
+L 2707 4147
+C 2912 4416 3072 4691 3200 4973
+L 2867 5126
+z
+M 429 4000
+L 429 3597
+L 1338 3597
+C 1146 3245 800 2925 307 2637
+L 531 2266
+C 1082 2637 1466 3072 1677 3578
+L 1677 2362
+L 2106 2362
+L 2106 3194
+C 2336 3040 2611 2835 2931 2579
+L 3168 2938
+C 2810 3155 2451 3354 2106 3526
+L 2106 3597
+L 3270 3597
+L 3270 4000
+L 2106 4000
+L 2106 5222
+L 1677 5222
+L 1677 4000
+L 429 4000
+z
+" transform="scale(0.015625)"/>
+      <path id="PingFangSC-Regular-a01" d="M 5914 4570
+L 3501 4570
+C 3418 4832 3328 5069 3238 5280
+L 2714 5190
+C 2816 5005 2912 4800 3002 4570
+L 486 4570
+L 486 3142
+L 947 3142
+L 947 4128
+L 5453 4128
+L 5453 3142
+L 5914 3142
+L 5914 4570
+z
+M 1472 3437
+L 1472 3008
+L 4218 3008
+C 3955 2842 3565 2618 3046 2349
+L 3046 1722
+L 371 1722
+L 371 1274
+L 3046 1274
+L 3046 77
+C 3046 -109 2963 -205 2797 -205
+C 2528 -205 2285 -198 2061 -192
+L 2170 -614
+L 2957 -614
+C 3328 -614 3514 -435 3514 -83
+L 3514 1274
+L 6035 1274
+L 6035 1722
+L 3514 1722
+L 3514 2150
+C 4026 2432 4493 2714 4909 3008
+L 4909 3437
+L 1472 3437
+z
+" transform="scale(0.015625)"/>
+      <path id="PingFangSC-Regular-14" d="M 1472 4570
+C 1318 4397 1139 4243 922 4102
+C 704 3974 486 3885 282 3827
+L 282 3302
+C 710 3430 1069 3635 1357 3930
+L 1357 0
+L 1882 0
+L 1882 4570
+L 1472 4570
+z
+" transform="scale(0.015625)"/>
+      <path id="PingFangSC-Regular-7a" d="M 1600 2771
+C 1472 2771 1363 2726 1274 2637
+C 1178 2547 1133 2432 1133 2304
+C 1133 2176 1178 2067 1274 1978
+C 1363 1888 1472 1843 1600 1843
+C 1728 1843 1837 1888 1926 1978
+C 2016 2067 2067 2176 2067 2304
+C 2067 2432 2016 2547 1926 2637
+C 1837 2726 1728 2771 1600 2771
+z
+" transform="scale(0.015625)"/>
+      <path id="PingFangSC-Regular-6" d="M 474 3488
+L 416 3104
+L 1139 3104
+L 877 1459
+L 230 1459
+L 173 1075
+L 819 1075
+L 646 0
+L 1075 0
+L 1248 1075
+L 2214 1075
+L 2042 0
+L 2470 0
+L 2643 1075
+L 3366 1075
+L 3424 1459
+L 2701 1459
+L 2963 3104
+L 3610 3104
+L 3667 3488
+L 3021 3488
+L 3194 4570
+L 2771 4570
+L 2598 3488
+L 1626 3488
+L 1798 4570
+L 1376 4570
+L 1203 3488
+L 474 3488
+z
+M 1306 1459
+L 1568 3104
+L 2534 3104
+L 2272 1459
+L 1306 1459
+z
+" transform="scale(0.015625)"/>
+      <path id="PingFangSC-Regular-16" d="M 1965 4659
+C 1530 4659 1178 4538 909 4288
+C 627 4038 461 3693 422 3251
+L 941 3251
+C 973 3558 1075 3795 1254 3962
+C 1427 4128 1664 4205 1971 4205
+C 2266 4205 2502 4134 2669 3981
+C 2822 3840 2906 3642 2906 3386
+C 2906 3130 2822 2931 2662 2790
+C 2502 2656 2272 2586 1965 2586
+L 1613 2586
+L 1613 2176
+L 1984 2176
+C 2304 2176 2547 2106 2726 1952
+C 2906 1798 2995 1587 2995 1312
+C 2995 1043 2899 819 2720 640
+C 2522 454 2259 358 1933 358
+C 1645 358 1408 442 1216 595
+C 992 781 870 1056 858 1414
+L 326 1414
+C 365 902 544 512 870 243
+C 1146 26 1498 -90 1933 -90
+C 2406 -90 2790 45 3085 314
+C 3373 576 3520 915 3520 1331
+C 3520 1600 3443 1824 3290 2003
+C 3149 2182 2944 2310 2675 2394
+C 3174 2560 3424 2906 3424 3418
+C 3424 3802 3290 4102 3027 4326
+C 2758 4550 2400 4659 1965 4659
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(273.390625 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(306.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(356.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(389.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-16" transform="translate(449.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-13" transform="translate(509.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-16" transform="translate(569.984375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 175.68612 153.96776
+L 305.27388 153.96776
+L 305.27388 24.38
+L 175.68612 24.38
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p0374c76e96)">
+    <image xlink:href="data:image/png;base64,
+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" id="imagedc21518fbf" transform="scale(1 -1) translate(0 -129.6)" x="175.68" y="-24.47952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="text_3">
+     <!-- $x_1$ = 0.094    $x_2$ = 0.258 -->
+     <g transform="translate(175.2 168.28776) scale(0.12 -0.12)">
+      <defs>
+       <path id="PingFangSC-Regular-18" d="M 672 4570
+L 429 2048
+L 928 2048
+C 1018 2227 1158 2368 1338 2458
+C 1510 2554 1702 2598 1920 2598
+C 2253 2598 2515 2502 2701 2298
+C 2893 2099 2995 1818 2995 1453
+C 2995 1133 2886 870 2682 666
+C 2470 461 2208 358 1888 358
+C 1606 358 1370 429 1190 563
+C 986 717 870 941 845 1229
+L 326 1229
+C 358 813 531 480 851 237
+C 1133 19 1478 -90 1882 -90
+C 2330 -90 2714 51 3021 326
+C 3347 621 3514 998 3514 1459
+C 3514 1952 3373 2336 3104 2618
+C 2835 2893 2483 3027 2048 3027
+C 1837 3027 1645 2995 1466 2918
+C 1267 2842 1101 2726 973 2573
+L 947 2573
+L 1101 4102
+L 3328 4102
+L 3328 4570
+L 672 4570
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1c" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-17" transform="translate(417.399611 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(477.39955 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(510.699522 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(543.999495 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(577.299467 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(610.59944 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(654.999403 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(694.499371 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(727.799344 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(788.299283 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(821.599255 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(881.599194 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(907.999173 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-18" transform="translate(967.999112 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1b" transform="translate(1027.999051 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4"/>
+   <g id="line2d_3">
+    <path d="M 175.68612 72.97541
+L 305.27388 72.97541
+" clip-path="url(#p0374c76e96)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 240.48 153.96776
+L 240.48 24.38
+" clip-path="url(#p0374c76e96)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 240.48 153.96776
+L 240.48 24.38
+" clip-path="url(#p0374c76e96)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 175.68612 153.96776
+L 175.68612 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 305.27388 153.96776
+L 305.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 175.68612 153.96776
+L 305.27388 153.96776
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 175.68612 24.38
+L 305.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_4">
+    <!-- 数字 1 · #349 -->
+    <g transform="translate(199.531016 18.38) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(273.390625 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(306.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(356.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(389.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-16" transform="translate(449.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-17" transform="translate(509.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1c" transform="translate(569.984375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_12">
+    <path d="M 343.68612 153.96776
+L 473.27388 153.96776
+L 473.27388 24.38
+L 343.68612 24.38
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pb1477a8f0d)">
+    <image xlink:href="data:image/png;base64,
+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" id="imagea44505813e" transform="scale(1 -1) translate(0 -129.6)" x="343.68" y="-24.47952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="text_5">
+     <!-- $x_1$ = 0.092    $x_2$ = 0.365 -->
+     <g transform="translate(343.2 168.28776) scale(0.12 -0.12)">
+      <defs>
+       <path id="PingFangSC-Regular-19" d="M 1984 4659
+C 1466 4659 1056 4422 755 3942
+C 467 3488 326 2893 326 2163
+C 326 1466 454 922 723 531
+C 1005 122 1421 -90 1978 -90
+C 2426 -90 2790 64 3085 358
+C 3373 653 3520 1030 3520 1478
+C 3520 1926 3386 2285 3123 2566
+C 2854 2848 2502 2989 2067 2989
+C 1798 2989 1562 2925 1357 2790
+C 1139 2662 979 2477 864 2240
+L 838 2240
+C 832 2323 832 2381 832 2406
+C 832 2925 928 3354 1133 3686
+C 1338 4045 1619 4218 1978 4218
+C 2509 4218 2822 3962 2925 3437
+L 3443 3437
+C 3315 4256 2829 4659 1984 4659
+z
+M 1965 2554
+C 2278 2554 2528 2458 2720 2253
+C 2906 2061 3002 1805 3002 1478
+C 3002 1152 2906 883 2714 666
+C 2522 461 2272 352 1965 352
+C 1645 352 1395 461 1203 678
+C 1011 883 922 1146 922 1466
+C 922 1786 1018 2042 1216 2246
+C 1414 2451 1664 2554 1965 2554
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1c" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(417.399611 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(477.39955 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(510.699522 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(543.999495 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(577.299467 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(610.59944 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(654.999403 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(694.499371 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(727.799344 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(788.299283 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(821.599255 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(881.599194 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(907.999173 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-19" transform="translate(967.999112 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-18" transform="translate(1027.999051 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6"/>
+   <g id="line2d_5">
+    <path d="M 343.68612 72.97541
+L 473.27388 72.97541
+" clip-path="url(#pb1477a8f0d)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 408.48 153.96776
+L 408.48 24.38
+" clip-path="url(#pb1477a8f0d)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 408.48 153.96776
+L 408.48 24.38
+" clip-path="url(#pb1477a8f0d)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 343.68612 153.96776
+L 343.68612 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 473.27388 153.96776
+L 473.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 343.68612 153.96776
+L 473.27388 153.96776
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 343.68612 24.38
+L 473.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_6">
+    <!-- 数字 1 · #615 -->
+    <g transform="translate(368.824922 18.38) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(273.390625 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(306.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(356.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(389.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-19" transform="translate(449.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(509.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-18" transform="translate(550.078125 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_17">
+    <path d="M 511.68612 153.96776
+L 641.27388 153.96776
+L 641.27388 24.38
+L 511.68612 24.38
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p5e312127b4)">
+    <image xlink:href="data:image/png;base64,
+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" id="imagedc8ca57e5b" transform="scale(1 -1) translate(0 -129.6)" x="511.68" y="-24.47952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_7">
+    <g id="text_7">
+     <!-- $x_1$ = 0.076    $x_2$ = 0.263 -->
+     <g transform="translate(511.5 168.28776) scale(0.12 -0.12)">
+      <defs>
+       <path id="PingFangSC-Regular-1a" d="M 218 4570
+L 218 4090
+L 2682 4090
+L 979 0
+L 1536 0
+L 3219 4141
+L 3219 4570
+L 218 4570
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1a" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-19" transform="translate(412.099623 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(472.099562 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(505.399535 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(538.699507 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(571.99948 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(605.299452 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(649.699416 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(689.199384 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(722.499356 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(782.999295 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(816.299268 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(876.299207 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(902.699185 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-19" transform="translate(962.699124 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(1022.699063 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_8"/>
+   <g id="line2d_7">
+    <path d="M 511.68612 72.97541
+L 641.27388 72.97541
+" clip-path="url(#p5e312127b4)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 576.48 153.96776
+L 576.48 24.38
+" clip-path="url(#p5e312127b4)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 576.48 153.96776
+L 576.48 24.38
+" clip-path="url(#p5e312127b4)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 511.68612 153.96776
+L 511.68612 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 641.27388 153.96776
+L 641.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 511.68612 153.96776
+L 641.27388 153.96776
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 511.68612 24.38
+L 641.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_8">
+    <!-- 数字 1 · #777 -->
+    <g transform="translate(536.563906 18.38) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(273.390625 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(306.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(356.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(389.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(449.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(504.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(559.390625 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_5">
+   <g id="patch_22">
+    <path d="M 679.68612 153.96776
+L 809.27388 153.96776
+L 809.27388 24.38
+L 679.68612 24.38
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p23120e5e00)">
+    <image xlink:href="data:image/png;base64,
+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" id="image4554a92314" transform="scale(1 -1) translate(0 -129.6)" x="679.68" y="-24.47952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_9">
+    <g id="text_9">
+     <!-- $x_1$ = 0.107    $x_2$ = 0.370 -->
+     <g transform="translate(681 168.28776) scale(0.12 -0.12)">
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-14" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(337.499693 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1a" transform="translate(397.499632 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(452.199583 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(485.499556 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(518.799529 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(552.099501 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(585.399474 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(629.799437 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(669.299405 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(702.599377 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(763.099316 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(796.399289 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(856.399228 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(882.799207 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1a" transform="translate(942.799146 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(997.499097 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_10"/>
+   <g id="line2d_9">
+    <path d="M 679.68612 72.97541
+L 809.27388 72.97541
+" clip-path="url(#p23120e5e00)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 744.48 153.96776
+L 744.48 24.38
+" clip-path="url(#p23120e5e00)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 744.48 153.96776
+L 744.48 24.38
+" clip-path="url(#p23120e5e00)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 679.68612 153.96776
+L 679.68612 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 809.27388 153.96776
+L 809.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 679.68612 153.96776
+L 809.27388 153.96776
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 679.68612 24.38
+L 809.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <!-- 数字 1 · #823 -->
+    <g transform="translate(703.531016 18.38) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(273.390625 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(306.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(356.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(389.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1b" transform="translate(449.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-15" transform="translate(509.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-16" transform="translate(569.984375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_6">
+   <g id="patch_27">
+    <path d="M 847.68612 153.96776
+L 977.27388 153.96776
+L 977.27388 24.38
+L 847.68612 24.38
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p63e8609423)">
+    <image xlink:href="data:image/png;base64,
+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" id="image4648a77587" transform="scale(1 -1) translate(0 -129.6)" x="847.68" y="-24.47952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_11">
+    <g id="text_11">
+     <!-- $x_1$ = 0.078    $x_2$ = 0.331 -->
+     <g transform="translate(848.7 168.28776) scale(0.12 -0.12)">
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1a" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1b" transform="translate(412.099623 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(472.099562 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(505.399535 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(538.699507 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(571.99948 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(605.299452 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(649.699416 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(689.199384 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(722.499356 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(782.999295 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(816.299268 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(876.299207 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(902.699185 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(962.699124 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-14" transform="translate(1022.699063 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_12"/>
+   <g id="line2d_11">
+    <path d="M 847.68612 72.97541
+L 977.27388 72.97541
+" clip-path="url(#p63e8609423)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 912.48 153.96776
+L 912.48 24.38
+" clip-path="url(#p63e8609423)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 912.48 153.96776
+L 912.48 24.38
+" clip-path="url(#p63e8609423)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 847.68612 153.96776
+L 847.68612 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 977.27388 153.96776
+L 977.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 847.68612 153.96776
+L 977.27388 153.96776
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 847.68612 24.38
+L 977.27388 24.38
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <!-- 数字 1 · #869 -->
+    <g transform="translate(871.531016 18.38) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(273.390625 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(306.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(356.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(389.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1b" transform="translate(449.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-19" transform="translate(509.984375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1c" transform="translate(569.984375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_7">
+   <g id="patch_32">
+    <path d="M 7.68612 330.67952
+L 137.27388 330.67952
+L 137.27388 201.09176
+L 7.68612 201.09176
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p07994047b9)">
+    <image xlink:href="data:image/png;base64,
+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" id="image90d3b55dff" transform="scale(1 -1) translate(0 -129.6)" x="7.68" y="-201.11952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_13">
+    <g id="text_13">
+     <!-- $x_1$ = 0.289    $x_2$ = 0.320 -->
+     <g transform="translate(7.2 344.99952) scale(0.12 -0.12)">
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1b" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1c" transform="translate(417.399611 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(477.39955 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(510.699522 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(543.999495 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(577.299467 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(610.59944 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(654.999403 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(694.499371 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(727.799344 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(788.299283 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(821.599255 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(881.599194 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(907.999173 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(967.999112 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(1027.999051 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_14"/>
+   <g id="line2d_13">
+    <path d="M 7.68612 249.68717
+L 137.27388 249.68717
+" clip-path="url(#p07994047b9)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 72.48 330.67952
+L 72.48 201.09176
+" clip-path="url(#p07994047b9)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 72.48 330.67952
+L 72.48 201.09176
+" clip-path="url(#p07994047b9)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 7.68612 330.67952
+L 7.68612 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 137.27388 330.67952
+L 137.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_35">
+    <path d="M 7.68612 330.67952
+L 137.27388 330.67952
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 7.68612 201.09176
+L 137.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <!-- 数字 7 · #7 -->
+    <g transform="translate(38.725703 195.09176) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(288 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(321.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(371.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(404.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(464.59375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_8">
+   <g id="patch_37">
+    <path d="M 175.68612 330.67952
+L 305.27388 330.67952
+L 305.27388 201.09176
+L 175.68612 201.09176
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pcafe592865)">
+    <image xlink:href="data:image/png;base64,
+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" id="imagea4084e4cab" transform="scale(1 -1) translate(0 -129.6)" x="175.68" y="-201.11952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_15">
+    <g id="text_15">
+     <!-- $x_1$ = 0.264    $x_2$ = 0.271 -->
+     <g transform="translate(176.7 344.99952) scale(0.12 -0.12)">
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-19" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-17" transform="translate(417.399611 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(477.39955 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(510.699522 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(543.999495 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(577.299467 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(610.59944 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(654.999403 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(694.499371 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(727.799344 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(788.299283 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(821.599255 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(881.599194 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(907.999173 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1a" transform="translate(967.999112 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-14" transform="translate(1022.699063 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_16"/>
+   <g id="line2d_15">
+    <path d="M 175.68612 249.68717
+L 305.27388 249.68717
+" clip-path="url(#pcafe592865)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 240.48 330.67952
+L 240.48 201.09176
+" clip-path="url(#pcafe592865)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 240.48 330.67952
+L 240.48 201.09176
+" clip-path="url(#pcafe592865)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_38">
+    <path d="M 175.68612 330.67952
+L 175.68612 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_39">
+    <path d="M 305.27388 330.67952
+L 305.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_40">
+    <path d="M 175.68612 330.67952
+L 305.27388 330.67952
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_41">
+    <path d="M 175.68612 201.09176
+L 305.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_16">
+    <!-- 数字 7 · #27 -->
+    <g transform="translate(202.825703 195.09176) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(288 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(321.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(371.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(404.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-15" transform="translate(464.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(524.59375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_9">
+   <g id="patch_42">
+    <path d="M 343.68612 330.67952
+L 473.27388 330.67952
+L 473.27388 201.09176
+L 343.68612 201.09176
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p294450ff5b)">
+    <image xlink:href="data:image/png;base64,
+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" id="imagea9a9315280" transform="scale(1 -1) translate(0 -129.6)" x="343.68" y="-201.11952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_17">
+    <g id="text_17">
+     <!-- $x_1$ = 0.207    $x_2$ = 0.349 -->
+     <g transform="translate(343.5 344.99952) scale(0.12 -0.12)">
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1a" transform="translate(417.399611 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(472.099562 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(505.399535 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(538.699507 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(571.99948 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(605.299452 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(649.699416 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(689.199384 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(722.499356 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(782.999295 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(816.299268 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(876.299207 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(902.699185 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-17" transform="translate(962.699124 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1c" transform="translate(1022.699063 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_18"/>
+   <g id="line2d_17">
+    <path d="M 343.68612 249.68717
+L 473.27388 249.68717
+" clip-path="url(#p294450ff5b)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 408.48 330.67952
+L 408.48 201.09176
+" clip-path="url(#p294450ff5b)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 408.48 330.67952
+L 408.48 201.09176
+" clip-path="url(#p294450ff5b)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_43">
+    <path d="M 343.68612 330.67952
+L 343.68612 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_44">
+    <path d="M 473.27388 330.67952
+L 473.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_45">
+    <path d="M 343.68612 330.67952
+L 473.27388 330.67952
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_46">
+    <path d="M 343.68612 201.09176
+L 473.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_18">
+    <!-- 数字 7 · #52 -->
+    <g transform="translate(370.481406 195.09176) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(288 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(321.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(371.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(404.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-18" transform="translate(464.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-15" transform="translate(524.59375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_10">
+   <g id="patch_47">
+    <path d="M 511.68612 330.67952
+L 641.27388 330.67952
+L 641.27388 201.09176
+L 511.68612 201.09176
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p0de4b2015f)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAhwAAAIcCAYAAAC9/nd8AAAKUElEQVR4nO3YIU5sWRhG0VedFiXxODDMAsFIYAhoHFgYA54xIPAwgEpAYqEk7rR5okWLl3R2zqlkLX2T8+WqnX8zxhi/4D/sdjv/5V+urq78j9+en5/9i9+2261/AX/grz/5CADg/xAcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAC5zRhj9M9wiPb7/ewJSzk5OZk9YRnX19ezJyzj5uZm9gQ4CC4cAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAAIIDADh8LhwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkNmOM0T/DIdrtdrMnLOXp6Wn2hGU8Pj7OnrCM19fX2ROWcnR0NHsCi3LhAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDABAcAMDhc+EAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgNxmjDH6Zw7HbrebPWEZZ2dnsyfA8i4vL2dPWMrt7e3sCcs4Pj6ePWEpLhwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAALnNGGP0z3CI7u7uZk9Yytvb2+wJy3h5eZk9YRnf39+zJyzl+vp69oRl3N/fz56wFBcOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcpsxxuif4RD9/PzMnrCU7XY7e8Iy7u7uZk9YxsPDw+wJS/n6+po9gUW5cAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5AQHAJATHABATnAAADnBAQDkBAcAkBMcAEBOcAAAOcEBAOQEBwCQExwAQE5wAAA5wQEA5P7un+BQXVxczJ4Ay/v+/p49YSn7/X72hGUcHR3NnrAUFw4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDABAcAMDhc+EAAHKCAwDIbcYYo3+GQ/T5+Tl7wlLOz89nT1jGx8fH7AnLOD09nT1hKe/v77MnsCgXDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAnOAAAHKCAwDICQ4AICc4AICc4AAAcoIDAMgJDgAgJzgAgJzgAAByggMAyAkOACAnOACAX7V/AM+OX64GhI6dAAAAAElFTkSuQmCC" id="image49a45c57bf" transform="scale(1 -1) translate(0 -129.6)" x="511.68" y="-201.11952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_19">
+    <g id="text_19">
+     <!-- $x_1$ = 0.191    $x_2$ = 0.336 -->
+     <g transform="translate(513.54 344.99952) scale(0.12 -0.12)">
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-14" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1c" transform="translate(337.499693 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-14" transform="translate(397.499632 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(437.599593 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(470.899565 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(504.199538 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(537.49951 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(570.799483 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(615.199446 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(654.699414 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(687.999387 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(748.499326 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(781.799298 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(841.799237 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(868.199216 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(928.199155 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-19" transform="translate(988.199094 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_20"/>
+   <g id="line2d_19">
+    <path d="M 511.68612 249.68717
+L 641.27388 249.68717
+" clip-path="url(#p0de4b2015f)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 576.48 330.67952
+L 576.48 201.09176
+" clip-path="url(#p0de4b2015f)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 576.48 330.67952
+L 576.48 201.09176
+" clip-path="url(#p0de4b2015f)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_48">
+    <path d="M 511.68612 330.67952
+L 511.68612 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_49">
+    <path d="M 641.27388 330.67952
+L 641.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_50">
+    <path d="M 511.68612 330.67952
+L 641.27388 330.67952
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_51">
+    <path d="M 511.68612 201.09176
+L 641.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_20">
+    <!-- 数字 7 · #81 -->
+    <g transform="translate(539.775313 195.09176) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(288 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(321.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(371.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(404.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1b" transform="translate(464.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(524.59375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_11">
+   <g id="patch_52">
+    <path d="M 679.68612 330.67952
+L 809.27388 330.67952
+L 809.27388 201.09176
+L 679.68612 201.09176
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p0a98827019)">
+    <image xlink:href="data:image/png;base64,
+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" id="image5abfa36134" transform="scale(1 -1) translate(0 -129.6)" x="679.68" y="-201.11952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_21">
+    <g id="text_21">
+     <!-- $x_1$ = 0.207    $x_2$ = 0.336 -->
+     <g transform="translate(679.5 344.99952) scale(0.12 -0.12)">
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1a" transform="translate(417.399611 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(472.099562 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(505.399535 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(538.699507 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(571.99948 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(605.299452 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(649.699416 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(689.199384 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(722.499356 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(782.999295 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(816.299268 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(876.299207 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(902.699185 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(962.699124 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-19" transform="translate(1022.699063 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_22"/>
+   <g id="line2d_21">
+    <path d="M 679.68612 249.68717
+L 809.27388 249.68717
+" clip-path="url(#p0a98827019)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 744.48 330.67952
+L 744.48 201.09176
+" clip-path="url(#p0a98827019)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 744.48 330.67952
+L 744.48 201.09176
+" clip-path="url(#p0a98827019)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_53">
+    <path d="M 679.68612 330.67952
+L 679.68612 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_54">
+    <path d="M 809.27388 330.67952
+L 809.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_55">
+    <path d="M 679.68612 330.67952
+L 809.27388 330.67952
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_56">
+    <path d="M 679.68612 201.09176
+L 809.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_22">
+    <!-- 数字 7 · #94 -->
+    <g transform="translate(706.481406 195.09176) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(288 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(321.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(371.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(404.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1c" transform="translate(464.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-17" transform="translate(524.59375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_12">
+   <g id="patch_57">
+    <path d="M 847.68612 330.67952
+L 977.27388 330.67952
+L 977.27388 201.09176
+L 847.68612 201.09176
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pd27f259e0b)">
+    <image xlink:href="data:image/png;base64,
+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" id="image47a618d169" transform="scale(1 -1) translate(0 -129.6)" x="847.68" y="-201.11952" width="129.6" height="129.6"/>
+   </g>
+   <g id="matplotlib.axis_23">
+    <g id="text_23">
+     <!-- $x_1$ = 0.209    $x_2$ = 0.375 -->
+     <g transform="translate(847.5 344.99952) scale(0.12 -0.12)">
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(0 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-14" transform="translate(44.399963 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(83.899931 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(117.199904 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(177.699843 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(210.999815 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(270.999754 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-15" transform="translate(297.399733 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(357.399672 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1c" transform="translate(417.399611 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(477.39955 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(510.699522 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(543.999495 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(577.299467 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Italic-5b" transform="translate(610.59944 0.203125)"/>
+      <use xlink:href="#STIXGeneral-Regular-15" transform="translate(654.999403 -14.796875) scale(0.7)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(694.499371 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-20" transform="translate(727.799344 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-3" transform="translate(788.299283 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-13" transform="translate(821.599255 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-11" transform="translate(881.599194 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-16" transform="translate(907.999173 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-1a" transform="translate(967.999112 0.203125)"/>
+      <use xlink:href="#PingFangSC-Regular-18" transform="translate(1022.699063 0.203125)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_24"/>
+   <g id="line2d_23">
+    <path d="M 847.68612 249.68717
+L 977.27388 249.68717
+" clip-path="url(#pd27f259e0b)" style="fill: none; stroke: #d65b30; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 912.48 330.67952
+L 912.48 201.09176
+" clip-path="url(#pd27f259e0b)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #ffffff; stroke-width: 3.5"/>
+    <path d="M 912.48 330.67952
+L 912.48 201.09176
+" clip-path="url(#pd27f259e0b)" style="fill: none; stroke-dasharray: 8.8,6.6; stroke-dashoffset: 0; stroke: #075b9b; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_58">
+    <path d="M 847.68612 330.67952
+L 847.68612 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_59">
+    <path d="M 977.27388 330.67952
+L 977.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_60">
+    <path d="M 847.68612 330.67952
+L 977.27388 330.67952
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_61">
+    <path d="M 847.68612 201.09176
+L 977.27388 201.09176
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_24">
+    <!-- 数字 7 · #112 -->
+    <g transform="translate(873.169219 195.09176) scale(0.13 -0.13)">
+     <use xlink:href="#PingFangSC-Regular-dc4"/>
+     <use xlink:href="#PingFangSC-Regular-a01" transform="translate(100 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(200 0)"/>
+     <use xlink:href="#PingFangSC-Regular-1a" transform="translate(233.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(288 0)"/>
+     <use xlink:href="#PingFangSC-Regular-7a" transform="translate(321.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-3" transform="translate(371.296875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-6" transform="translate(404.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(464.59375 0)"/>
+     <use xlink:href="#PingFangSC-Regular-14" transform="translate(504.6875 0)"/>
+     <use xlink:href="#PingFangSC-Regular-15" transform="translate(544.78125 0)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd37b63fd4c">
+   <rect x="7.68612" y="24.38" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="p0374c76e96">
+   <rect x="175.68612" y="24.38" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="pb1477a8f0d">
+   <rect x="343.68612" y="24.38" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="p5e312127b4">
+   <rect x="511.68612" y="24.38" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="p23120e5e00">
+   <rect x="679.68612" y="24.38" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="p63e8609423">
+   <rect x="847.68612" y="24.38" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="p07994047b9">
+   <rect x="7.68612" y="201.09176" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="pcafe592865">
+   <rect x="175.68612" y="201.09176" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="p294450ff5b">
+   <rect x="343.68612" y="201.09176" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="p0de4b2015f">
+   <rect x="511.68612" y="201.09176" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="p0a98827019">
+   <rect x="679.68612" y="201.09176" width="129.58776" height="129.58776"/>
+  </clipPath>
+  <clipPath id="pd27f259e0b">
+   <rect x="847.68612" y="201.09176" width="129.58776" height="129.58776"/>
+  </clipPath>
+ </defs>
+</svg>

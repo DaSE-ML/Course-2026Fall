@@ -1,0 +1,69 @@
+{
+  "train_size": 1437,
+  "test_size": 360,
+  "models": [
+    {
+      "model": "高斯核 SVM",
+      "parameters": {
+        "svc__C": 10,
+        "svc__gamma": 0.03
+      },
+      "validation": 0.9812280605728881,
+      "train": 1.0,
+      "test": 0.9777777777777777,
+      "storage": "813 个 64 维向量",
+      "fit_cpu_ms": 25.727999999999973,
+      "predict_cpu_us": 31.500000000000355
+    },
+    {
+      "model": "多项式特征＋Logistic 回归",
+      "parameters": {
+        "logisticregression__C": 0.1
+      },
+      "validation": 0.9818208356139391,
+      "train": 1.0,
+      "test": 0.9861111111111112,
+      "storage": "10 组 2,144 维权重＋截距",
+      "fit_cpu_ms": 162.93200000000053,
+      "predict_cpu_us": 3.6083333333343974
+    },
+    {
+      "model": "kNN",
+      "parameters": {
+        "kneighborsclassifier__n_neighbors": 3
+      },
+      "validation": 0.976374201787995,
+      "train": 0.988169798190675,
+      "test": 0.9666666666666667,
+      "storage": "1437 个训练点",
+      "fit_cpu_ms": 1.2579999999999814,
+      "predict_cpu_us": 4.938888888890899
+    },
+    {
+      "model": "决策树",
+      "parameters": {
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "validation": 0.8445876664842181,
+      "train": 1.0,
+      "test": 0.8222222222222222,
+      "storage": "283 个节点",
+      "fit_cpu_ms": 8.299000000000056,
+      "predict_cpu_us": 0.31666666666652077
+    },
+    {
+      "model": "梯度提升树",
+      "parameters": {
+        "max_depth": 2,
+        "n_estimators": 100
+      },
+      "validation": 0.9650173326035395,
+      "train": 1.0,
+      "test": 0.95,
+      "storage": "1000 棵树 · 6998 个节点",
+      "fit_cpu_ms": 2086.353000000003,
+      "predict_cpu_us": 7.999999999993197
+    }
+  ]
+}
