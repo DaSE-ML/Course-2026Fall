@@ -93,6 +93,16 @@
         <p><strong>相关资料</strong><br><a href="assignments/resources/lab07.md">实验说明</a>，<a href="assignments/resources/lab07.md#openreview-cases">OpenReview 9 篇案例论文</a></p>
       </td>
     </tr>
+    <tr>
+      <td valign="top"><strong>Lesson 8</strong><br><br>集智成谋<br>用集成学习设计<br>Agent Workflow</td>
+      <td align="center" valign="top"><a href="assignments/lab08-poster.jpg"><img src="assignments/lab08-poster-thumb.jpg" width="320" alt="Lab 8 集智成谋任务海报缩略图"></a></td>
+      <td valign="top">
+        <p><strong>提交到哪里？</strong><br>各组私有仓库 <code>ML26-XX</code> 根目录下的 <code>lab08/</code>。</p>
+        <p><strong>提交什么？</strong><br>① 3 页 A4 PDF 分析报告<br>② 可运行的工作流代码与配置<br>③ 工作流图及实验结果<br>④ 与单个强 Agent 的对比，或性能与开销分析（加分项，按所选任务附结果）</p>
+        <p><strong>基本要求</strong><br>自选任务与数据，将 Agent 作为基学习器设计动态工作流，与单 Agent 比较表现并分析协作效果。</p>
+        <p><strong>相关资料</strong><br><a href="assignments/resources/lab08.md">实验说明</a></p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
