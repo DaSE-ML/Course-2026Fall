@@ -206,11 +206,14 @@ a:focus-visible,button:focus-visible{outline:3px solid #4177b7;outline-offset:4p
   font-size:14px;font-weight:650;letter-spacing:.04em;
   color:#52657a;text-transform:uppercase;
 }
-.student-portal .portal-topnav{display:flex;flex-wrap:wrap;gap:18px}
+.student-portal .portal-topnav{display:flex;flex-wrap:wrap;align-items:center;gap:18px}
 .student-portal .portal-topnav a{
   font-size:14px;font-weight:500;color:#52657a;text-decoration:none;
 }
 .student-portal .portal-topnav a:hover{color:#174b87;text-decoration:underline}
+.student-portal .portal-topnav .portal-review-link{
+  padding:4px 10px;border-radius:6px;background:#e7effa;color:#174b87;font-weight:650;
+}
 
 .student-portal .student-hero{
   display:grid;

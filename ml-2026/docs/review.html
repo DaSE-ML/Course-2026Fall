@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>期末复习重点 · 机器学习</title>
+<link rel="stylesheet" href="../lessons/assets/portal.css">
+<style>
+.review-progress { color: #52657a; }
+.review-topics { padding-inline-start: 1.6em; }
+.doc-main .review-topics > li { margin: 0 0 1.55rem; }
+.review-topics > li::marker { color: #174b87; font-weight: 700; }
+.doc-main .review-topics h2 { margin: 0; border: 0; padding: 0; font-size: 20px; }
+.review-topics label { display: inline-flex; align-items: baseline; gap: .5em; cursor: pointer; }
+.review-topics input { margin: 0; inline-size: 1rem; block-size: 1rem; flex: none; accent-color: #23756c; }
+.review-topics p { margin: .25em 0 0; }
+.review-pages { display: flex; flex-wrap: wrap; gap: .1em 1.15em; }
+.review-mark { background: none; }
+.review-mark-1 { color: #215b9b; }
+.review-mark-2 { color: #216b4b; }
+.review-mark-3 { color: #8a5100; }
+</style>
+</head>
+<body>
+<main class="doc-main">
+<header class="doc-header"><a class="back" href="../index.html">← 返回课程目录</a></header>
+<h1>机器学习部分的期末复习重点</h1>
+
+<p id="review-progress" class="review-progress" aria-live="polite" hidden></p>
+<ol class="review-topics">
+<li>
+<h2><label><input type="checkbox" data-topic="classification-regression" aria-label="标记为已复习：分类与回归的区分"><span>分类与回归的区分</span></label></h2>
+<p><mark class="review-mark review-mark-2">懂得</mark>判断一个机器学习任务属于分类还是回归。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/01-intro-ai-coding/slides.html#16" target="_blank" rel="noopener">L1-P16</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="underfitting-overfitting" aria-label="标记为已复习：欠拟合与过拟合"><span>欠拟合与过拟合</span></label></h2>
+<p><mark class="review-mark review-mark-1">知道</mark>如何判断模型是欠拟合还是过拟合，并能阐明理由。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/01-intro-ai-coding/slides.html#22" target="_blank" rel="noopener">L1-P22</a></span>
+<span><span>参考：</span><a href="../lessons/03-regression-gd/slides.html#19" target="_blank" rel="noopener">L3-P19</a>、<a href="../lessons/06-model-selection/slides.html#22" target="_blank" rel="noopener">L6-P22</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="preprocessing-leakage" aria-label="标记为已复习：标准化与数据泄漏"><span>标准化与数据泄漏</span></label></h2>
+<p><mark class="review-mark review-mark-1">了解</mark>数据划分与数据预处理的常见操作，<mark class="review-mark review-mark-2">理解</mark>不当的预处理如何导致数据泄漏。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/02-first-workflow/slides.html#5" target="_blank" rel="noopener">L2-P5</a>、<a href="../lessons/02-first-workflow/slides.html#10" target="_blank" rel="noopener">L2-P10</a>、<a href="../lessons/02-first-workflow/slides.html#14" target="_blank" rel="noopener">L2-P14</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="classification-metrics" aria-label="标记为已复习：混淆矩阵与分类评估指标"><span>混淆矩阵与分类评估指标</span></label></h2>
+<p><mark class="review-mark review-mark-2">理解</mark>混淆矩阵中各类结果的含义，<mark class="review-mark review-mark-3">掌握</mark>准确率（Accuracy）、查准率（Precision）、召回率（Recall）和 F1 分数的解读，<mark class="review-mark review-mark-2">理解</mark>各指标的用途与局限。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/02-first-workflow/slides.html#7" target="_blank" rel="noopener">L2-P7</a>、<a href="../lessons/05-metrics-cost/slides.html#2" target="_blank" rel="noopener">L5-P2</a>、<a href="../lessons/05-metrics-cost/slides.html#3" target="_blank" rel="noopener">L5-P3</a>、<a href="../lessons/05-metrics-cost/slides.html#4" target="_blank" rel="noopener">L5-P4</a></span>
+<span><span>参考：</span><a href="../lessons/05-metrics-cost/slides.html#5" target="_blank" rel="noopener">L5-P5</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="logistic-sigmoid" aria-label="标记为已复习：逻辑回归与 sigmoid"><span>逻辑回归与 sigmoid</span></label></h2>
+<p><mark class="review-mark review-mark-2">理解</mark>逻辑回归如何进行分类，以及 sigmoid 函数在模型中的作用。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/04-classification-probability/slides.html#5" target="_blank" rel="noopener">L4-P5</a>、<a href="../lessons/04-classification-probability/slides.html#8" target="_blank" rel="noopener">L4-P8</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="gradient-learning-rate" aria-label="标记为已复习：梯度下降中的学习率"><span>梯度下降中的学习率</span></label></h2>
+<p><mark class="review-mark review-mark-1">知道</mark>梯度下降中参数更新的方向，<mark class="review-mark review-mark-2">理解</mark>学习率对收敛的影响。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/03-regression-gd/slides.html#9" target="_blank" rel="noopener">L3-P9</a>、<a href="../lessons/03-regression-gd/slides.html#10" target="_blank" rel="noopener">L3-P10</a>、<a href="../lessons/03-regression-gd/slides.html#12" target="_blank" rel="noopener">L3-P12</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="k-fold" aria-label="标记为已复习：K 折交叉验证"><span>K 折交叉验证</span></label></h2>
+<p><mark class="review-mark review-mark-1">了解</mark> K 折交叉验证的流程，<mark class="review-mark review-mark-2">理解</mark>它在模型评估中的作用。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/06-model-selection/slides.html#5" target="_blank" rel="noopener">L6-P5</a></span>
+<span><span>参考：</span><a href="../lessons/03-regression-gd/slides.html#20" target="_blank" rel="noopener">L3-P20</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="binary-cross-entropy" aria-label="标记为已复习：二分类交叉熵"><span>二分类交叉熵</span></label></h2>
+<p><mark class="review-mark review-mark-1">了解</mark>二分类交叉熵衡量什么。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/04-classification-probability/slides.html#11" target="_blank" rel="noopener">L4-P11</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="threshold-decisions" aria-label="标记为已复习：分类阈值与决策"><span>分类阈值与决策</span></label></h2>
+<p><mark class="review-mark review-mark-1">了解</mark>错误代价和复核名额如何影响分类阈值的选择。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/05-metrics-cost/slides.html#21" target="_blank" rel="noopener">L5-P21</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="time-series-validation" aria-label="标记为已复习：时间序列的验证划分"><span>时间序列的验证划分</span></label></h2>
+<p><mark class="review-mark review-mark-2">理解</mark>为什么预测未来时要按时间顺序划分数据，以及扩展窗口与滑动窗口的区别。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/06-model-selection/slides.html#9" target="_blank" rel="noopener">L6-P9</a></span>
+<span><span>参考：</span><a href="../lessons/06-model-selection/slides.html#10" target="_blank" rel="noopener">L6-P10</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="ensembles" aria-label="标记为已复习：预测误差的来源与集成学习"><span>预测误差的来源与集成学习</span></label></h2>
+<p><mark class="review-mark review-mark-2">理解</mark>平方损失下预测误差的三个来源（偏差平方、方差和不可约误差），以及 Bagging 和 Boosting 的原理。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/06-model-selection/slides.html#23" target="_blank" rel="noopener">L6-P23</a>、<a href="../lessons/06-model-selection/slides.html#24" target="_blank" rel="noopener">L6-P24</a>、<a href="../lessons/07-trees-ensembles/slides.html#25" target="_blank" rel="noopener">L7-P25</a>、<a href="../lessons/07-trees-ensembles/slides.html#30" target="_blank" rel="noopener">L7-P30</a></span>
+<span><span>参考：</span><a href="../lessons/07-trees-ensembles/slides.html#12" target="_blank" rel="noopener">L7-P12</a>、<a href="../lessons/07-trees-ensembles/slides.html#31" target="_blank" rel="noopener">L7-P31</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="gini-splits" aria-label="标记为已复习：基尼不纯度与决策树切分"><span>基尼不纯度与决策树切分</span></label></h2>
+<p><mark class="review-mark review-mark-1">了解</mark>基尼不纯度的含义，<mark class="review-mark review-mark-2">理解</mark>它在分类树切分中的作用。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/07-trees-ensembles/slides.html#16" target="_blank" rel="noopener">L7-P16</a>、<a href="../lessons/07-trees-ensembles/slides.html#17" target="_blank" rel="noopener">L7-P17</a></span>
+<span><span>参考：</span><a href="../lessons/07-trees-ensembles/slides.html#15" target="_blank" rel="noopener">L7-P15</a></span>
+</p>
+</li>
+
+<li>
+<h2><label><input type="checkbox" data-topic="svm" aria-label="标记为已复习：SVM 的基本原理与适用场景"><span>SVM 的基本原理与适用场景</span></label></h2>
+<p><mark class="review-mark review-mark-1">了解</mark> SVM 的基本原理，以及硬间隔、软间隔和核方法的区别与适用场景。</p>
+<p class="review-pages">
+<span><strong>重点：</strong><a href="../lessons/08-svm-kernels/slides.html#6" target="_blank" rel="noopener">L8-P6</a>、<a href="../lessons/08-svm-kernels/slides.html#11" target="_blank" rel="noopener">L8-P11</a>、<a href="../lessons/08-svm-kernels/slides.html#15" target="_blank" rel="noopener">L8-P15</a></span>
+<span><span>参考：</span><a href="../lessons/08-svm-kernels/slides.html#9" target="_blank" rel="noopener">L8-P9</a>、<a href="../lessons/08-svm-kernels/slides.html#16" target="_blank" rel="noopener">L8-P16</a></span>
+</p>
+</li>
+</ol>
+</main>
+<script>
+const topics = document.querySelectorAll('.review-topics input[type="checkbox"]');
+const progress = document.getElementById('review-progress');
+const storageKey = 'ecnu-ml-2026-review:';
+
+function updateProgress() {
+    const completed = document.querySelectorAll('.review-topics input:checked').length;
+    progress.textContent = `已复习 ${completed} / ${topics.length} 项`;
+}
+
+for (const topic of topics) {
+    try {
+        const saved = localStorage.getItem(storageKey + topic.dataset.topic);
+        if (saved !== null) topic.checked = saved === '1';
+    } catch {
+        // The checklist still works when browser storage is unavailable.
+    }
+
+    topic.addEventListener('change', () => {
+        updateProgress();
+        try {
+            localStorage.setItem(storageKey + topic.dataset.topic, topic.checked ? '1' : '0');
+        } catch {
+            // The current page continues to track progress.
+        }
+    });
+}
+
+updateProgress();
+progress.hidden = false;
+</script>
+</body>
+</html>
